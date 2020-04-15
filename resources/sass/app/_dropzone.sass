@@ -1,0 +1,30 @@
+
+//.dropzone
+//    min-height: 220px
+//    border: dashed 3px $dark-color
+
+
+.dz-image
+    img
+        max-width: 100%
+
+
+.dz-filename
+    background: $primary-color
+    color: #fff
+    position: relative
+    top: 30px
+
+.dropzone .dz-preview .dz-details .dz-filename:not(:hover) span,
+.dropzone .dz-preview .dz-details .dz-filename:hover span,
+.dropzone .dz-preview .dz-progress .dz-upload
+    background: $primary-color
+    color: #fff
+    border: none
+
+.dropzone .dz-preview .dz-progress
+    opacity: 0
+
+.dropzone .dz-preview .dz-image
+    +radius
+    border: solid 1px $mute-border-color

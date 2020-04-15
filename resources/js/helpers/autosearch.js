@@ -1,0 +1,3 @@
+
+export const ALGOLIA_APP_KEY = 'IGWPQRZ1XN';
+export const ALGOLIA_API_KEY = '059740f1b58f8395fa32bbaf13f9d689';

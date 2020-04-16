@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/../.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FarmersFrien-key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FarmersFrien-key.pub" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +168,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -222,7 +226,8 @@
       <workItem from="1586647731856" duration="11042000" />
       <workItem from="1586786480835" duration="21245000" />
       <workItem from="1586927802428" duration="1678000" />
-      <workItem from="1586954371839" duration="35970000" />
+      <workItem from="1586954371839" duration="37411000" />
+      <workItem from="1586996593038" duration="1112000" />
     </task>
     <servers />
   </component>
@@ -249,10 +254,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="795" y="445" key="NewPhpFileDialog/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1585958690399" />
-    <state x="476" y="168" key="SettingsEditor" timestamp="1586987706168">
+    <state x="342" y="168" width="1102" height="713" key="SettingsEditor" timestamp="1586996337735">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="476" y="168" key="SettingsEditor/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1586987706168" />
+    <state x="342" y="168" width="1102" height="713" key="SettingsEditor/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1586996337735" />
     <state x="516" y="128" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586557294112">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -261,9 +266,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1585968943854" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1586994693751">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1586995608459">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1586994693751" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1586995608459" />
   </component>
 </project>

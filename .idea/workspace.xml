@@ -2,11 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../FarmersFrien-key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FarmersFrien-key.pub" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/G21oI07CkEpmIHxqrDdoA0FE6PDEhrLQ/mvLsxXuUijcmNMYaicon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/G21oI07CkEpmIHxqrDdoA0FE6PDEhrLQ/yvvc13xuHLfaOwOE.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/aLPLGDGTcQASlrgpSWObUAY5k2vz6dJ5/FQn74cecUAweSzvK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/aLPLGDGTcQASlrgpSWObUAY5k2vz6dJ5/q9sUNlFtGbQ970v5icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/fo43fY0K0QnGg9gy9Gkr5WNSdZD4RC9L/BIPgQ2o1TGVTrCaGicon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/fo43fY0K0QnGg9gy9Gkr5WNSdZD4RC9L/Ct3I6spsAZOGm71b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/lUpQS7WoIz2AqaO2NEAwNwjIcVB1vW5c/3dfsk6zH0R9aY3h7icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/lUpQS7WoIz2AqaO2NEAwNwjIcVB1vW5c/XvOSP2azPXX3U7rR.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/nvGsL8j2cNvXC2o3kdjxqzUngYbgsaUz/HsnAIIQjLHYpDKH6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/nvGsL8j2cNvXC2o3kdjxqzUngYbgsaUz/uy1SqoXGktK4bNK4icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/qvtGiMvzlA3SiN2eRqJDjHpXyYCzBnbE/BOkoedHtpP5Cggoj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/qvtGiMvzlA3SiN2eRqJDjHpXyYCzBnbE/ukep0iR9N8aaTbJUicon.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/farmersfriend.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/farmersfriend.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_listing.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_listing.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/listings/partials/_base_listing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/partials/_base_listing.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +242,7 @@
       <workItem from="1586786480835" duration="21245000" />
       <workItem from="1586927802428" duration="1678000" />
       <workItem from="1586954371839" duration="37411000" />
-      <workItem from="1586996593038" duration="1112000" />
+      <workItem from="1586996593038" duration="9247000" />
     </task>
     <servers />
   </component>
@@ -266,9 +281,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1585968943854" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1586995608459">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1587007886430">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1586995608459" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587007886430" />
   </component>
 </project>

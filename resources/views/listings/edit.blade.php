@@ -13,7 +13,7 @@
 {{--                upload="{{ route('api.listing.image.upload', [$listing])  }}"--}}
 {{--                remove="api/listing">--}}
 {{--            </drop-zone>--}}
-                <x-listing.-upload-image :listing="$listing"></x-listing.-upload-image>
+                <x-listing.upload-image :listing="$listing"></x-listing.upload-image>
 
                 <div class="panel shadow--1">
                     <div class="panel__header">

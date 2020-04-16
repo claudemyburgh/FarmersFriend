@@ -31,6 +31,6 @@ class UploadImage extends Component
      */
     public function render()
     {
-        return view('components.listing\-upload-image');
+        return view('components.listing.upload-image');
     }
 }

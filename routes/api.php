@@ -11,7 +11,7 @@ Route::group(['middleware' => ['auth:sanctum'], 'as' => 'api.'], function() {
 
     Route::get('categories', 'Categories\CategoriesController@index')->name('categories.index');
 
-    Route::apiResource('listings', 'Listing\ListingsController');
+    Route::apiResource('{area}/listings', 'Listing\ListingsController');
 
     Route::post('listing/{listing}/upload', 'Listing\ListingImageController@store')->name('listing.image.upload');
 

@@ -10,11 +10,14 @@
             <div class="panel shadow--1">
                 <div class="panel__header">{{ __('Login') }}</div>
                 <div class="panel__body">
-                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+                    <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" novalidate>
                         @csrf
                         <div class="form__group {{ $errors->has('email') ? ' has__danger' : '' }} ">
-                            <label for="email" class="form__lable">{{ __('E-Mail Address') }}</label>
-                            <input type="email" name="email" id="email" class="form__item" value="{{ old('email') }}">
+                            <label for="email" class="form__label font--bold">{{ __('E-Mail Address') }}</label>
+                            <div class="form__wrap">
+                                <i class="lunacon lunacon-mail-envelope"></i>
+                                <input type="email" name="email" id="email" class="form__item" value="{{ old('email') }}">
+                            </div>
                             @if ($errors->has('email'))
                                 <strong class="form__helper">
                                     {{ $errors->first('email') }}
@@ -22,8 +25,11 @@
                             @endif
                         </div>
                         <div class="form__group {{ $errors->has('password') ? ' has__danger' : '' }} ">
-                            <label for="password" class="form__lable">{{ __('Password')  }}</label>
-                            <input type="password" name="password" id="password" class="form__item">
+                            <label for="password" class="form__label font--bold">{{ __('Password')  }}</label>
+                            <div class="form__wrap">
+                                <i class="lunacon lunacon-shield-lock-solid"></i>
+                                <input type="password" name="password" id="password" class="form__item">
+                            </div>
                             @if ($errors->has('password'))
                                 <strong class="form__helper">
                                     {{ $errors->first('password') }}

@@ -35961,9 +35961,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'; // window.axios.defaults.baseURL = "http://farmersfriend.build";
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.baseURL = "http://farmersfriend.build"; // window.axios.defaults.baseURL = "http://farmersfriend.co.za";
 
-window.axios.defaults.baseURL = "http://farmersfriend.co.za";
 axios.defaults.withCredentials = true;
 /**
  *
@@ -36050,15 +36050,16 @@ var luna = __webpack_require__(/*! luna-sass/Framework/js/luna.js */ "./node_mod
   'use strict';
 
   var masonry = document.querySelector('.masonry');
+  $(document).Luna();
 
   if (masonry) {
-    var msnry = new masonry_layout__WEBPACK_IMPORTED_MODULE_0___default.a(masonry, {
-      itemSelector: '.masonry__item' // columnWidth: 200
+    setTimeout(function () {
+      var msnry = new masonry_layout__WEBPACK_IMPORTED_MODULE_0___default.a(masonry, {
+        itemSelector: '.masonry__item' // columnWidth: 200
 
-    });
+      });
+    }, 500);
   }
-
-  $(document).Luna();
 })(jQuery, window, document);
 
 /***/ }),
@@ -37372,8 +37373,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var createListing = function createListing(_ref, _ref2) {
   var commit = _ref.commit,
       dispatch = _ref.dispatch;
-  var listing = _ref2.listing,
-      area = _ref2.area;
+  var area = _ref2.area,
+      listing = _ref2.listing;
   commit('CLEAR_ERROR');
   commit('PROCESSING_STATUS', true);
   commit('notify/SET_NOTIFICATION', {
@@ -37381,7 +37382,7 @@ var createListing = function createListing(_ref, _ref2) {
   }, {
     root: true
   });
-  return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post('api/listings', listing).then(function (response) {
+  return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("api/".concat(area.slug, "/listings"), listing).then(function (response) {
     commit('notify/SET_NOTIFICATION', {
       name: 'success',
       "class": 'notify--success',

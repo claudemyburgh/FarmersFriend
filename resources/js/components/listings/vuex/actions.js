@@ -1,10 +1,11 @@
 import axios from 'axios'
 
-export const createListing = ({commit, dispatch}, {listing, area}) => {
+export const createListing = ({commit, dispatch}, {area, listing}) => {
     commit('CLEAR_ERROR')
     commit('PROCESSING_STATUS', true)
     commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
-    return axios.post('api/listings', listing).then( (response ) => {
+    return axios.post(`api/${area.slug}/listings`, listing).then( (response ) => {
+
         commit('notify/SET_NOTIFICATION', {
             name: 'success',
             class: 'notify--success',

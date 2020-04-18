@@ -6023,10 +6023,10 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-luna-sass@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/luna-sass/-/luna-sass-2.0.4.tgz#f0e3bd8134c9dde223e9c4bced30f1d61d92609f"
-  integrity sha512-YOD6fvkJNjnGSy+aRzXiIgmLNb6sDHe/enUsYB1FTInWK35GhuAGfWYSUI4tf2ypMrUB4DJjjGyq1MMdEI19AQ==
+luna-sass@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/luna-sass/-/luna-sass-2.1.0.tgz#bc5c787585e0468f4f603c7559a5787de4e4c6b9"
+  integrity sha512-wb3fjGkhSZijNK/6R4YWCNzgDIkffXGvdweXWMvR+HetCnvlNZZvFTSi51OzkivcyCvZvTuxuR/Y3ImvaBOTYQ==
   dependencies:
     copy-webpack-plugin "^4.6.0"
     imagemin-mozjpeg "^8.0.0"

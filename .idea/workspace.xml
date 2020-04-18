@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="" />
+    <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../app/View/Components/Listing/CreateListing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/components/listing/create-listing.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Listing.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Listing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/frontpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/frontpage.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/listings/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,7 +244,7 @@
       <workItem from="1586954371839" duration="37411000" />
       <workItem from="1586996593038" duration="10444000" />
       <workItem from="1587028308653" duration="5642000" />
-      <workItem from="1587168957676" duration="7380000" />
+      <workItem from="1587168957676" duration="18136000" />
     </task>
     <servers />
   </component>
@@ -238,10 +259,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="715" y="316" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1585958675388" />
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586553573360">
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587192784287">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1586553573360" />
+    <state x="690" y="280" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587192784287" />
     <state x="651" y="324" key="NewPhpClassDialog" timestamp="1586983560633">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -262,9 +283,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1585968943854" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1587174105079">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1587191305104">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587174105079" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587191305104" />
   </component>
 </project>

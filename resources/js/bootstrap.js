@@ -21,16 +21,20 @@ import Masonry from 'masonry-layout'
 
     var masonry = document.querySelector('.masonry');
 
-    if (masonry) {
-        var msnry = new Masonry( masonry, {
-            itemSelector: '.masonry__item',
-            // columnWidth: 200
-        });
-
-    }
 
 
     $(document).Luna();
+
+
+    if (masonry) {
+        setTimeout(() => {
+            var msnry = new Masonry( masonry, {
+                itemSelector: '.masonry__item',
+                // columnWidth: 200
+            });
+
+        }, 500)
+    }
 
 
 

@@ -32,7 +32,7 @@
                 <div class="sm-col-6 md-col-4 lg-col-3 masonry__item">
                     <div class="panel shadow--5">
                         <div class="panel__header"><img class="list__icon" src="{{ asset('img/icons/') . '/' . $category->slug . '.svg'}}" alt="{{ $category->name }}">{{ $category->name }}</div>
-                        <ul class="list">
+                        <ul class="panel__list">
                             @foreach ($category->children as $sub)
                                 <li class="list__item flex justify--between">
                                     <a href="{{ route('listings.index', [$area, $sub]) }}">

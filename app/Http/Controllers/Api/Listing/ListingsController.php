@@ -8,9 +8,11 @@ use App\Area;
 use App\Category;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\ListingCreateRequest;
+use App\Http\Resources\Listing\ListingResource;
 use App\Http\Resources\Listing\ListingsCollection;
 use App\Listing;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 
 class ListingsController extends Controller
@@ -31,17 +33,19 @@ class ListingsController extends Controller
 
     /**
      * @param ListingCreateRequest $request
+     * @param Listing $listing
      * @return \Illuminate\Http\JsonResponse
      */
-    public function store(ListingCreateRequest $request)
+    public function store(ListingCreateRequest $request, Listing $listing)
     {
-        Listing::create(array_merge($request->only(['title', 'body', 'category_id', 'area_id', 'url', 'price']),
-            ['user_id' => $request->user()->id]
-        ));
+        $listing = $listing::create(array_merge($request->only(['title', 'body', 'category_id', 'area_id', 'url', 'price']),
+            [
+                'user_id' => $request->user()->id,
+                'key' => Str::uuid()
+            ]
+        ))->id;
 
-        return response()->json([
-            'success' => true
-        ]);
+
 
     }
 

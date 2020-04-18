@@ -49,6 +49,7 @@ class Listing extends Model implements HasMedia
     protected $fillable = [
         'id',
         'title',
+        'key',
         'body',
         'category_id',
         'area_id',

@@ -15,7 +15,10 @@
                         <input type="hidden" name="token" value="{{ $token }}">
                         <div class="form__group {{ $errors->has('email') ? ' has__danger' : '' }} ">
                             <label for="email" class="form__label font--bold">{{ __('E-Mail Address') }}</label>
-                            <input type="email" name="email" id="email" class="form__item" value="{{ old('email') }}">
+                            <div class="form__wrap">
+                                <i class="lunacon lunacon-mail-envelope"></i>
+                                <input type="email" name="email" id="email" class="form__item" value="{{ old('email') }}">
+                            </div>
                             @if ($errors->has('email'))
                                 <strong class="form__helper">
                                     {{ $errors->first('email') }}

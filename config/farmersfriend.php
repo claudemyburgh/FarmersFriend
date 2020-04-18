@@ -22,6 +22,11 @@ return [
             'width' => 800,
             'height' => 600
         ]
+    ],
+    'auth' => [
+        'name' => env('AUTH_USERNAME', 'Admin'),
+        'email' => env('AUTH_EMAIL', 'admin@mail.com'),
+        'password' => env('AUTH_PASSWORD', 'password')
     ]
 
 ];

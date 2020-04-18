@@ -17,7 +17,7 @@
 
                 @else
                     <li class="nav__links__item nav__links__item--dropdown">
-                        <a href="#">{{ Auth::user()->name }}</a>
+                        <a href="#"> <img class="avatar__nav"  src="{{ Auth::user()->avatar(30) }}" alt="Avater"> {{ Auth::user()->name }}</a>
                         <ul class="nav__links">
                             <li class="nav__links__item nav__links__item--dropdown">
                                 <a href="#">{{__("Dashboard")}}</a>

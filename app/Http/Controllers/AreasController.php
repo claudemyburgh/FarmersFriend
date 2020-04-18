@@ -13,6 +13,7 @@ class AreasController extends Controller
      */
     public function index()
     {
+//        cache()->forget('areas');
         $areas =  cache()->remember('areas', 60*60*24, function() {
             return Area::get()->toTree();
         });

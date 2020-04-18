@@ -16,10 +16,11 @@ class CreateAreasTable extends Migration
     {
         Schema::create('areas', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('name')->index();
+            $table->string('slug')->unique()->index();
             $table->boolean('usable')->default(false);
             NestedSet::columns($table);
+            $table->text('meta')->nullable();
             $table->timestamps();
         });
     }

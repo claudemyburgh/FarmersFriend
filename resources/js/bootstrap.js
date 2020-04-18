@@ -12,14 +12,23 @@ const luna =  require('luna-sass/Framework/js/luna.js');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-import { preview } from "./helpers/images";
+import Masonry from 'masonry-layout'
 
 
 (function($, window, document){
 
     'use strict';
 
-    preview()
+    var masonry = document.querySelector('.masonry');
+
+    if (masonry) {
+        var msnry = new Masonry( masonry, {
+            itemSelector: '.masonry__item',
+            // columnWidth: 200
+        });
+
+    }
+
 
     $(document).Luna();
 

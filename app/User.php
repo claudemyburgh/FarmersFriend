@@ -18,7 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'phone', 'bio', 'avatar'
     ];
 
     /**
@@ -66,17 +66,21 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
+     * @param int $size
      * @return string
      * @description return gravatar url
      */
-    public function avatar()
+    public function avatar($size = 100) : String
     {
-        return 'https://www.gravatar.com/avatar/' . md5($this->email) . '/?d=mp';
+        return "https://secure.gravatar.com/avatar/" . md5(strtolower(trim($this->email))) . "?d/=mp&s={$size}";
     }
 
-    public function getAvatarAttribute()
+    /**
+     * @return String
+     */
+    public function getAvatarAttribute($vaule) : String
     {
-        return $this->avatar();
+        return $vaule ?: $this->avatar();
     }
 
 }

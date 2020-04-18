@@ -6,8 +6,8 @@
 
             @if ($errors->has('message'))
                 <span class="form__helper">
-                                        {{ $errors->first('message') }}
-                                    </span>
+                    {{ $errors->first('message') }}
+                </span>
             @endif
         </div>
         <div class="form__group flex justify--between flex--center">

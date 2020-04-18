@@ -16,7 +16,7 @@ class CreateListingsTable extends Migration
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
             $table->uuid('key');
-            $table->string('title');
+            $table->string('title')->index();
             $table->text('body');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('area_id');
@@ -24,6 +24,7 @@ class CreateListingsTable extends Migration
             $table->timestamp('live')->nullable();
             $table->string('url')->nullable();
             $table->integer('price')->nullable();
+            $table->text('meta')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

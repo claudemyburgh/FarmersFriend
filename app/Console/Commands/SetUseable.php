@@ -39,17 +39,27 @@ class SetUseable extends Command
      */
     public function handle()
     {
+
+
+        $this->line('Seeding Database');
+
         Artisan::call('db:seed');
+
+        $this->line('Set usable fields to areas');
 
         DB::table('areas')
             ->whereNotNull('parent_id')
             ->where('parent_id', '!=', 1)
             ->update(['usable' => 1]);
 
+
+        $this->line('Set usable fields to categories');
+
         DB::table('categories')
             ->whereNotNull('parent_id')
             ->update(['usable' => 1]);
 
+        $this->line('Done');
 
 
     }

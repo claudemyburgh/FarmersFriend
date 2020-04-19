@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Area;
+use App\Http\Resources\Area\AreaCollection;
+
 
 
 class AreasController extends Controller
@@ -17,6 +19,8 @@ class AreasController extends Controller
         $areas =  cache()->remember('areas', 60*60*24, function() {
             return Area::get()->toTree();
         });
+
+
 
         return view('areas', compact('areas'));
     }

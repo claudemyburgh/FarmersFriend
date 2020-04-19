@@ -9,14 +9,14 @@
         @foreach ($areas as $country)
             <div class="md-col-12">
                 <h2><a href="{{ route('user.area.store', $country) }}">{{ $country->name }}</a></h2>
-                <div class="row">
+                <div class="row flex masonry">
                     @foreach ($country->children as $state)
-                        <div class="md-col-3">
-                            <div class="panel shadow--4">
+                        <div class="md-col-2 masonry__item">
+                            <div class="panel shadow--3">
                                 <div class="panel__header">
                                     <a href="{{ route('user.area.store', $state) }}">{{ $state->name }}</a>
                                 </div>
-                                <ul class="list">
+                                <ul class="panel__list">
                                     @foreach ($state->children as $city)
                                         <li class="list__item">
                                             <a href="{{ route('user.area.store', $city) }}">{{ $city->name }}</a>

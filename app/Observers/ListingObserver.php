@@ -14,7 +14,7 @@ class ListingObserver
      */
     public function creating(Listing $listing)
     {
-        $listing->key = Str::uuid();
+        $listing->key = (string) Str::uuid();
     }
 
 }

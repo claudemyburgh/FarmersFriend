@@ -11,6 +11,9 @@ class Area extends Model
 
     protected $fillable = ['name', 'slug'];
 
+    /**
+     * @return string
+     */
     public function getRouteKeyName()
     {
         return 'slug';

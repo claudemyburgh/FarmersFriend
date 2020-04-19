@@ -1,6 +1,6 @@
 <div class="form__group{{ $errors->has('category_id') ? ' has__danger' : '' }}">
     <label for="category" class="form__label font--bold">Category</label>
-    <select name="category_id" id="category" class="form__item"{{ isset($listing) && $listing->live() ? ' disabled="disabled"' : '' }}>
+    <select name="category_id" id="category" class="form__item"{{ isset($listing) && $listing->isLive() ? ' disabled="disabled"' : '' }}>
         @foreach ($categories as $category)
             <optgroup label="{{ $category->name }}">
                 @foreach ($category->children as $child)

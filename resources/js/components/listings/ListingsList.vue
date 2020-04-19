@@ -1,22 +1,22 @@
 <template>
-  <div>
-       <div class="row flex">
-           <listing-card v-for="listing in listings" :key="listing.id" :listing="listing"></listing-card>
+    <div>
+        <div class="row flex">
+            <listing-card v-for="listing in listings" :key="listing.id" :listing="listing"></listing-card>
 
-           <div class="observ"
-                v-if="listings.length" v-observe-visibility="{
+            <div class="observ"
+                 v-if="listings.length" v-observe-visibility="{
                     callback: handleScrollToBottomOffTimeline,
                      // throttleOptions: {
                      //    leading: 'visible',
                      // },
                     throttle: 300}">
-<!--                <div v-if="!loadingComplete" class="lds-ripple"><div></div><div></div></div>-->
-               <div v-if="!loadingComplete"  class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-           </div>
+                <!--                <div v-if="!loadingComplete" class="lds-ripple"><div></div><div></div></div>-->
+                <div v-if="!loadingComplete"  class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
 
 
-       </div>
-  </div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -54,13 +54,13 @@
         },
         methods: {
             ...mapActions({
-                getListings: 'listings/getListings'
+                get_listings: 'listings/get_listings'
             }),
             ...mapMutations({
                 PUSH_LISTINGS: 'listings/PUSH_LISTINGS'
             }),
             loadListings() {
-                this.getListings({url: this.urlWithPage}).then( (response) => {
+                this.get_listings({url: this.urlWithPage}).then( (response) => {
                     this.lastPage = response.data.meta.last_page
                 })
             },

@@ -27,7 +27,7 @@ class ListingPaymentController extends Controller
     {
         $this->authorize('touch', $listing);
 
-        if ($listing->live()) {
+        if ($listing->isLive()) {
             return back();
         }
 
@@ -45,7 +45,7 @@ class ListingPaymentController extends Controller
     {
         $this->authorize('touch', $listing);
 
-        if ($listing->live()) {
+        if ($listing->isLive()) {
             return back();
         }
 

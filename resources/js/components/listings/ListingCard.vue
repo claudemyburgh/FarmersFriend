@@ -15,7 +15,7 @@
                     <img :src="listing.user.avatar" :alt="listing.user.name">
                 </div>
                 <header class="listing__header ">
-                    <a class="ellipsis block" :href="`/${listing.area.slug}/${listing.key}`">{{ listing.title }}</a>
+                    <a class="ellipsis block" :href="`/${listing.area.slug}/listing/${listing.key}`">{{ listing.title }}</a>
                 </header>
                 <div class="listing__footer flex flex--row justify--between">
 

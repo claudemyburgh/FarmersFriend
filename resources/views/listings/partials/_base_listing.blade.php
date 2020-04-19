@@ -1,4 +1,4 @@
-<section class="listing flex">
+<section class="listing flex animate">
     @if($listing->hasMedia('listing'))
     <picture class="listing__pic shadow--6">
 {{--        <source media="(min-width: 600px)" srcset="https://picsum.photos/seed/picsum/400/230">--}}

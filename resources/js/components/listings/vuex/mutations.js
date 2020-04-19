@@ -25,3 +25,7 @@ export const CLEAR_SINGLE_ERROR = (state, data) => {
 export const PUSH_LISTINGS = (state, data) => {
     state.listings.push(...data)
 }
+
+export const PUSH_LISTING = (state, {listing}) => {
+    state.listing = listing
+}

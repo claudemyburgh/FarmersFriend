@@ -1,7 +1,19 @@
 
-//.dropzone
-//    min-height: 220px
-//    border: dashed 3px $dark-color
+.dropzone
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    min-height: 220px
+    border: dashed 3px $dark-color
+    background: mix( $dark-color, white, 5%)
+
+    & .dz-default.dz-message
+        width: 100%
+        padding: 30px
+        font-weight: 900
+        letter-spacing: 2px
+        color: $dark-color
 
 
 .dz-image
@@ -25,6 +37,18 @@
 .dropzone .dz-preview .dz-progress
     opacity: 0
 
-.dropzone .dz-preview .dz-image
+.dropzone .dz-preview .dz-image-preview
+    width: 25%
+
+.dropzone .dz-preview
     +radius
+    width: 100px
+    height: 100px
     border: solid 1px $mute-border-color
+
+    & .dz-image
+        position: relative
+        max-width: 100%
+        object-fit: cover
+        height: 110px
+        +radius

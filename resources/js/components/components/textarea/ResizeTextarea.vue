@@ -1,5 +1,7 @@
 <template>
-  <textarea :name="name" :id="name" cols="30" rows="6" class="form__item resize_textarea" @input="$emit('input', $event.target.value); resize($event)" :value="value"></textarea>
+    <div class="form__wrap">
+        <textarea :name="name" :id="name" cols="30" rows="6" class="form__item resize_textarea" @input="$emit('input', $event.target.value); resize($event)" :value="value"></textarea>
+    </div>
 </template>
 
 <script>

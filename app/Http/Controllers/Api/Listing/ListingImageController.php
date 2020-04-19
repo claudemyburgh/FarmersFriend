@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Listing;
 use App\Http\Controllers\Controller;
 use App\Listing;
 use Illuminate\Http\Request;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class ListingImageController extends Controller
 {
@@ -25,6 +26,20 @@ class ListingImageController extends Controller
             'size' => $details->size,
             'name' => $details->name,
             'collection_name' => $details->collection_name
+        ]);
+    }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function destroy($id){
+
+        $media = Media::find($id)->delete();
+
+        return response()->json([
+            'id' => $id,
+            'media' => $media
         ]);
     }
 }

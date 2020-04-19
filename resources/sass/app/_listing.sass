@@ -1,3 +1,9 @@
+@keyframes slide-top
+    0%
+        transform: translateY(100px)
+
+    100%
+        transform: translateY(0px)
 
 
 .listing
@@ -7,6 +13,11 @@
     align-items: center
     padding-top: 105px
     width: 100%
+    transform: translateY(100px)
+    animation: slide-top 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+
+
 
     &__pic
         position: absolute

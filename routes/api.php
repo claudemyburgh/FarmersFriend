@@ -14,6 +14,7 @@ Route::group(['middleware' => ['auth:sanctum'], 'as' => 'api.'], function() {
     Route::apiResource('{area}/listings', 'Listing\ListingsController');
 
     Route::post('listing/{listing}/upload', 'Listing\ListingImageController@store')->name('listing.image.upload');
+    Route::delete('listing/{listing}', 'Listing\ListingImageController@destroy')->name('listing.image.destroy');
 
     Route::post('{listing}/user/message', 'Listing\ContactListingUser@store')->name('listing.message.friends');
 

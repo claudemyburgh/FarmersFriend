@@ -25,8 +25,7 @@ class ListingsController extends Controller
      */
     public function index(Area $area, Category $category)
     {
-        $listings = Listing::with(['user', 'area'])->inArea($area)->isLive()->fromCategory($category)->latestFirst()->paginate(8);
-
+        $listings = Listing::with(['user', 'area'])->inArea($area)->isLive()->fromCategory($category)->latestFirst()->paginate(12);
         return new ListingsCollection($listings);
     }
 
@@ -34,42 +33,61 @@ class ListingsController extends Controller
     /**
      * @param ListingCreateRequest $request
      * @param Listing $listing
-     * @return \Illuminate\Http\JsonResponse
+     * @return ListingResource
      */
     public function store(ListingCreateRequest $request, Listing $listing)
     {
         $listing = $listing::create(array_merge($request->only(['title', 'body', 'category_id', 'area_id', 'url', 'price']),
             [
                 'user_id' => $request->user()->id,
-                'key' => Str::uuid()
+                'key' => (string) Str::uuid()
             ]
-        ))->id;
+        ));
 
-
-
+        return new ListingResource($listing);
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return ListingResource
      */
-    public function show($id)
+    public function show($key)
     {
-        //
+
+        $listing = Listing::find($key);
+
+//        $listing->load('area', 'user', 'media');
+
+        return new ListingResource($listing);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param ListingCreateRequest $request
+     * @param Listing $listing
+     * @return ListingResource
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function update(Request $request, $id)
+    public function update(ListingCreateRequest $request, Area $area, Listing $listing)
     {
-        //
+        $this->authorize('update', $listing);
+
+        if (!$listing->isLive()) {
+            $listing->category_id = $request->category_id;
+        }
+
+        $listing->area_id = $request->area_id;
+
+        $listing = $listing->update($request->all());
+
+        if ($request->has('payment')) {
+            return redirect()->route('listings.payment.show', [$area, $listing]);
+        }
+
+
     }
 
     /**

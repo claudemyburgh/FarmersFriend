@@ -4,7 +4,7 @@
             <div class="wrapper pt" v-if="notify.show" >
                 <div class="row">
                     <div class="col">
-                        <div class="notify" :class="notify.class" >
+                        <div class="notify flex justify--between flex--align-center" :class="notify.class" >
                             <span @click.prevent="closeNotify" class="notify__close">&times;</span>
                             {{ notify.message }}
                         </div>

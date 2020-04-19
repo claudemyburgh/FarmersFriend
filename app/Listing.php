@@ -37,7 +37,7 @@ class Listing extends Model implements HasMedia
      * User string for primary key
      * @var string
      */
-//    protected $keyType = 'string';
+    protected $keyType = 'string';
 
     /**
      * Do not increment id
@@ -73,6 +73,12 @@ class Listing extends Model implements HasMedia
         return 'key';
     }
 
+    public function parent_id()
+    {
+        return $this->area->parent_id = 10;
+    }
+
+
     /**
      * @param $query
      * @return mixed
@@ -101,6 +107,7 @@ class Listing extends Model implements HasMedia
         return $query->where('category_id', $category->id);
     }
 
+
     /**
      * @param $query
      * @param Area $area
@@ -114,6 +121,9 @@ class Listing extends Model implements HasMedia
         ));
     }
 
+    /**
+     * @return string
+     */
     public function excerpt()
     {
         return Str::words($this->body, self::EXCERPT_WORD_COUNT);
@@ -122,7 +132,7 @@ class Listing extends Model implements HasMedia
     /**
      * @return mixed
      */
-    public function live()
+    public function isLive()
     {
         return $this->live;
     }
@@ -134,6 +144,7 @@ class Listing extends Model implements HasMedia
     {
         return $this->category->price;
     }
+
 
     /**
      * @param User $user

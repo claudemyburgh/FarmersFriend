@@ -7,4 +7,8 @@ export const setAreas = ({commit}) => {
     })
 };
 
+export const set_province = ({commit}) => {
+
+}
+
 

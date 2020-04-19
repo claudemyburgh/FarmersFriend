@@ -89,7 +89,7 @@ class FrontendRoutes
                 $this->authenticatedListings();
             });
 
-            $this->get('/{listing}', 'Listing\ListingController@show')->name('listings.show');
+            $this->get('/listing/{listing}', 'Listing\ListingController@show')->name('listings.show');
         };
     }
 

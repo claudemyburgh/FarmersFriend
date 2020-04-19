@@ -37,7 +37,7 @@ class ListingController extends Controller
     public function show(Request $request, Area $area, Listing $listing)
     {
 
-        if (!$listing->live()) {
+        if (!$listing->isLive()) {
             abort(404);
         }
 
@@ -46,6 +46,8 @@ class ListingController extends Controller
         if ($request->user()) {
             dispatch(new UserViewedListing($request->user(), $listing));
         }
+
+
 
         return view('listings.show', compact('listing'));
     }
@@ -86,8 +88,7 @@ class ListingController extends Controller
     {
         $this->authorize('edit', $listing);
 
-        $listing->load('media');
-
+       $listing->load('media', 'area', 'category');
 
         return view('listings.edit', compact('listing'))->withSuccess('Listing successfully created.');
     }
@@ -106,7 +107,7 @@ class ListingController extends Controller
         $listing->title = $request->title;
         $listing->body = $request->body;
 
-        if (!$listing->live()) {
+        if (!$listing->isLive()) {
             $listing->category_id = $request->category_id;
         }
 

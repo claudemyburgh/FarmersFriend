@@ -11,7 +11,9 @@ class CategoriesController extends Controller
 {
     public function index()
     {
-        $categories = Category::get()->toTree();
+        $categories = cache()->remember('api.categories', 60*60*24 , function() {
+            return Category::get()->toTree();
+        });
 
         return new CategoriesCollection($categories);
     }

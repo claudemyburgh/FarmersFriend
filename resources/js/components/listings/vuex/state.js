@@ -1,6 +1,8 @@
 
 export default {
-    listing: {},
+    listing: {
+        province_id: ''
+    },
     listings: [],
     errors: [],
     processing: false

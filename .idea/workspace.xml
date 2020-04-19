@@ -2,57 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/NotifyPublished.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/vuex/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/vuex/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/vuex/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/vuex/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/vuex/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/listings/EditListing.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/listings/FormBase.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Area.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Area.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Api/Categories/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Categories/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/AreasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/AreasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingFavouriteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingFavouriteController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingPaymentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Listing.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Listing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Observers/ListingObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Observers/ListingObserver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/RouteMethods/FrontendRoutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/RouteMethods/FrontendRoutes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/dropzone/DropZone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/dropzone/DropZone.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/notify/NotifyAlert.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/notify/NotifyAlert.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/notify/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/notify/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/textarea/ResizeTextarea.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/textarea/ResizeTextarea.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/CreateListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/CreateListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingsList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/components/area/AreaDropdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/components/area/AreaDropdown.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/components/area/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/components/area/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/components/categories/CategoriesDropdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/components/categories/CategoriesDropdown.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/vuex/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/vuex/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/vuex/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/vuex/state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/vuex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/vuex/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_dropzone.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_dropzone.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_globals.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_globals.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_listing.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_listing.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_nav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_nav.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/style.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/areas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/areas.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/partials/_base_listing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/partials/_base_listing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/partials/forms/_categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/partials/forms/_categories.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/payment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/payment/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/components/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/footer.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +234,7 @@
       <workItem from="1587028308653" duration="5642000" />
       <workItem from="1587168957676" duration="31264000" />
       <workItem from="1587239994431" duration="33936000" />
-      <workItem from="1587301907566" duration="23353000" />
+      <workItem from="1587301907566" duration="24440000" />
     </task>
     <servers />
   </component>
@@ -317,9 +273,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587196546027" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1587335966559">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1587338351184">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587335966559" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587338351184" />
   </component>
 </project>

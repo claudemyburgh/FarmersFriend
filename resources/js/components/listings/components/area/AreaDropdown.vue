@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-            <div class="form__group md-col-6" :class="errors.area_id ? 'has__danger' : ''">
+            <div v-if="provinces" class="form__group md-col-6" :class="errors.area_id ? 'has__danger' : ''">
                 <template v-for="provs in provinces">
                     <label for="city" class="form__label font--bold">City</label>
                     <div class="form__wrap">
@@ -28,17 +28,17 @@
                     </div>
                 </template>
             </div>
-<!--            <div v-else  class="form__group md-col-6" :class="errors.area_id ? 'has__danger' : ''">-->
-<!--                <label class="form__label font&#45;&#45;bold">City</label>-->
-<!--                <div class="form__wrap">-->
-<!--                    <select disabled class="form__item font&#45;&#45;bold" >-->
-<!--                        <option value="">Select City, Town</option>-->
-<!--                    </select>-->
-<!--                </div>-->
-<!--                <div class="form__helper" v-if="errors.area_id">-->
-<!--                    {{ errors.area_id[0]}}-->
-<!--                </div>-->
-<!--            </div>-->
+            <div v-else  class="form__group md-col-6" :class="errors.area_id ? 'has__danger' : ''">
+                <label class="form__label font--bold">City</label>
+                <div class="form__wrap">
+                    <select disabled class="form__item font--bold" >
+                        <option value="">Select City, Town</option>
+                    </select>
+                </div>
+                <div class="form__helper" v-if="errors.area_id">
+                    {{ errors.area_id[0]}}
+                </div>
+            </div>
         </template>
         <div v-else class="flex justify--center flex--align-center">
             <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>

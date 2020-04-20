@@ -21,4 +21,6 @@ class ListingsCollection extends ResourceCollection
             'data' => $this->collection
         ];
     }
+
+
 }

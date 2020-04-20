@@ -37,6 +37,16 @@ import Masonry from 'masonry-layout'
     }
 
 
+    // function success(pos) {
+    //     console.log(pos)
+    // }
+    //
+    // function errorCallback(pos) {
+    //     console.log(pos)
+    // }
+    //
+    // window.navigator.geolocation.getCurrentPosition(success, errorCallback)
+
 
 })(jQuery, window, document);
 

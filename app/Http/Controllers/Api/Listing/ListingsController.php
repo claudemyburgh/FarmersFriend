@@ -39,6 +39,7 @@ class ListingsController extends Controller
     {
         $listing = $listing::create(array_merge($request->only(['title', 'body', 'category_id', 'area_id', 'url', 'price']),
             [
+                'area_parent_id' => $request->province_id,
                 'user_id' => $request->user()->id,
                 'key' => (string) Str::uuid()
             ]
@@ -81,7 +82,10 @@ class ListingsController extends Controller
 
         $listing->area_id = $request->area_id;
 
-        $listing = $listing->update($request->all());
+        $listing = $listing->update(array_merge($request->only(['title', 'body', 'category_id', 'area_id', 'url', 'price']), [
+            'area_parent_id' => $request->province_id,
+
+        ]));
 
         if ($request->has('payment')) {
             return redirect()->route('listings.payment.show', [$area, $listing]);

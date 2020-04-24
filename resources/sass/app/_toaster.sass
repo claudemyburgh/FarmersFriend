@@ -1,0 +1,30 @@
+
+
+.toaster
+    +radius
+    background: $success-color
+    padding: $the__global__padding
+    color: $mute-color
+    min-height: 60px
+    @extend .shadow--7
+    pointer-events: all
+    z-index: 10000
+
+    &__footer
+        position: fixed
+        bottom: $the__global__padding
+        left: 0
+        right: 0
+        min-height: 100px
+        pointer-events: none
+
+    &__close
+        position: absolute
+        right: $the__global__padding
+        top: $the__global__padding
+        color: #fff
+        width: 30px
+        height: 30px
+        line-height: 30px
+        text-align: center
+        cursor: pointer

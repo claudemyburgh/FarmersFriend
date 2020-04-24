@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-export const setCategories = async ({commit}) => {
+export const set_categories = async ({commit}) => {
 
-    return axios.get(`api/categories`).then((response) => {
+    return axios.get(`api/categories`, { cache: true }).then((response) => {
         commit('UPDATE_CATEGORIES_LIST', response)
     })
 

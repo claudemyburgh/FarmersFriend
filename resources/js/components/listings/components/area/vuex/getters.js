@@ -1,12 +1,12 @@
 
-export const getArea = (state) => {
+export const get_area = (state) => {
     return state.area
 }
 
-export const getAreas = (state) => {
+export const get_areas = (state) => {
     return state.areas
 }
 
-export const loadingStatus = (state) => {
+export const loading_status = (state) => {
     return state.loaded
 }

@@ -5,14 +5,15 @@
 use App\Listing;
 use Carbon\Carbon;
 use Faker\Generator as Faker;
+use Illuminate\Support\Arr;
 
 $factory->define(Listing::class, function (Faker $faker) {
     return [
         'title' => $faker->colorName,
         'body' => $faker->paragraph(rand(2,5)),
-        'live' => Carbon::now(),
+        'live' => Arr::random([Carbon::now(), null]),
         'area_id' => rand(10, 700),
-        'category_id' => rand(10, 20),
+        'category_id' => rand(1, 20),
         'user_id' => 1
     ];
 });

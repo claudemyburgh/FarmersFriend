@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="row flex">
-            <listing-card v-for="listing in listings" :key="listing.id" :listing="listing"></listing-card>
+            <listing-card v-for="listing in listings" :key="listing.id" :listing="listing" :area="area"></listing-card>
 
             <div class="observ"
                  v-if="listings.length" v-observe-visibility="{
@@ -10,7 +10,6 @@
                      //    leading: 'visible',
                      // },
                     throttle: 300}">
-                <!--                <div v-if="!loadingComplete" class="lds-ripple"><div></div><div></div></div>-->
                 <div v-if="!loadingComplete"  class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             </div>
 
@@ -46,7 +45,7 @@
         },
         computed: {
             ...mapGetters({
-                listings: 'listings/getListings'
+                listings: 'listings/get_listings'
             }),
             urlWithPage() {
                 return `api/${this.area.slug}/categories/${this.category.slug}/listings?page=${this.page}`

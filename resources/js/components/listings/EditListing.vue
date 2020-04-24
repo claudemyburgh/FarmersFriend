@@ -7,7 +7,7 @@
             <form method="post">
 
                 <form-base>
-
+<!--                    {{ listing }}-->
                     <div class="row">
                         <div class="form__group md-col-8" :class="errors.url ? 'has__danger' : ''">
                             <label for="url" class="form__label font--bold">URL to website</label>
@@ -24,14 +24,13 @@
                             <label for="price" class="form__label font--bold">Price</label>
                             <div class="form__wrap">
                                 <i class="font--bold">R</i>
-                                <input type="number" v-model="listing.price" id="price" class="form__item" @focus.prevent="errors.price = null" >
+                                <input type="text" v-model="listing.price" id="price" class="form__item" @focus.prevent="errors.price = null" />
                             </div>
                             <div v-if="errors.price" class="form__helper">
                                 {{ errors.price[0] }}
                             </div>
                         </div>
                     </div>
-
 
                 </form-base>
 
@@ -53,6 +52,7 @@
     import DropZone from "../components/dropzone/DropZone";
     import FormBase from "./FormBase";
 
+
     export default {
         name: "EditListing",
         components: {FormBase, DropZone},
@@ -68,10 +68,13 @@
         },
         computed: {
             ...mapGetters({
-                listing: 'listings/getListing',
-                errors: 'listings/getListingErrors',
-                status: 'listings/getProcessingStatus'
-            })
+                listing: 'listings/get_listing',
+                errors: 'listings/get_listing_errors',
+                status: 'listings/get_processing_status'
+            }),
+            price() {
+                return this.listing.price
+            }
         },
         methods: {
             ...mapActions({
@@ -97,6 +100,7 @@
         },
         created() {
             this.setListing()
+
         }
     }
 </script>

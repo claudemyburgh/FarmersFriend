@@ -6,15 +6,17 @@
 <div class="wrapper">
     <div class="row flex justify--center">
         <div class="md-col-6">
-            <blockquote class="blockquote blockquote--info shadow--2">
-                <header class="blockquote__header">Notic</header>
-                <aside class="blockquote__body">
+            <blockquote class="bq bq--info shadow--2">
+                <header class="bq__header">Notic</header>
+                <aside class="bq__body">
                     Please make sure that what <strong><mark>{{ $listing->category->name }}</mark></strong> is the category that you seleceted. The <strong>Category</strong> can not be change when this listing go's live.
                 </aside>
-                <footer class="blockquote__footer bg--info-light flex justify--end">
+                <footer class="bq__footer bg--info-light flex justify--end">
                     <button class="btn btn--info" onclick="window.history.back()">GO BACK</button>
                 </footer>
             </blockquote>
+
+            <modal-component name="before-payment"></modal-component>
 
             <div class="panel shadow--2">
                 <div class="panel__header">Pay for your listing</div>

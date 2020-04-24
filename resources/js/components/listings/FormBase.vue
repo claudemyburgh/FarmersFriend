@@ -40,9 +40,9 @@
         components: {CategoriesDropdown, AreaDropdown},
         computed: {
             ...mapGetters({
-                listing: 'listings/getListing',
-                errors: 'listings/getListingErrors',
-                status: 'listings/getProcessingStatus'
+                listing: 'listings/get_listing',
+                errors: 'listings/get_listing_errors',
+                status: 'listings/get_processing_status'
             })
         }
     }

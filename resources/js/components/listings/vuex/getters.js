@@ -1,17 +1,17 @@
 
 
-export const getListing = (state) => {
+export const get_listing = (state) => {
     return state.listing
 }
 
-export const getListings = (state) => {
+export const get_listings = (state) => {
     return state.listings
 }
 
-export const getListingErrors = (state) => {
+export const get_listing_errors = (state) => {
     return state.errors
 }
 
-export const getProcessingStatus = (state) => {
+export const get_processing_status = (state) => {
     return state.processing
 }

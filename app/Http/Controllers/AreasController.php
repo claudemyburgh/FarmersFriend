@@ -20,8 +20,6 @@ class AreasController extends Controller
             return Area::get()->toTree();
         });
 
-
-
-        return view('areas', compact('areas'));
+         return view('areas', compact('areas'));
     }
 }

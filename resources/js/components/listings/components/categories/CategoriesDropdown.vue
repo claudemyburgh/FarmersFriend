@@ -2,7 +2,7 @@
     <div class="form__group" @click.prevent="errors.category_id = null"  :class="errors.category_id ? 'has__danger' : ''">
         <label for="category_id" class="form__label font--bold">Category</label>
         <div class="form__wrap">
-            <select id="category_id" class="form__item" v-model="listing.category_id">
+            <select :disabled="listing.live" id="category_id" class="form__item" v-model="listing.category_id">
                 <optgroup v-for="category in categories" :label="category.name">
                     <option v-for="sub in category.children" :value="sub.id">{{ sub.name}}</option>
                 </optgroup>
@@ -24,14 +24,14 @@
         name: "CategoriesDropdown",
         computed: {
             ...mapGetters({
-                categories: 'categories/getCategories',
-                listing: 'listings/getListing',
-                errors: 'listings/getListingErrors',
+                categories: 'categories/get_categories',
+                listing: 'listings/get_listing',
+                errors: 'listings/get_listing_errors',
             })
         },
         methods: {
             ...mapActions({
-                setCategories: 'categories/setCategories'
+                setCategories: 'categories/set_categories'
             })
         },
         created() {

@@ -1,6 +1,8 @@
 <?php
 
-Auth::routes(['verify' => true]);
+//Auth::routes(['verify' => true]);
+
+Route::auth(['verify' => true]);
 
 //Route::group(['prefix' => 'api/test/'], function () {
 //

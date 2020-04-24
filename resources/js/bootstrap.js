@@ -14,17 +14,13 @@ const luna =  require('luna-sass/Framework/js/luna.js');
 
 import Masonry from 'masonry-layout'
 
-
 (function($, window, document){
 
     'use strict';
 
     var masonry = document.querySelector('.masonry');
 
-
-
     $(document).Luna();
-
 
     if (masonry) {
         setTimeout(() => {
@@ -35,18 +31,6 @@ import Masonry from 'masonry-layout'
 
         }, 500)
     }
-
-
-    // function success(pos) {
-    //     console.log(pos)
-    // }
-    //
-    // function errorCallback(pos) {
-    //     console.log(pos)
-    // }
-    //
-    // window.navigator.geolocation.getCurrentPosition(success, errorCallback)
-
 
 })(jQuery, window, document);
 

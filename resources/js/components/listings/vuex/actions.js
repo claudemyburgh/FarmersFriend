@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-export const create_listing = ({commit, dispatch}, {area, listing}) => {
 
+export const create_listing = ({commit, dispatch}, {area, listing}) => {
     commit('CLEAR_ERROR')
     commit('PROCESSING_STATUS', true)
     commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
@@ -31,12 +31,14 @@ export const create_listing = ({commit, dispatch}, {area, listing}) => {
     })
 }
 
-export const update_listing = ({commit}, data) => {
+
+export const update_listing = ({ commit }, data) => {
 
     commit('CLEAR_ERROR')
     commit('PROCESSING_STATUS', true)
     commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
     return axios.patch(`api/${data.area.slug}/listings/${data.listing.key}`, data.listing).then( (response ) => {
+
         commit('notify/SET_NOTIFICATION', {
             name: 'success',
             class: 'notify--success',
@@ -47,7 +49,6 @@ export const update_listing = ({commit}, data) => {
         setTimeout( () => {
             commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
         }, 3500)
-
 
     }).catch( (error) => {
         commit('notify/SET_NOTIFICATION', {
@@ -61,6 +62,7 @@ export const update_listing = ({commit}, data) => {
         setTimeout( () => {
             commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
         }, 3500)
+
     })
 }
 

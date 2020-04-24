@@ -5,10 +5,10 @@
             <form @submit.prevent="submitForm" method="post" novalidate>
                 <form-base></form-base>
                 <div class="form__group" v-if="!status" >
-                    <button type="submit" class="btn btn--block btn--primary">Save</button>
+                    <button type="submit" class="btn btn--primary">Save</button>
                 </div>
                 <div class="form__group" v-else>
-                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                 </div>
             </form>
         </div>
@@ -31,14 +31,14 @@
         },
         computed: {
             ...mapGetters({
-                listing: 'listings/getListing',
-                errors: 'listings/getListingErrors',
-                status: 'listings/getProcessingStatus'
+                listing: 'listings/get_listing',
+                errors: 'listings/get_listing_errors',
+                status: 'listings/get_processing_status'
             })
         },
         methods: {
             ...mapActions({
-                getListing: 'listings/getListing',
+                get_listing: 'listings/get_listing',
                 create_listing: 'listings/create_listing',
             }),
             submitForm() {

@@ -11,8 +11,8 @@
       <div v-for="listing in filteredListings" class="flex shadow--2 bg--white p--xs">
           <img v-if="typeof (listing.images[0]) !== 'undefined' "  height="60" :src="listing.images[0].type.icon" :alt="listing.title">
           <div>
-              <header><strong>{{ listing.title }}</strong></header>
-              <button class="btn btn--primary btn--sm"><i class="lunacon lunacon-eye"></i> VIEW</button>
+              <header><strong>{{ listing.title }}</strong> {{ `/${area.slug}/listing/${listing.key}/edit`}}</header>
+              <a href="`/${area.slug}/listing/${listing.key}/edit`">Edit</a>
           </div>
       </div>
 
@@ -30,6 +30,12 @@
                 search: ''
             }
         },
+        props: {
+            area: {
+                required: true,
+                type: Object
+            }
+        },
         computed: {
             filteredListings () {
                 let count = 0
@@ -40,7 +46,6 @@
         },
         methods: {
             getListing () {
-
                 return axios.get(`/api/listings/published`).then( (response) => {
                     this.listings =  response.data.data
                 })

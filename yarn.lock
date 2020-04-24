@@ -1940,7 +1940,7 @@ cacache@^10.0.4:
     unique-filename "^1.1.0"
     y18n "^4.0.0"
 
-cacache@^12.0.2:
+cacache@^12.0.2, cacache@^12.0.3:
   version "12.0.4"
   resolved "https://registry.yarnpkg.com/cacache/-/cacache-12.0.4.tgz#668bcbd105aeb5f1d92fe25570ec9525c8faa40c"
   integrity sha512-a0tMB40oefvuInr4Cwb3GerbL9xTj1D5yg0T5xrjGCGyfvbxseIXX7BAO/u/hIXdafzOI5JC3wDwHyf24buOAQ==
@@ -2493,7 +2493,7 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-copy-webpack-plugin@^4.6.0, copy-webpack-plugin@^4.x:
+copy-webpack-plugin@^4.x:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-4.6.0.tgz#e7f40dd8a68477d405dd1b7a854aae324b158bae"
   integrity sha512-Y+SQCF+0NoWQryez2zXn5J5knmr9z/9qSQt7fbL78u83rxmigOy8X5+BFn8CFSuX+nKT8gpYwJX68ekqtQt6ZA==
@@ -2506,6 +2506,24 @@ copy-webpack-plugin@^4.6.0, copy-webpack-plugin@^4.x:
     minimatch "^3.0.4"
     p-limit "^1.0.0"
     serialize-javascript "^1.4.0"
+
+copy-webpack-plugin@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/copy-webpack-plugin/-/copy-webpack-plugin-5.1.1.tgz#5481a03dea1123d88a988c6ff8b78247214f0b88"
+  integrity sha512-P15M5ZC8dyCjQHWwd4Ia/dm0SgVvZJMYeykVIVYXbGyqO4dWB5oyPHp9i7wjwo5LhtlhKbiBCdS2NvM07Wlybg==
+  dependencies:
+    cacache "^12.0.3"
+    find-cache-dir "^2.1.0"
+    glob-parent "^3.1.0"
+    globby "^7.1.1"
+    is-glob "^4.0.1"
+    loader-utils "^1.2.3"
+    minimatch "^3.0.4"
+    normalize-path "^3.0.0"
+    p-limit "^2.2.1"
+    schema-utils "^1.0.0"
+    serialize-javascript "^2.1.2"
+    webpack-log "^2.0.0"
 
 core-js-compat@^3.6.2:
   version "3.6.4"
@@ -4834,7 +4852,7 @@ imagemin-svgo@^7.0.0:
     is-svg "^4.2.1"
     svgo "^1.3.2"
 
-imagemin-webpack-plugin@^2.4.0, imagemin-webpack-plugin@^2.x:
+imagemin-webpack-plugin@^2.4.2, imagemin-webpack-plugin@^2.x:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/imagemin-webpack-plugin/-/imagemin-webpack-plugin-2.4.2.tgz#2e6b2119071c6fa30f19fb0b5b1869d9010f3465"
   integrity sha512-/K6ueN7avxjesAwGMpwuNYAHSHQcDrJYcpRTI74wBLg2nUBp+i9MXjXm04/94M0hDqy4kYdxeC+XzuBfOiIrmA==
@@ -5593,51 +5611,12 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-laravel-mix@^4.0.14:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-4.1.4.tgz#3260b89a2a85ff5e21c7f9db860a5086cbf75dca"
-  integrity sha512-fpFNpPyYAdeZ5mozlKbHpw+tCiRFUCCdSsK/D2+yYhlyIEbzPcAe4ar5cjeT33TnDNiKXSS42cB58yUSW5Y5tg==
-  dependencies:
-    "@babel/core" "^7.2.0"
-    "@babel/plugin-proposal-object-rest-spread" "^7.2.0"
-    "@babel/plugin-syntax-dynamic-import" "^7.2.0"
-    "@babel/plugin-transform-runtime" "^7.2.0"
-    "@babel/preset-env" "^7.2.0"
-    "@babel/runtime" "^7.2.0"
-    autoprefixer "^9.4.2"
-    babel-loader "^8.0.4"
-    babel-merge "^2.0.1"
-    chokidar "^2.0.3"
-    clean-css "^4.1.3"
-    collect.js "^4.12.8"
-    concatenate "0.0.2"
-    css-loader "^1.0.1"
-    dotenv "^6.2.0"
-    dotenv-expand "^4.2.0"
-    extract-text-webpack-plugin v4.0.0-beta.0
-    file-loader "^2.0.0"
-    friendly-errors-webpack-plugin "^1.6.1"
-    fs-extra "^7.0.1"
-    glob "^7.1.2"
-    html-loader "^0.5.5"
-    imagemin "^6.0.0"
-    img-loader "^3.0.0"
-    lodash "^4.17.15"
-    md5 "^2.2.1"
-    optimize-css-assets-webpack-plugin "^5.0.1"
-    postcss-loader "^3.0.0"
-    style-loader "^0.23.1"
-    terser "^3.11.0"
-    terser-webpack-plugin "^1.2.2"
-    vue-loader "^15.4.2"
-    webpack "^4.27.1"
-    webpack-cli "^3.1.2"
-    webpack-dev-server "^3.1.14"
-    webpack-merge "^4.1.0"
-    webpack-notifier "^1.5.1"
-    yargs "^12.0.5"
+laravel-mix-postcss-config@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/laravel-mix-postcss-config/-/laravel-mix-postcss-config-1.0.4.tgz#0a20f46a2854df43e2aae4d814c2cbec2e75699e"
+  integrity sha512-9OVbuuxA5kxaOZdeLi6wsMzA6jrxAOOPgFFLNz9/R/E2htokCdZD1GTJZNKTCgPJ3/PEU0G0AtBqCXJv9OxfIQ==
 
-laravel-mix@^5.0.1:
+laravel-mix@^5.0.1, laravel-mix@^5.0.4:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-5.0.4.tgz#606a28781b936d66cf96a0d631909cea22ebf0a8"
   integrity sha512-/fkcMdlxhGDBcH+kFDqKONlAfhJinMAWd+fjQ+VLii4UzIeXUF5Q8FbS4+ZrZs9JO3Y1E4KoNq3hMw0t/soahA==
@@ -6023,16 +6002,21 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-luna-sass@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/luna-sass/-/luna-sass-2.1.0.tgz#bc5c787585e0468f4f603c7559a5787de4e4c6b9"
-  integrity sha512-wb3fjGkhSZijNK/6R4YWCNzgDIkffXGvdweXWMvR+HetCnvlNZZvFTSi51OzkivcyCvZvTuxuR/Y3ImvaBOTYQ==
+luna-sass@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/luna-sass/-/luna-sass-2.2.2.tgz#5d0f49a74b842d067e5f70d26ed523a0ee740b24"
+  integrity sha512-1gyMgnKWJvsaOJGhvb5mlXkzWinl/G5M7KQFUZXs0VXpV2+JkCGsSjcvUj79XwtX9fog2JABRaJvRH4zG80aXA==
   dependencies:
-    copy-webpack-plugin "^4.6.0"
+    copy-webpack-plugin "^5.1.1"
     imagemin-mozjpeg "^8.0.0"
-    imagemin-webpack-plugin "^2.4.0"
-    laravel-mix "^4.0.14"
+    imagemin-webpack-plugin "^2.4.2"
+    laravel-mix "^5.0.4"
+    laravel-mix-postcss-config "^1.0.4"
     path "^0.12.7"
+    vue "^2.6.11"
+    vue-progressbar "^0.7.5"
+    vue-router "^3.1.6"
+    vuex "^3.2.0"
 
 make-dir@^1.0.0, make-dir@^1.2.0:
   version "1.3.0"
@@ -6877,6 +6861,13 @@ p-limit@^2.0.0, p-limit@^2.2.0, p-limit@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.2.tgz#61279b67721f5287aa1c13a9a7fbbc48c9291b1e"
   integrity sha512-WGR+xHecKTr7EbUEhyLSh5Dube9JtdiG78ufaeLxTgpudf/20KqyMioIUZJAezlTIi6evxuoUs9YXc11cU+yzQ==
+  dependencies:
+    p-try "^2.0.0"
+
+p-limit@^2.2.1:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
+  integrity sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
   dependencies:
     p-try "^2.0.0"
 
@@ -8912,7 +8903,7 @@ tempfile@^2.0.0:
     temp-dir "^1.0.0"
     uuid "^3.0.1"
 
-terser-webpack-plugin@^1.2.2, terser-webpack-plugin@^1.4.3:
+terser-webpack-plugin@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.4.3.tgz#5ecaf2dbdc5fb99745fd06791f46fc9ddb1c9a7c"
   integrity sha512-QMxecFz/gHQwteWwSo5nTc6UaICqN1bMedC5sMtUc7y3Ha3Q8y6ZO0iCR8pq4RJC8Hjf0FEPEHZqcMB/+DFCrA==
@@ -9475,6 +9466,16 @@ vue-observe-visibility@^0.4.6:
   resolved "https://registry.yarnpkg.com/vue-observe-visibility/-/vue-observe-visibility-0.4.6.tgz#878cb8ebcf3078e40807af29774e97105ebd519e"
   integrity sha512-xo0CEVdkjSjhJoDdLSvoZoQrw/H2BlzB5jrCBKGZNXN2zdZgMuZ9BKrxXDjNP2AxlcCoKc8OahI3F3r3JGLv2Q==
 
+vue-progressbar@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/vue-progressbar/-/vue-progressbar-0.7.5.tgz#414730892252b1e45582d4979dec93038e007f79"
+  integrity sha512-VeNG/inMsFbvdCTS7lJ1gjDAKSUZdqkhW9gS1tb0we1rqFKxR+BCEiVUgw5C84vODKb14M2GWHTw0WVdpoVg6g==
+
+vue-router@^3.1.6:
+  version "3.1.6"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
+  integrity sha512-GYhn2ynaZlysZMkFE5oCHRUTqE8BWs/a9YbKpNLi0i7xD6KG1EzDqpHQmv1F5gXjr8kL5iIVS8EOtRaVUEXTqA==
+
 vue-style-loader@^4.1.0:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"
@@ -9503,7 +9504,7 @@ vue2-dropzone@^3.6.0:
   dependencies:
     dropzone "^5.5.1"
 
-vue@^2.5.17:
+vue@^2.5.17, vue@^2.6.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
@@ -9512,6 +9513,11 @@ vuex@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.1.3.tgz#f2ad73e3fb73691698b38c93f66e58e267947180"
   integrity sha512-k8vZqNMSNMgKelVZAPYw5MNb2xWSmVgCKtYKAptvm9YtZiOXnRXFWu//Y9zQNORTrm3dNj1n/WaZZI26tIX6Mw==
+
+vuex@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vuex/-/vuex-3.2.0.tgz#86da7f26c3e131ff374870580109145a640ee5a8"
+  integrity sha512-qBZGJJ1gUNWZbfZlH7ylIPwENg3R0Ckpq+qPexF065kOMOt1Ixt8WDJmtssVv7OhepWD0+Qie7pOS8f0oQy1JA==
 
 ware@^1.2.0:
   version "1.3.0"
@@ -9635,7 +9641,7 @@ webpack-sources@^1.1.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.27.1, webpack@^4.36.1:
+webpack@^4.36.1:
   version "4.42.1"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.42.1.tgz#ae707baf091f5ca3ef9c38b884287cfe8f1983ef"
   integrity sha512-SGfYMigqEfdGchGhFFJ9KyRpQKnipvEvjc1TwrXEPCM6H5Wywu10ka8o3KGrMzSMxMQKt8aCHUFh5DaQ9UmyRg==

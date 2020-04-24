@@ -14,7 +14,7 @@ class ListingPaymentController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth']);
+        $this->middleware(['auth:sanctum']);
     }
 
     /**
@@ -87,18 +87,19 @@ class ListingPaymentController extends Controller
      */
     public function update(Request $request, Area $area, Listing $listing)
     {
-//        $this->authorize('touch', $listing);
+        $this->authorize('touch', $listing);
 
-//        if ($listing->cost() > 0) {
-//            return back();
-//        }
+        if ($listing->cost() > 0) {
+            return back();
+        }
 
         $listing->live = Carbon::now();
         $listing->created_at = Carbon::now();
+        $listing->expire_at =  Carbon::now()->addWeek(2);
         $listing->save();
 
         return redirect()
-            ->route('listings.show', [$area, $listing])
+            ->route('listings.edit', [$area, $listing])
             ->withSuccess('Congratulations! Your listing is live.');
     }
 }

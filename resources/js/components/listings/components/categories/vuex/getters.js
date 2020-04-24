@@ -1,8 +1,8 @@
 
-export const getCategory = (state) => {
+export const get_category = (state) => {
     return state.category
 }
 
-export const getCategories = (state) => {
+export const get_categories = (state) => {
     return state.categories
 }

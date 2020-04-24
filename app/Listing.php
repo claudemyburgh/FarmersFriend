@@ -53,15 +53,23 @@ class Listing extends Model implements HasMedia
         'body',
         'category_id',
         'area_id',
+        'area_parent_id',
         'user_id',
         'url',
-        'price'
+        'price',
+        'created_at',
+        'expire_at'
     ];
 
     protected $casts = [
         'live',
         'created_at',
-        'updated_at'
+        'updated_at',
+        'expire_at'
+    ];
+
+    protected $appends = [
+        'province_id'
     ];
 
     /**
@@ -73,9 +81,13 @@ class Listing extends Model implements HasMedia
         return 'key';
     }
 
-    public function parent_id()
+
+    /**
+     * @return int
+     */
+    public function getProvinceIdAttribute()
     {
-        return $this->area->parent_id = 10;
+        return $this->area->parent_id;
     }
 
 
@@ -240,6 +252,7 @@ class Listing extends Model implements HasMedia
             ->registerMediaConversions(function (Media $media) {
                 foreach (config('farmersfriend.img') as $key => $value) {
                     $this->addMediaConversion($key)
+//                        ->fit(Manipulations::FIT_CROP, (int) $value['width'], (int) $value['height'])
                         ->crop(Manipulations::CROP_CENTER, (int) $value['width'], (int) $value['height'])
                         ->sharpen(5)
                         ->optimize()

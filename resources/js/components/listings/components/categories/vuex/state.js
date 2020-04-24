@@ -1,8 +1,4 @@
 export default {
-    category: {
-
-    },
-    categories: {
-        test: 'test data'
-    }
+    category: {},
+    categories: {}
 }

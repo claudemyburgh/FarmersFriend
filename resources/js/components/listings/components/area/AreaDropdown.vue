@@ -5,9 +5,9 @@
                 <label for="province" class="form__label font--bold">Province</label>
                 <div class="form__wrap">
                     <select @change.prevent="filteredData" id="province" class="form__item font--bold" v-model="listing.province_id" placeholder="Select Your Province">
-                    <optgroup v-for="country in areas" :label="country.name">
-                        <option :value="province.id" v-for="province in country.children">{{ province.name }}</option>
-                    </optgroup>
+                        <optgroup v-for="country in areas" :label="country.name">
+                            <option :value="province.id" v-for="province in country.children">{{ province.name }}</option>
+                        </optgroup>
                     </select>
                 </div>
                 <div class="form__helper" v-if="errors.province_id">
@@ -51,29 +51,34 @@
     import { mapGetters, mapActions } from 'vuex'
     export default {
         name: "AreaDropdown",
+        props: {
+            listingObject: {
+                required: false,
+                type: Object
+            }
+        },
         data() {
             return {
-                form: {},
-                prov: null,
+
                 provinces: null
             }
         },
         computed: {
             ...mapGetters({
-                areas: 'area/getAreas',
-                listing: 'listings/getListing',
-                errors: 'listings/getListingErrors',
-                loaded: 'area/loadingStatus'
+                areas: 'area/get_areas',
+                listing: 'listings/get_listing',
+                errors: 'listings/get_listing_errors',
+                loaded: 'area/loading_status'
             })
         },
         methods: {
             ...mapActions({
-                setArea: 'area/setAreas',
+                setArea: 'area/set_areas',
             }),
             filteredData() {
                 this.provinces = this.areas[0].children.filter((area) => {
                     return Object.keys(area).some((key) => {
-                        return String(area[key]) == this.listing.province_id
+                        return parseInt(area[key]) === this.listing.province_id
                     })
                 })
             }
@@ -83,4 +88,3 @@
         }
     }
 </script>
-

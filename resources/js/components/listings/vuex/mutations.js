@@ -11,7 +11,7 @@ export const CLEAR_LISTING = (state) => {
     state.listing = {}
 }
 
-export  const PROCESSING_STATUS = (state, data) => {
+export const PROCESSING_STATUS = (state, data) => {
     state.processing = data
 }
 

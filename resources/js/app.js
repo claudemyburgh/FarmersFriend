@@ -1,15 +1,25 @@
 import Vue from 'vue'
+// import VueProgressBar from 'vue-progressbar'
 import VueObserveVisibility from 'vue-observe-visibility'
-
+import {cacheAdapterEnhancer, throttleAdapterEnhancer} from "axios-extensions";
+import { options } from './defaults'
+import store from './vuex'
+import Mix from './Mixins/moment'
 
 /**
  * Axios
  */
 window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-//window.axios.defaults.baseURL = "http://farmersfriend.build";
+window.axios.adapter = throttleAdapterEnhancer(cacheAdapterEnhancer(axios.defaults.adapter,
+    { enabledByDefault: false, cacheFlag: 'useCache'}))
+// window.axios.defaults.baseURL = "http://farmersfriend.build";
 window.axios.defaults.baseURL = "http://farmersfriend.co.za";
 axios.defaults.withCredentials = true;
+
+/**
+ * Plugins
+ */
 
 
 /**
@@ -23,11 +33,14 @@ Dropzone.autoDiscover = false;
  * Vue Use Plugins
  */
 Vue.use(VueObserveVisibility)
+// Vue.use(VueProgressBar, options)
+Vue.mixin(Mix)
+
 
 /**
  * Register vue components
  */
-const files = require.context('./', true, /\.vue$/i)
+const files = require.context('./components/', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 /**
@@ -46,7 +59,8 @@ if (token) {
 
  */
 
-import store from './vuex'
+
+
 
 
 /**
@@ -55,7 +69,7 @@ import store from './vuex'
  */
 const app = new Vue({
     el: '#app',
-    store: store
+    store: store,
 });
 
 require('./bootstrap');

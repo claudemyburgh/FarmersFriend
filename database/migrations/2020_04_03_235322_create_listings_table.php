@@ -20,8 +20,10 @@ class CreateListingsTable extends Migration
             $table->text('body');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('area_id');
+            $table->integer('area_parent_id')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->timestamp('live')->nullable();
+            $table->timestamp('expire_at')->nullable();
             $table->string('url')->nullable();
             $table->integer('price')->nullable();
             $table->text('meta')->nullable();

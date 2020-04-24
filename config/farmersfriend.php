@@ -7,16 +7,16 @@ return [
     ],
     'img' => [
         'icon' => [
-            'width' => 100,
-            'height' => 100
+            'width' => 140,
+            'height' => 140
         ],
         'thumb' => [
-            'width' => 280,
-            'height' => 200
+            'width' => 300,
+            'height' => 225
         ],
         'thumb_big' => [
             'width' => 400,
-            'height' => 260
+            'height' => 300
         ],
         'card' => [
             'width' => 800,

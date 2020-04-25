@@ -1,4 +1,11 @@
 /*!
+ * Chart.js v2.9.3
+ * https://www.chartjs.org
+ * (c) 2019 Chart.js Contributors
+ * Released under the MIT License
+ */
+
+/*!
  * Masonry v4.2.2
  * Cascading grid layout library
  * https://masonry.desandro.com

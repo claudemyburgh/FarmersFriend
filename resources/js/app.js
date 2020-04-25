@@ -13,8 +13,8 @@ window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.adapter = throttleAdapterEnhancer(cacheAdapterEnhancer(axios.defaults.adapter,
     { enabledByDefault: false, cacheFlag: 'useCache'}))
-window.axios.defaults.baseURL = "http://farmersfriend.build";
-// window.axios.defaults.baseURL = "http://farmersfriend.co.za";
+// window.axios.defaults.baseURL = "http://farmersfriend.build";
+window.axios.defaults.baseURL = "http://farmersfriend.co.za";
 axios.defaults.withCredentials = true;
 
 /**

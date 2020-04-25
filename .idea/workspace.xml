@@ -2,57 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Dashboard/ChartsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/DashboardController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/View/Components/Sponsors.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsers/crystalbars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsers/dbc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsers/sponser_Busimix.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsers/sponser_coenie-marais.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsers/sponser_crystal-bars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsers/sponser_designbycode.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsers/sponser_unique-tillers.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/crystalbars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/dbc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponser_busimix.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponser_coenie-marais.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponser_crystal-bars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponser_designbycode.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponser_unique-tillers.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponsor_busimix.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponsor_coenie-marais.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponsor_crystal-bars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponsor_designbycode.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../public/img/sponsors/sponsor_unique-tillers.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/img/sponsors/crystalbars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/img/sponsors/dbc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/img/sponsors/sponsor_busimix.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/img/sponsors/sponsor_coenie-marais.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/img/sponsors/sponsor_crystal-bars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/img/sponsors/sponsor_designbycode.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/img/sponsors/sponsor_unique-tillers.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/charts/BarChart.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/charts/LineChart.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/sass/app/_sponsors.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/views/components/sponsors.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/views/dashboard/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Listing.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Listing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/RouteMethods/FrontendRoutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/RouteMethods/FrontendRoutes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/factories/ListingsFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/factories/ListingsFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_footer.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_nav.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_nav.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/components/nav-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/nav-top.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/frontpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/frontpage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -283,7 +233,7 @@
       <workItem from="1587341207051" duration="18096000" />
       <workItem from="1587483782141" duration="39210000" />
       <workItem from="1587714227997" duration="40507000" />
-      <workItem from="1587774455897" duration="14750000" />
+      <workItem from="1587774455897" duration="14977000" />
     </task>
     <servers />
   </component>
@@ -334,9 +284,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587514607407" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1587788192621">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1587789495760">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587788192621" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587789495760" />
   </component>
 </project>

@@ -1,0 +1,26 @@
+
+
+.sponsors
+    background: darken($global-background-color, 4%)
+
+
+    &__title
+        position: relative
+        color: darken($global-background-color, 15%)
+        width: 100%
+
+
+        &::before,
+        &::after
+            content: ''
+            margin: 15px
+            flex: 1
+            height: 1px
+            background: darken($global-background-color, 15%)
+            display: block
+
+    &__hover
+        transition: all 0.25s ease
+        &:hover
+            transform: scale(1.2)
+            //filter: drop-shadow(rgba($secondary-color, 0.45) 0 5px 10px)

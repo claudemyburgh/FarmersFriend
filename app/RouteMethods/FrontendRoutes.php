@@ -16,6 +16,9 @@ class FrontendRoutes
         return function() {
             $this->get('/', 'WelcomeController@index');
             $this->get('areas', 'AreasController@index')->name('areas');
+
+            $this->dashboard();
+
             $this->get('/user/area/{area}', 'User\AreaController@store')->name('user.area.store');
             $this->get('/{area}', 'WelcomeController@index')->name('welcome');
 
@@ -96,7 +99,7 @@ class FrontendRoutes
     protected function authenticatedListings ()
     {
         return function () {
-            $this->group(['middleware' => ['auth', 'verified']], function () {
+            $this->group(['middleware' => ['auth:sanctum', 'verified']], function () {
 
                 $this->get('/create', 'ListingController@create')->name('listings.create');
                 $this->post('/', 'ListingController@store')->name('listings.store');
@@ -106,6 +109,17 @@ class FrontendRoutes
                 $this->delete('/{listing}', 'ListingController@destroy')->name('listings.destroy');
 
                 $this->post('/{listing}/upload', 'ListingController@upload')->name('listings.upload');
+            });
+        };
+    }
+
+    protected function dashboard()
+    {
+        return function () {
+            $this->group(['middleware' => ['auth:sanctum', 'verified'], 'namespace' => 'Dashboard', 'as' => 'dashboard.'], function () {
+                $this->get('dashboard', 'DashboardController@index')->name('index');
+
+
             });
         };
     }

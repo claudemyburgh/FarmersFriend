@@ -14007,8 +14007,7 @@ button:disabled {
   box-shadow: inset rgba(0, 0, 0, 0.35) 0 0 6px;
 }
 
-.shadow--7,
-.toaster {
+.shadow--7 {
   box-shadow: rgba(0, 0, 0, 0.3) 0 7px 21px;
 }
 
@@ -18852,6 +18851,13 @@ body:not(.welcome) {
   }
 }
 
+.nav__devider {
+  height: 1px;
+  width: 100%;
+  border: dashed 1px silver;
+  display: block;
+}
+
 .algolia-autocomplete {
   width: 100%;
 }
@@ -19044,7 +19050,6 @@ body:not(.welcome) {
   color: #fff;
   padding-top: 90px;
   padding-bottom: 45px;
-  margin-top: 45px;
 }
 
 .footer h3 {
@@ -19417,34 +19422,31 @@ body:not(.welcome) {
   }
 }
 
-.toaster {
-  border-radius: 5px;
-  background: #16ca90;
-  padding: 15px;
-  color: #f3f3f3;
-  min-height: 60px;
-  pointer-events: all;
-  z-index: 10000;
+.sponsors {
+  background: #e9e9e9;
 }
 
-.toaster__footer {
-  position: fixed;
-  bottom: 15px;
-  left: 0;
-  right: 0;
-  min-height: 100px;
-  pointer-events: none;
+.sponsors__title {
+  position: relative;
+  color: #cdcdcd;
+  width: 100%;
 }
 
-.toaster__close {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  color: #fff;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
+.sponsors__title::before,
+.sponsors__title::after {
+  content: "";
+  margin: 15px;
+  flex: 1;
+  height: 1px;
+  background: #cdcdcd;
+  display: block;
+}
+
+.sponsors__hover {
+  transition: all 0.25s ease;
+}
+
+.sponsors__hover:hover {
+  transform: scale(1.2);
 }
 

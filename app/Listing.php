@@ -87,7 +87,7 @@ class Listing extends Model implements HasMedia
      */
     public function getProvinceIdAttribute()
     {
-        return $this->area->parent_id;
+        return optional($this->area)->parent_id;
     }
 
 

@@ -28,3 +28,8 @@ Route::group(['prefix' => '{area}/categories/{category}', 'as' => 'api.'], funct
 
 });
 
+Route::group(['middleware' => ['auth:sanctum', 'verified'], 'as' => 'api.dashboard.', 'namespace' => 'Dashboard', 'prefix' => 'dashboard'], function () {
+
+    Route::get('listings-chart', 'ChartsController@listings')->name('chart.listing');
+
+});

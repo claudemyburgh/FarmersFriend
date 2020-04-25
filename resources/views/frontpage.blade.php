@@ -46,8 +46,9 @@
                     <div class="sm-col-6 md-col-4 lg-col-3 masonry__item">
                         <div class="panel bg--dark text--white shadow--5">
                             <div class="panel__body">
-                                <h3>Find work</h3>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam consequuntur distinctio dolores enim ex explicabo, fuga numquam odio veniam.
+                                <a href="">
+                                    <img  src="img/sponsers/crystalbars.svg" alt="" class="responsive__image mx-3 my-5">
+                                </a>
                             </div>
                         </div>
                     </div>

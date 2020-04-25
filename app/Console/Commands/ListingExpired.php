@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Listing;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Log;
 
 class ListingExpired extends Command
 {
@@ -43,5 +44,8 @@ class ListingExpired extends Command
             'live' => null,
             'deleted_at' => Carbon::now()
         ]);
+
+        Log::info('Cron done');
+
     }
 }

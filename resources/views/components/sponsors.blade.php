@@ -8,7 +8,7 @@
 
         <div class="row flex justify--center flex--center">
             @foreach($sponsors as $sponsor)
-                <div class="sm-col-4 md-col-2 m-4">
+                <div class="xm-col-4 md-col-2 m-4">
                     <a href="{{ $sponsor['url'] }}" target="_blank">
                         <img class="sponsors__img sponsors__hover" src="{{ asset('img/sponsors/')}}/{{$sponsor['img'] }}" alt="{{ $sponsor['name'] . ' ' . $sponsor['alt'] }}">
                     </a>

@@ -24,6 +24,7 @@
         <div class="row">
             <div class="col">
                 <h1>Listings Categories</h1>
+
             </div>
         </div>
         <div class="row flex masonry">
@@ -34,9 +35,9 @@
                         <div class="panel__header"><img class="list__icon" src="{{ asset('img/icons/') . '/' . $category->slug . '.svg'}}" alt="{{ $category->name }}">{{ $category->name }}</div>
                         <ul class="panel__list">
                             @foreach ($category->children as $sub)
-                                <li class="list__item flex justify--between">
-                                    <a href="{{ route('listings.index', [$area, $sub]) }}">
-                                        {{ $sub->name }}</a> ({{ $sub->listings->count() }})
+                                <li class="list__item ">
+                                    <a class="flex justify--between" href="{{ route('listings.index', [$area, $sub]) }}">
+                                        <span>{{ $sub->name }}</span> <span class="xs-float-right">({{ $sub->listings->count() }})</span></a>
                                 </li>
                             @endforeach
                         </ul>
@@ -47,13 +48,24 @@
                         <div class="panel bg--dark text--white shadow--5">
                             <div class="panel__body">
                                 <a href="">
-                                    <img  src="img/sponsers/crystalbars.svg" alt="" class="responsive__image mx-3 my-5">
+                                    <img  src="img/sponsors/{{ ['crystalbars.svg', 'dbc.svg'][rand(0,1)] }}" alt="" class="responsive__image mx-3 my-5">
                                 </a>
                             </div>
                         </div>
                     </div>
                 @endif
             @endforeach
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="bq mt-9 shadow--5 ">
+                    <div class="panel p-5">
+                        <div class="panel__body flex justify--center">
+                            <h3>{{ Inspire::quote() }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

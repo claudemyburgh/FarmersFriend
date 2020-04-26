@@ -1,7 +1,16 @@
 <template>
     <div>
         <div class="row flex">
-            <listing-card v-for="listing in listings" :key="listing.id" :listing="listing" :area="area"></listing-card>
+            <listing-panel columns="sm-col-6 md-col-4 lg-col-3" v-for="listing in listings" :key="listing.id" :listing="listing" :area="area">
+                <template v-slot:body>
+                    <div class="flex justify--between">
+                        <div class="avatar avatar__sm ">
+                            <img :src="listing.user.avatar" :alt="listing.user.name">
+                        </div>
+                        <a :href="`/${area.slug}/listing/${listing.key}`" class="btn btn--primary">VIEW</a>
+                    </div>
+                </template>
+            </listing-panel>
 
             <div class="observ"
                  v-if="listings.length" v-observe-visibility="{
@@ -21,11 +30,12 @@
 <script>
 
     import {mapActions, mapGetters, mapMutations} from "vuex";
-    import ListingCard from "./ListingCard";
+    import ListingPanel from "./ListingPanel";
+
 
     export default {
         name: "ListingsList",
-        components: {ListingCard},
+        components: {ListingPanel},
         props: {
             category: {
                 required: true,

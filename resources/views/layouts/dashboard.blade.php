@@ -39,9 +39,13 @@
                     </div>
                 </div>
             </div>
-
         </main>
+        <x-sponsors></x-sponsors>
+
         <x-footer></x-footer>
+        <div class="scrollup">
+            <div class="wrapper"><a href="#" class="scrollup__button" style="transform: translateY(0px);"></a></div>
+        </div>
 
     </div><!-- #app -->
 </body>

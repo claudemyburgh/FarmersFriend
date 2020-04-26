@@ -1,32 +1,37 @@
 <template>
   <div>
-      <h1>Published Listings</h1>
-
-      <div class="form__group">
+      <div class="form__group mb-4">
           <div class="form__wrap">
               <i class="lunacon lunacon-search"></i>
               <input v-model="search" type="text" class="form__item" autofocus>
           </div>
       </div>
-      <div v-for="listing in filteredListings" class="flex shadow--2 bg--white p--xs">
-          <img v-if="typeof (listing.images[0]) !== 'undefined' "  height="60" :src="listing.images[0].type.icon" :alt="listing.title">
-          <div>
-              <header><strong>{{ listing.title }}</strong> {{ `/${area.slug}/listing/${listing.key}/edit`}}</header>
-              <a href="`/${area.slug}/listing/${listing.key}/edit`">Edit</a>
-          </div>
+      <div class="row flex mb-7">
+          <template v-for="listing in filteredListings">
+              <listing-panel columns="sm-col-6 md-col-4 lg-col-3" :key="listing.id" :listing="listing" :area="area">
+                  <template v-slot:body>
+                      <div class="flex justify--between">
+                          <a :href="`/${area.slug}/listings/${listing.key}/edit`" class="btn btn--sm btn--info">EDIT</a>
+                          <a href="" class="btn btn--sm btn--danger">DELETE</a>
+                      </div>
+                  </template>
+              </listing-panel>
+          </template>
       </div>
-
-<!--      <pre>{{filteredListings}}</pre>-->
 
   </div>
 </template>
 
 <script>
+
+    import {mapGetters} from "vuex/dist/vuex.esm.browser";
+    import {mapActions} from "vuex";
+
     export default {
         name: "ListingsFilter",
         data () {
             return {
-                listings: [],
+                // listings: [],
                 search: ''
             }
         },
@@ -34,9 +39,16 @@
             area: {
                 required: true,
                 type: Object
+            },
+            url: {
+                required: true,
+                type: String
             }
         },
         computed: {
+            ...mapGetters({
+                listings: 'listings/get_listings'
+            }),
             filteredListings () {
                 let count = 0
                 return this.listings.filter( (listing) => {
@@ -45,14 +57,14 @@
             }
         },
         methods: {
-            getListing () {
-                return axios.get(`/api/listings/published`).then( (response) => {
-                    this.listings =  response.data.data
-                })
-            }
+            ...mapActions({
+                get_listings: 'listings/get_listings'
+            }),
         },
         mounted() {
-            this.getListing()
+            this.get_listings({
+                url: this.url
+            })
         }
     }
 </script>

@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactListingUser extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth:sanctum']);
+    }
+
+
     /**
      * @param StoreListingContactFormRequest $request
      * @param Area $area

@@ -13,18 +13,16 @@ class ListingFavouriteController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth']);
+        $this->middleware(['auth:sanctum']);
     }
 
+
     /**
-     * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index(Request $request)
+    public function index()
     {
-        $listings = $request->user()->favouriteListings()->with(['user', 'area'])->paginate(10);
-
-        return view('user.listings.favourites.index', compact('listings'));
+        return view('user.listings.favourites.index');
     }
 
     /**

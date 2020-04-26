@@ -13,7 +13,10 @@ Route::group(['middleware' => ['auth:sanctum'], 'as' => 'api.'], function() {
 
     Route::apiResource('{area}/listings', 'Listing\ListingsController');
 
-    Route::get('listings/published', 'Listing\ListingPublishedController@index')->name('listings.published.index');
+    Route::get('listings/published', 'Listing\ListingsPublishedController@index')->name('listings.published.index');
+    Route::get('listings/unpublished', 'Listing\ListingsUnpublishedController@index')->name('listings.unpublished.index');
+    Route::get('listings/favourited', 'Listing\ListingsFavouritedController@index')->name('listings.favourited.index');
+    Route::get('listings/viewed', 'Listing\ListingsViewedController@index')->name('listings.viewed.index');
 
     Route::post('listing/{listing}/upload', 'Listing\ListingImageController@store')->name('listing.image.upload');
     Route::delete('listing/{listing}', 'Listing\ListingImageController@destroy')->name('listing.image.destroy');

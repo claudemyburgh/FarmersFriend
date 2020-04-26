@@ -21,7 +21,6 @@ class FrontendRoutes
 
             $this->get('/user/area/{area}', 'User\AreaController@store')->name('user.area.store');
             $this->get('/{area}', 'WelcomeController@index')->name('welcome');
-
             $this->inArea();
         };
     }
@@ -113,16 +112,18 @@ class FrontendRoutes
         };
     }
 
+    /**
+     * @return \Closure
+     */
     protected function dashboard()
     {
         return function () {
             $this->group(['middleware' => ['auth:sanctum', 'verified'], 'namespace' => 'Dashboard', 'as' => 'dashboard.'], function () {
                 $this->get('dashboard', 'DashboardController@index')->name('index');
-
-
             });
         };
     }
+
 
 
 }

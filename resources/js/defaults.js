@@ -1,9 +1,9 @@
-export const  primaryColor = '#2075d0'
-export const  secondaryColor = '#e91e63'
+export const  primaryColor = '#f09300'
+export const  secondaryColor = '#008c3a'
 export const  triColor = '#380f8f'
-export const  darkColor = '#0a0e24'
-export const  muteColor = '#f7f7f7'
-export const  dangerColor = '#e91e63'
+export const  darkColor = '#052e3c'
+export const  muteColor = '#f3f3f3'
+export const  dangerColor = '#ca1616'
 
 export const options = {
     color: primaryColor,

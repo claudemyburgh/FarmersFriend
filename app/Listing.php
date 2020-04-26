@@ -4,6 +4,7 @@ namespace App;
 
 use App\Traits\Eloquent\OrderableTrait;
 use App\Traits\Eloquent\PivotOrderableTrait;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
@@ -107,6 +108,24 @@ class Listing extends Model implements HasMedia
     public function scopeIsNotLive($query)
     {
         return $query->whereNull('live');
+    }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeIsNotExpired($query)
+    {
+        return $query->where('expire_at', '>', Carbon::now());
+    }
+
+    /**
+     * @param $query
+     * @return mixed
+     */
+    public function scopeIsExpired($query)
+    {
+        return $query->where('expire_at', '<', Carbon::now());
     }
 
     /**

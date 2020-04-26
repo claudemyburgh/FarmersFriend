@@ -22,10 +22,7 @@ class ListingController extends Controller
      */
     public function index(Area $area, Category $category)
     {
-
-        $listings = Listing::with(['user', 'area'])->inArea($area)->isLive()->fromCategory($category)->latestFirst()->paginate();
-
-        return view('listings.index', compact('listings', 'category'));
+        return view('listings.index', compact( 'category'));
     }
 
     /**
@@ -47,8 +44,6 @@ class ListingController extends Controller
             dispatch(new UserViewedListing($request->user(), $listing));
         }
 
-
-
         return view('listings.show', compact('listing'));
     }
 
@@ -60,19 +55,22 @@ class ListingController extends Controller
         return view('listings.create');
     }
 
+
     /**
      * @param StoreListingFormRequest $request
      * @param Area $area
-     * @return \Illuminate\Http\RedirectResponse
+     * @return mixed
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function store(StoreListingFormRequest $request, Area $area)
     {
+        $this->authorize('edit', $listing);
+
         $listing = Listing::create(array_merge($request->only('title', 'body', 'category_id', 'area_id'),
             [
                 'user_id' => $request->user()->id
             ]
         ));
-
 
         return redirect()->route('listings.edit', [$area, $listing])->withSuccess('Successfully created, But not yet live');
     }

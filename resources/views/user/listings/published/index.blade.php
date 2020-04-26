@@ -4,19 +4,12 @@
 
 @section('content')
 
-{{--    <listings-filter :area="{{ $area }}"></listings-filter>--}}
-
-
-    @if ($listings->count())
-        @foreach($listings as $listing)
-            <div class="sm-col-6 md-col-4">
-                @include('listings.partials._listing_own', $listing)
-            </div>
-        @endforeach
-        <div class="md-col-12 p--tb">
-            {{ $listings->links() }}
+    <div class="row">
+        <div class="col">
+            <h1>Published Listings</h1>
         </div>
-    @else
-        <p>No published listings.</p>
-    @endif
+    </div>
+
+    <listings-filter :area="{{ $area }}" url="/api/listings/published"></listings-filter>
+
 @endsection

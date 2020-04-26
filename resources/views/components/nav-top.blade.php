@@ -25,14 +25,21 @@
                             <li class="nav__links__item">
                                 <a href="{{ route('dashboard.index') }}"> <i class="lunacom lunacon-dashboard mr-2"></i> {{__("Dashboard")}}</a>
                             </li>
-                            <li class="nav__links__item nav__devider"></li>
+{{--                            <li class="nav__links__item nav__devider"></li>--}}
+
+                            <li class="nav__links__item ">
+                                <a class="mx-2" href="{{ route('listings.create', [$area]) }}"> <i class="lunacom lunacon-pencil  mr-2"></i>Create a listing</a>
+                            </li>
+
+
+{{--                            <li class="nav__links__item nav__devider"></li>--}}
                             <li class="nav__links__item">
                                 <a href="{{ route('listings.published.index', [$area]) }}"> <i class="lunacom lunacon-file mr-2"></i>  Published listings ({{ $publishedListingsCount }})</a>
                             </li>
                             <li class="nav__links__item">
                                 <a href="{{ route('listings.unpublished.index', [$area]) }}"> <i class="lunacom lunacon-file-delete mr-2"></i> Unpublished listings ({{ $unpublishedListingsCount }})</a>
                             </li>
-                            <li class="nav__links__item nav__devider"></li>
+{{--                            <li class="nav__links__item nav__devider"></li>--}}
                             <li class="nav__links__item">
                                 <a href="{{ route('listings.favourites.index', [$area]) }}"><i class="lunacom lunacon-heart mr-2"></i>  Favourited listings</a>
                             </li>
@@ -44,7 +51,7 @@
                             <li class="nav__links__item nav__devider"></li>
 
                             <li class="nav__links__item">
-                                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> <i class="lunacom lunacon-keys-hole mr-2"></i> {{ __('Logout') }}</a>
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> <i class="lunacom lunacon-power-button mr-2"></i> {{ __('Logout') }}</a>
                             </li>
                         </ul>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

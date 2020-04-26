@@ -2,14 +2,14 @@
 
 @section('title','Recently Viewed Listings')
 @section('content')
-    <p>Showing your last {{ $indexLimit }} viewed listings.</p>
-    @if ($listings->count())
-        @foreach($listings as $listing)
-            <div class="sm-col-6 md-col-4">
-                @include('listings.partials._listing', $listing)
-            </div>
-        @endforeach
-    @else
-        <p>You have no viewed listings.</p>
-    @endif
+
+
+    <div class="row">
+        <div class="col">
+            <h1>Showing your last {{ $indexLimit }} viewed listings.</h1>
+        </div>
+    </div>
+
+    <listings-filter :area="{{ $area }}" url="/api/listings/viewed"></listings-filter>
+
 @endsection

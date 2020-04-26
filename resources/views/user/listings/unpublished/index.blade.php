@@ -3,16 +3,12 @@
 @section('title', 'Unpublished Listings')
 
 @section('content')
-    @if ($listings->count())
-        @foreach($listings as $listing)
-            <div class="sm-col-6 md-col-4">
-                @include('listings.partials._listing_own', $listing)
-            </div>
-        @endforeach
-        <div class="md-col-12 p--tb">
-            {{ $listings->links() }}
+
+    <div class="row">
+        <div class="col">
+            <h1>Unpublished Listings</h1>
         </div>
-    @else
-        <p>No unpublished listings.</p>
-    @endif
+    </div>
+
+    <listings-filter :area="{{ $area }}" url="/api/listings/unpublished"></listings-filter>
 @endsection

@@ -25,7 +25,7 @@ class ListingsController extends Controller
      */
     public function index(Area $area, Category $category)
     {
-        $listings = Listing::with(['user', 'area'])->inArea($area)->isLive()->fromCategory($category)->latestFirst()->paginate(12);
+        $listings = Listing::with(['user', 'area'])->inArea($area)->isLive()->isNotExpired()->fromCategory($category)->latestFirst()->paginate(12);
         return new ListingsCollection($listings);
     }
 

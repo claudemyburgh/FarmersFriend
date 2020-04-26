@@ -10,6 +10,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class ListingImageController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware(['auth:sanctum']);
+    }
+
     /**
      * @param Request $request
      * @param Listing $listing

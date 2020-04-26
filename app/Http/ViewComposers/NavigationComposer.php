@@ -3,6 +3,7 @@
 namespace App\Http\ViewComposers;
 
 use Auth;
+use Carbon\Carbon;
 use Illuminate\View\View;
 
 class NavigationComposer
@@ -18,7 +19,8 @@ class NavigationComposer
 
         return $view->with([
             'unpublishedListingsCount' => $listings->where('live', false)->count(),
-            'publishedListingsCount' => $listings->where('live', true)->count()
+            'publishedListingsCount' => $listings->where('live', true)->where('expire_at', '>', Carbon::now())->count(),
+
         ]);
     }
 }

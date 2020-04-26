@@ -22,14 +22,14 @@
             </div>
         @endif
         <div class="{{ Auth::check() ? 'md-col-6' : 'md-col-9' }}">
+
             <div class="panel shadow--1">
-                <div class="panel__header ">
-                    <h4>{{ $listing->title }} in <span class="text-muted">{{ $listing->area->name }}</span></h4>
-                </div>
                 @if($listing->getFirstMediaUrl('listing', 'card'))
                     <img class="panel__img" src="{{ $listing->getFirstMediaUrl('listing', 'card') }}" alt="Image">
                 @endif
                 <div class="panel__body">
+                    <h2>{{ $listing->title }} in <span class="text-muted">{{ $listing->area->name }}</span></h2>
+
                     {!! nl2br(e($listing->body)) !!}
                     <hr>
                     <p>Viewed {{ $listing->views() }} times</p>

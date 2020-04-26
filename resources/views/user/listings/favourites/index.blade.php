@@ -1,13 +1,14 @@
 @extends('layouts.dashboard')
 
-@section('title', 'Favourite Listings')
+@section('title', 'Favourited Listings')
 
 
 @section('content')
-    @if ($listings->count())
-        @each ('listings.partials._listing_favourite', $listings, 'listing')
-        {{ $listings->links() }}
-    @else
-        <p>No favourite listings.</p>
-    @endif
+    <div class="row">
+        <div class="col">
+            <h1>Favourited Listings</h1>
+        </div>
+    </div>
+
+    <listings-filter :area="{{ $area }}" url="/api/listings/favourited"></listings-filter>
 @endsection

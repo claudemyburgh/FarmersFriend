@@ -3,18 +3,17 @@
 namespace App\Http\Controllers\Api\Listing;
 
 use App\Http\Resources\Listing\ListingsCollection;
-use App\Listing;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ListingUnpublishedController extends Controller
+class ListingsUnpublishedController extends Controller
 {
     /**
-     * ListingPublishedController constructor.
+     * ListingsPublishedController constructor.
      */
     public function __construct()
     {
-        $this->middleware(['auth']);
+        $this->middleware(['auth:sanctum']);
     }
 
     /**

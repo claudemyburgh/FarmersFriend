@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Listing;
+namespace App\Http\Controllers\Api\Listing;
 
+use App\Http\Resources\Listing\ListingsCollection;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class ListingViewedController extends Controller
+class ListingsViewedController extends Controller
 {
     const INDEX_LIMIT = 10;
 
@@ -14,7 +15,7 @@ class ListingViewedController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(['auth']);
+        $this->middleware(['auth:sanctum']);
     }
 
     /**
@@ -30,9 +31,6 @@ class ListingViewedController extends Controller
             ->take(self::INDEX_LIMIT)
             ->get();
 
-        return view('user.listings.viewed.index', [
-            'listings' => $listings,
-            'indexLimit' => self::INDEX_LIMIT,
-        ]);
+        return new ListingsCollection($listings);
     }
 }

@@ -32,31 +32,32 @@ class Sponsors extends Component
             'crystal-bars' => [
                 'name' => 'Crystal Bars',
                 'url' => 'https://crystalbars.co.za',
-                'img' => 'sponsor_crystal-bars.svg',
+                'img' => 'sponser_crystal-bars.svg',
                 'alt' => 'Transparent burglar bars'
-            ],
-            'coenie-marias' => [
-                'name' => 'Coenie Marais inhouse finishings',
-                'url' => 'https://coeniemarais.co.za',
-                'img' => 'sponsor_coenie-marais.svg',
-                'alt' => 'House redesign'
             ],
             'designbycode' => [
                 'name' => 'DesignByCode',
                 'url' => 'https://designbycode.co.za',
-                'img' => 'sponsor_designbycode.svg',
+                'img' => 'sponser_designbycode.svg',
                 'alt' => 'Web design and development'
             ],
+            'coenie-marias' => [
+                'name' => 'Coenie Marais inhouse finishings',
+                'url' => 'https://coeniemarais.co.za',
+                'img' => 'sponser_coenie-marais.svg',
+                'alt' => 'House redesign'
+            ],
+
             'busimix-transport' => [
                 'name' => 'Busimix Transport',
                 'url' => 'https://busimixtransport.co.za',
-                'img' => 'sponsor_busimix.svg',
+                'img' => 'sponser_busimix.svg',
                 'alt' => 'Transparent burglar bars'
             ],
             'unique-tillers' => [
                 'name' => 'Unique Tillers',
                 'url' => 'https://uniquetillers.co.za',
-                'img' => 'sponsor_unique-tillers.svg',
+                'img' => 'sponser_unique-tillers.svg',
                 'alt' => 'Gardern Tillers'
             ],
         ];

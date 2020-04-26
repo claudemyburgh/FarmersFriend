@@ -10,5 +10,7 @@
         </div>
     </div>
 
-    <listings-filter :area="{{ $area }}" url="/api/listings/favourited"></listings-filter>
+    <listings-filter :area="{{ $area }}" url="/api/listings/favourited">
+
+    </listings-filter>
 @endsection

@@ -7,6 +7,9 @@ namespace App\Http\Controllers\Api\Listing;
 use App\Area;
 use App\Category;
 use App\Http\Controllers\Controller;
+
+use App\Http\Requests\Api\Listing\StoreListingRequest;
+use App\Http\Requests\Api\Listing\UpdateListingRequest;
 use App\Http\Requests\Api\ListingCreateRequest;
 use App\Http\Resources\Listing\ListingResource;
 use App\Http\Resources\Listing\ListingsCollection;
@@ -35,9 +38,9 @@ class ListingsController extends Controller
      * @param Listing $listing
      * @return ListingResource
      */
-    public function store(ListingCreateRequest $request, Listing $listing)
+    public function store(StoreListingRequest $request, Listing $listing)
     {
-        $listing = $listing::create(array_merge($request->only(['title', 'body', 'category_id', 'area_id', 'url', 'price']),
+        $listing = $listing::create(array_merge($request->only(['title', 'category_id', 'area_id']),
             [
                 'area_parent_id' => $request->province_id,
                 'user_id' => $request->user()->id,
@@ -64,15 +67,15 @@ class ListingsController extends Controller
         return new ListingResource($listing);
     }
 
+
     /**
-     * Update the specified resource in storage.
-     *
-     * @param ListingCreateRequest $request
+     * @param UpdateListingRequest $request
+     * @param Area $area
      * @param Listing $listing
-     * @return ListingResource
+     * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function update(ListingCreateRequest $request, Area $area, Listing $listing)
+    public function update(UpdateListingRequest $request, Area $area, Listing $listing)
     {
         $this->authorize('update', $listing);
 
@@ -90,8 +93,7 @@ class ListingsController extends Controller
         if ($request->has('payment')) {
             return redirect()->route('listings.payment.show', [$area, $listing]);
         }
-
-
+        
     }
 
     /**

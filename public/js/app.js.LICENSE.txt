@@ -31,6 +31,13 @@
  */
 
 /*!
+ * Splide.js
+ * Version  : 2.2.4
+ * License  : MIT
+ * Copyright: 2020 Naotoshi Fujita
+ */
+
+/*!
  * Vue.js v2.6.11
  * (c) 2014-2019 Evan You
  * Released under the MIT License.

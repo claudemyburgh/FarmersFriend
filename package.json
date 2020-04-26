@@ -27,6 +27,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@splidejs/splide": "^2.2.4",
         "algoliasearch": "^4.1.0",
         "axios-extensions": "^3.1.2",
         "chart.js": "^2.9.3",

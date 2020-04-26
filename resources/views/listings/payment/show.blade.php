@@ -16,7 +16,6 @@
                 </footer>
             </blockquote>
 
-            <modal-component name="before-payment"></modal-component>
 
             <div class="panel shadow--2">
                 <div class="panel__header">Pay for your listing</div>

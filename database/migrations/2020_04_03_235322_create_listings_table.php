@@ -17,7 +17,7 @@ class CreateListingsTable extends Migration
             $table->id();
             $table->uuid('key');
             $table->string('title')->index();
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('area_id');
             $table->integer('area_parent_id')->nullable();

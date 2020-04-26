@@ -4,11 +4,12 @@ export const  triColor = '#380f8f'
 export const  darkColor = '#052e3c'
 export const  muteColor = '#f3f3f3'
 export const  dangerColor = '#ca1616'
+export const  successColor = '#16ca90'
 
 export const options = {
-    color: primaryColor,
+    color: successColor,
     failedColor: dangerColor,
-    thickness: '5px',
+    thickness: '7px',
     transition: {
         speed: '0.2s',
         opacity: '0.6s',

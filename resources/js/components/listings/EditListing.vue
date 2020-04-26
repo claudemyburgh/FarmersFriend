@@ -4,10 +4,7 @@
         <div class="panel__header flex justify--between">Edit Listing</div>
         <div class="panel__body">
 
-            <form method="post">
-
                 <form-base>
-<!--                    {{ listing }}-->
                     <div class="row">
                         <div class="form__group md-col-8" :class="errors.url ? 'has__danger' : ''">
                             <label for="url" class="form__label font--bold">URL to website</label>
@@ -32,6 +29,16 @@
                         </div>
                     </div>
 
+
+                    <div class="form__group" :class="errors.body ? 'has__danger' : ''">
+                        <label for="body" class="form__label font--bold">Body</label>
+                        <resize-textarea  name="body" v-model="listing.body"></resize-textarea>
+                        <div v-if="errors.body" class="form__helper">
+                            {{ errors.body[0] }}
+                        </div>
+                    </div>
+
+
                 </form-base>
 
                 <div class="form__group flex justify--between" v-if="!status" >
@@ -41,7 +48,7 @@
                 <div class="form__group" v-else>
                     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                 </div>
-            </form>
+
         </div>
     </div>
 
@@ -73,7 +80,7 @@
                 status: 'listings/get_processing_status'
             }),
             price() {
-                return this.listing.price
+                return (this.listing.price) ? parseInt(this.listing.price) : null
             }
         },
         methods: {
@@ -88,19 +95,35 @@
                 })
             },
             submitForm() {
+                this.$Progress.start()
                 this.update_listing({
                     listing: this.listing,
                     area: this.area
+                }).then( ({status}) => {
+                    if (status === 200) {
+                        this.$Progress.finish()
+                    }
+                }).catch( (error) => {
+                    this.$Progress.fail()
                 })
             },
             publishForm() {
-                this.submitForm()
-                window.location.href = `/${this.area.slug}/listings/${this.listing.key}/payment`
+                this.$Progress.start()
+                this.update_listing({
+                    listing: this.listing,
+                    area: this.area
+                }).then( ({status}) => {
+                    this.$Progress.finish()
+                    if (status === 200) {
+                        window.location.href = `/${this.area.slug}/listings/${this.listing.key}/payment`
+                    }
+                }).catch( (error) => {
+                    this.$Progress.fail()
+                })
             }
         },
         created() {
             this.setListing()
-
         }
     }
 </script>

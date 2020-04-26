@@ -23,10 +23,20 @@
         @endif
         <div class="{{ Auth::check() ? 'md-col-6' : 'md-col-9' }}">
 
+            @if($listing->images()->count())
+            <div class="splide panel shadow--1">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        @foreach($listing->images() as $image)
+                            <img class="splide__list" src="{{  $image->getFullUrl('thumb_big') }}" alt="slide">
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
+            @endif
+
             <div class="panel shadow--1">
-                @if($listing->getFirstMediaUrl('listing', 'card'))
-                    <img class="panel__img" src="{{ $listing->getFirstMediaUrl('listing', 'card') }}" alt="Image">
-                @endif
                 <div class="panel__body">
                     <h2>{{ $listing->title }} in <span class="text-muted">{{ $listing->area->name }}</span></h2>
 

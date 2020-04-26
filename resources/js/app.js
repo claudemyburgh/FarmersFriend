@@ -1,10 +1,11 @@
 import Vue from 'vue'
-// import VueProgressBar from 'vue-progressbar'
+import VueProgressBar from 'vue-progressbar'
 import VueObserveVisibility from 'vue-observe-visibility'
 import {cacheAdapterEnhancer, throttleAdapterEnhancer} from "axios-extensions";
 import { options } from './defaults'
 import store from './vuex'
-import Mix from './Mixins/moment'
+import Moment from './Mixins/moment'
+import Currency from './Mixins/currency'
 
 /**
  * Axios
@@ -13,8 +14,8 @@ window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.adapter = throttleAdapterEnhancer(cacheAdapterEnhancer(axios.defaults.adapter,
     { enabledByDefault: false, cacheFlag: 'useCache'}))
-window.axios.defaults.baseURL = "http://farmersfriend.build";
-// window.axios.defaults.baseURL = "http://farmersfriend.co.za";
+// window.axios.defaults.baseURL = "http://farmersfriend.build";
+window.axios.defaults.baseURL = "http://farmersfriend.co.za";
 axios.defaults.withCredentials = true;
 
 /**
@@ -33,8 +34,9 @@ Dropzone.autoDiscover = false;
  * Vue Use Plugins
  */
 Vue.use(VueObserveVisibility)
-// Vue.use(VueProgressBar, options)
-Vue.mixin(Mix)
+Vue.use(VueProgressBar, options)
+Vue.mixin(Moment)
+Vue.mixin(Currency)
 
 
 /**
@@ -70,6 +72,7 @@ if (token) {
 const app = new Vue({
     el: '#app',
     store: store,
+
 });
 
 require('./bootstrap');

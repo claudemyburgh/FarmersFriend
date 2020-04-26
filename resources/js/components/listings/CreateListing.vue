@@ -5,7 +5,7 @@
             <form @submit.prevent="submitForm" method="post" novalidate>
                 <form-base></form-base>
                 <div class="form__group" v-if="!status" >
-                    <button type="submit" class="btn btn--primary">Save</button>
+                    <button type="submit" class="btn btn--primary">CREATE</button>
                 </div>
                 <div class="form__group" v-else>
                     <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
@@ -13,7 +13,6 @@
             </form>
         </div>
     </div>
-
 </template>
 
 <script>

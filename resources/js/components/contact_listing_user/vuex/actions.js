@@ -1,9 +1,11 @@
 import axios from 'axios'
 
-export const sendMessage = ({state, commit} , {listing, form}) => {
+export const sendMessage = async ({state, commit} , {listing, form}) => {
     commit('RESET_ERRORS')
     commit('SET_PROCESSING', true)
-    return axios.post(`api/${listing}/user/message`, form).then( (response) => {
+
+    try {
+        let response = await axios.post(`api/${listing}/user/message`, form)
         commit('notify/SET_NOTIFICATION', {
             name: 'success',
             class: 'notify--success',
@@ -12,7 +14,8 @@ export const sendMessage = ({state, commit} , {listing, form}) => {
         }, {root: true})
         commit('SET_PROCESSING', false)
         commit('RESET_FORM')
-    }).catch( (error) => {
+        return response
+    } catch (error) {
         commit('SET_PROCESSING', false)
         commit('VALIDATE_ERROR', error.response.data)
         commit('notify/SET_NOTIFICATION', {
@@ -21,7 +24,6 @@ export const sendMessage = ({state, commit} , {listing, form}) => {
             message: error.response.data.message,
             show: true
         }, {root: true})
-
-    })
+    }
 
 }

@@ -82,7 +82,6 @@ class Listing extends Model implements HasMedia
         return 'key';
     }
 
-
     /**
      * @return int
      */
@@ -90,7 +89,6 @@ class Listing extends Model implements HasMedia
     {
         return optional($this->area)->parent_id;
     }
-
 
     /**
      * @param $query
@@ -138,7 +136,6 @@ class Listing extends Model implements HasMedia
         return $query->where('category_id', $category->id);
     }
 
-
     /**
      * @param $query
      * @param Area $area
@@ -176,7 +173,6 @@ class Listing extends Model implements HasMedia
         return $this->category->price;
     }
 
-
     /**
      * @param User $user
      * @return bool
@@ -192,7 +188,6 @@ class Listing extends Model implements HasMedia
     public function toSearchableArray()
     {
         $properties = $this->toArray();
-
         $properties['created_at_human'] = $this->created_at->diffForHumans();
         $properties['user'] = $this->user;
         $properties['category'] = $this->category;
@@ -207,6 +202,15 @@ class Listing extends Model implements HasMedia
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public function images()
+    {
+        return $this->getMedia('listing');
     }
 
     /**
@@ -224,7 +228,6 @@ class Listing extends Model implements HasMedia
     {
         return $this->belongsTo(Area::class);
     }
-
 
 
     /**

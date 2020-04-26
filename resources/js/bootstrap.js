@@ -12,6 +12,8 @@ const luna =  require('luna-sass/Framework/js/luna.js');
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
+import Splide from '@splidejs/splide';
+
 import Masonry from 'masonry-layout'
 
 (function($, window, document){
@@ -22,6 +24,17 @@ import Masonry from 'masonry-layout'
 
     $(document).Luna();
 
+
+    let _splide = document.querySelectorAll('.splide')
+
+    if (_splide.length) {
+        for (var i = 0,  item = _splide; i < item.length; i++ ) {
+            new Splide( item[i] ).mount()
+        }
+    }
+
+
+
     if (masonry) {
         setTimeout(() => {
             var msnry = new Masonry( masonry, {
@@ -29,8 +42,11 @@ import Masonry from 'masonry-layout'
                 // columnWidth: 200
             });
 
-        }, 500)
+        }, 800)
     }
+
+
+
 
 })(jQuery, window, document);
 

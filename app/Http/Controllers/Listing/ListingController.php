@@ -44,6 +44,7 @@ class ListingController extends Controller
             dispatch(new UserViewedListing($request->user(), $listing));
         }
 
+
         return view('listings.show', compact('listing'));
     }
 

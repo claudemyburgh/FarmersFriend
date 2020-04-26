@@ -25,7 +25,7 @@
                             <li class="nav__links__item">
                                 <a href="{{ route('dashboard.index') }}"> <i class="lunacom lunacon-dashboard mr-2"></i> {{__("Dashboard")}}</a>
                             </li>
-{{--                            <li class="nav__links__item nav__devider"></li>--}}
+                            <li class="nav__links__item nav__devider"></li>
 
                             <li class="nav__links__item ">
                                 <a class="mx-2" href="{{ route('listings.create', [$area]) }}"> <i class="lunacom lunacon-pencil  mr-2"></i>Create a listing</a>

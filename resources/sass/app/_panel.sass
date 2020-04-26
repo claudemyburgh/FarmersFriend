@@ -3,3 +3,21 @@
     &__img
         width: 100%
         display: block
+
+    &__picture
+        position: relative
+
+        &::after
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 70px
+            width: 100%
+            content: ''
+            display: block
+            z-index: 10
+            background: linear-gradient(to bottom, rgba($dark-color, 0), rgba($dark-color, 0.4))
+
+
+    &__price
+        font-size: larger

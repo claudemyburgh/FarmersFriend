@@ -18,14 +18,6 @@
 
       </slot>
 
-      <div class="form__group" :class="errors.body ? 'has__danger' : ''">
-          <label for="body" class="form__label font--bold">Body</label>
-          <resize-textarea  name="body" v-model="listing.body"></resize-textarea>
-          <div v-if="errors.body" class="form__helper">
-              {{ errors.body[0] }}
-          </div>
-      </div>
-
 
   </div>
 </template>

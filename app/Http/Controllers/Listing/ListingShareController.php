@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Listing;
 
-use Mail;
-use App\{Area, Listing};
+
+use App\Area;
+use App\Listing;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreListingShareFormRequest;
 use App\Mail\ListingShared;
+use Illuminate\Support\Facades\Mail;
 
 class ListingShareController extends Controller
 {

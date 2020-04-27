@@ -2,45 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/Http/Requests/Api/Listing/StoreListingRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Http/Requests/Api/Listing/UpdateListingRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/Mixins/currency.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/sass/app/_splide.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/ibpDqffPXBSIJ5bamF38bPXw6gnpQmti/E1c9LyWHQqDQ1Yfz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/ibpDqffPXBSIJ5bamF38bPXw6gnpQmti/LPOOi8vGjRqHZY5Iicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/vgt2q5k5ygtBuGjF8TzMRBwGaOlMGhq0/RfcoANIw7QMhOpXUicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/vgt2q5k5ygtBuGjF8TzMRBwGaOlMGhq0/mykByJaUlYzCaKQu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/FarmersFriend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/FarmersFriend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/DesignByCode/Inspire.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/DesignByCode/Inspire.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingShareController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingShareController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Listing.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Listing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/migrations/2020_04_03_235322_create_listings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2020_04_03_235322_create_listings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/ContactListingUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/ContactListingUser.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/CreateListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/CreateListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/EditListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/EditListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/FormBase.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/FormBase.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingCard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingPanel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/defaults.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/defaults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_panel.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_panel.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/style.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/components/nav-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/nav-top.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/payment/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/payment/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/user/listings/favourites/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/user/listings/favourites/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/media-library.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/media-library.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/frontpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/frontpage.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +240,8 @@
       <workItem from="1587714227997" duration="40507000" />
       <workItem from="1587774455897" duration="15580000" />
       <workItem from="1587813631786" duration="20059000" />
-      <workItem from="1587866644290" duration="48933000" />
+      <workItem from="1587866644290" duration="49097000" />
+      <workItem from="1588007073755" duration="3035000" />
     </task>
     <servers />
   </component>

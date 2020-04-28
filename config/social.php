@@ -8,6 +8,10 @@ return [
             'name' => 'Github'
         ],
 
+        'google' => [
+            'name' => 'Google'
+        ],
+
 
 
     ],
@@ -19,7 +23,7 @@ return [
         ],
 
         'google' => [
-            'created' => ''
+            'created' => \App\Events\Social\GoogleAccountWasLinked::class
         ]
 
     ]

@@ -29,6 +29,8 @@
         </div>
         <div class="row flex masonry">
 
+
+
             @foreach ($categories as $category)
                 <div class="sm-col-6 md-col-4 lg-col-3 masonry__item">
                     <div class="panel shadow--5">

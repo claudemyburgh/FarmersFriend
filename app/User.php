@@ -18,7 +18,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'bio', 'avatar'
+        'name', 'email', 'password', 'phone', 'bio', 'avatar', 'email_verified_at'
     ];
 
     /**
@@ -38,6 +38,16 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function social()
+    {
+        return $this->hasMany(UserSocial::class);
+    }
+
+    public function hasSocialLinked($service)
+    {
+        return (bool) $this->social->where('service', $service)->count();
+    }
 
     /**
      * @return mixed

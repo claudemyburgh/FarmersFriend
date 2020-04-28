@@ -27,6 +27,10 @@ return [
         'name' => env('AUTH_USERNAME', 'Admin'),
         'email' => env('AUTH_EMAIL', 'admin@mail.com'),
         'password' => env('AUTH_PASSWORD', 'password')
+    ],
+    'authorized' => [
+        env('AUTH_EMAIL', 'admin@mail.com'),
+        'claudemyburgh@gmail.com'
     ]
 
 ];

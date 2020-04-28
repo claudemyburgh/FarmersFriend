@@ -2,12 +2,11 @@
 
 namespace App\Providers;
 
-use App\RouteMethods\FrontendRoutes;
-use App\RouteMethods\SocialRoutes;
-use Illuminate\Support\Facades\Route;
+use App\Observers\UserSocialObserver;
+use App\UserSocial;
 use Illuminate\Support\ServiceProvider;
 
-class RouteMethodsServiceProvider extends ServiceProvider
+class SocialServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -26,7 +25,6 @@ class RouteMethodsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Route::mixin(new FrontendRoutes);
-        Route::mixin(new SocialRoutes);
+        UserSocial::observe(UserSocialObserver::class);
     }
 }

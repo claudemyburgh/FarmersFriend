@@ -178,6 +178,7 @@ return [
         App\Providers\TelescopeServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
         App\Providers\ListingServiceProvider::class,
+        App\Providers\SocialServiceProvider::class,
 
     ],
 

@@ -2,6 +2,9 @@
 
 //Auth::routes(['verify' => true]);
 
+
+Route::social();
+
 Route::auth(['verify' => true]);
 
 //Route::group(['prefix' => 'api/test/'], function () {
@@ -13,6 +16,7 @@ Route::auth(['verify' => true]);
 
 
 Route::frontend();
+
 
 
 //Route::get('/braintree/token', 'BraintreeController@token');

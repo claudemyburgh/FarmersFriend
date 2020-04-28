@@ -5,23 +5,31 @@
 @section('content')
 <div class="wrapper">
     <div class="row flex">
-        @if (Auth::check())
-            <div class="md-col-3 ">
-                <ul class="list nav__sidebar__sticky">
-                    <li class="list__item"><a href="{{ route('listings.share.index', [$area, $listing]) }}">Email to a friend</a></li>
-                    @if (!$listing->favouritedBy(Auth::user()))
-                        <li class="list__item">
-                            <a href="#" onclick="event.preventDefault(); document.getElementById('listings-favourite-form').submit();">Add to favourites</a>
+        <div class="md-col-3 ">
+            <div class="nav__sidebar__sticky mb-4">
+                @if (Auth::check())
+                    <ul class="list">
+                        <li class="list__item"><a href="{{ route('listings.share.index', [$area, $listing]) }}">Email to a friend</a></li>
+                        @if (!$listing->favouritedBy(Auth::user()))
+                            <li class="list__item">
+                                <a href="#" onclick="event.preventDefault(); document.getElementById('listings-favourite-form').submit();">Add to favourites</a>
 
-                            <form action="{{ route('listings.favourites.store', [$area, $listing]) }}" method="post" id="listings-favourite-form" class="hidden">
-                                {{ csrf_field() }}
-                            </form>
-                        </li>
-                    @endif
-                </ul>
+                                <form action="{{ route('listings.favourites.store', [$area, $listing]) }}" method="post" id="listings-favourite-form" class="hidden">
+                                    {{ csrf_field() }}
+                                </form>
+                            </li>
+                        @endif
+                    </ul>
+                @endif
+                <div class="bg--primary p-4 text--primary-light r-2 shadow--1">
+                    <h2>Lorem ipsum dolor.</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, molestias!
+                    </p>
+                </div>
             </div>
-        @endif
-        <div class="{{ Auth::check() ? 'md-col-6' : 'md-col-9' }}">
+        </div>
+        <div class="md-col-6">
 
             @if($listing->images()->count())
             <div class="splide panel shadow--1">

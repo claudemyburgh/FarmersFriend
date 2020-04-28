@@ -8,7 +8,7 @@
     <div class="row flex justify--center">
         <div class="md-col-4">
             <x-social-login></x-social-login>
-            
+
             <div class="panel shadow--1">
                 <div class="panel__header">{{ __('Register') }}</div>
                 <div class="panel__body">

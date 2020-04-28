@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/Listeners/Social/SendGoogleLinkedEmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Mail/Social/GoogleAccountLinkedEmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/views/email/social/google.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/Legal/PrivacyPolicyController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/Legal/TermsConditionsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/RouteMethods/LegalRoutes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/legal/privacy-policy.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/views/legal/terms-conditions.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Events/Social/GoogleAccountWasLinked.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Events/Social/GoogleAccountWasLinked.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/social.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/social.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Providers/RouteMethodsServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Providers/RouteMethodsServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/RouteMethods/SocialRoutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/RouteMethods/SocialRoutes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/components/social-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/social-login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/components/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +172,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../app/Mail/Social" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/views/legal" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -186,11 +188,11 @@
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\resources\js\Plugins" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\MyProjects\FarmersFriend\resources\views\legal" />
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\app\Mail\Social" />
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\app\Listeners\Social" />
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\app\Http\Controllers\Api\Listing" />
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\resources\js\components\components" />
-      <recent name="C:\wamp64\www\MyProjects\FarmersFriend\resources\js\components\listings\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -246,7 +248,7 @@
       <workItem from="1587774455897" duration="15580000" />
       <workItem from="1587813631786" duration="20059000" />
       <workItem from="1587866644290" duration="49097000" />
-      <workItem from="1588007073755" duration="31255000" />
+      <workItem from="1588007073755" duration="37837000" />
     </task>
     <servers />
   </component>
@@ -281,14 +283,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="651" y="324" key="NewPhpClassDialog/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588026165428" />
-    <state x="795" y="445" key="NewPhpFileDialog" timestamp="1588041457746">
+    <state x="795" y="445" key="NewPhpFileDialog" timestamp="1588088461756">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="795" y="445" key="NewPhpFileDialog/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588041457746" />
-    <state x="342" y="168" width="1102" height="713" key="SettingsEditor" timestamp="1587901922455">
+    <state x="795" y="445" key="NewPhpFileDialog/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588088461756" />
+    <state x="342" y="168" width="1102" height="713" key="SettingsEditor" timestamp="1588091055078">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="342" y="168" width="1102" height="713" key="SettingsEditor/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587901922455" />
+    <state x="342" y="168" width="1102" height="713" key="SettingsEditor/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588091055078" />
     <state x="516" y="128" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587261521538">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -297,9 +299,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587514607407" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588082705127">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588089124877">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588082705127" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588089124877" />
   </component>
 </project>

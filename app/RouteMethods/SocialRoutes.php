@@ -7,9 +7,6 @@ namespace App\RouteMethods;
 class SocialRoutes
 {
 
-    /**
-     * @return \Closure
-     */
     public function social()
     {
         return function() {

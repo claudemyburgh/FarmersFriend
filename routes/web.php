@@ -1,11 +1,29 @@
 <?php
 
-//Auth::routes(['verify' => true]);
-
-
 Route::social();
-
+Route::legal();
 Route::auth(['verify' => true]);
+Route::frontend();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Route::group(['prefix' => 'api/test/'], function () {
 //
@@ -13,10 +31,6 @@ Route::auth(['verify' => true]);
 ////    Route::get('/listings', 'Api\Listing\ListingsController@index');
 //
 //});
-
-
-Route::frontend();
-
 
 
 //Route::get('/braintree/token', 'BraintreeController@token');

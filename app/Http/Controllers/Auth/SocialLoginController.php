@@ -38,30 +38,36 @@ class SocialLoginController extends Controller
      */
     public function callback($service, Request $request)
     {
-        $serviceUser = Socialite::driver($service)->user();
+        try {
+            $serviceUser = Socialite::driver($service)->user();
 
-        $user = $this->getExistingUser($serviceUser, $service);
+            $user = $this->getExistingUser($serviceUser, $service);
 
-        if(!$user) {
-            $user = User::create([
-                'name' => $serviceUser->getName(),
-                'email' => $serviceUser->getEmail(),
-                'password' => bcrypt($this->randomPassword()),
-                'email_verified_at' => Carbon::now()
-            ]);
+            if(!$user) {
+                $user = User::create([
+                    'name' => $serviceUser->getName(),
+                    'email' => $serviceUser->getEmail(),
+                    'password' => bcrypt($this->randomPassword()),
+                    'email_verified_at' => Carbon::now()
+                ]);
+            }
+
+            if($this->needsToCreateSocial($user, $service)) {
+                $user->social()->create([
+                    'social_id' => $serviceUser->getId(),
+                    'service' => $service
+                ]);
+            }
+
+            Auth::login($user);
+
+            return redirect()->intended();
+
+        } catch (\Exception $e) {
+
+            return redirect()->route('login')->withError('Sorry something went wrong');
         }
-
-        if($this->needsToCreateSocial($user, $service)) {
-            $user->social()->create([
-                'social_id' => $serviceUser->getId(),
-                'service' => $service
-            ]);
-        }
-
-        Auth::login($user);
-
-        return redirect()->intended();
-
+        
     }
 
     /**

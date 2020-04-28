@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/Listeners/Social/SendFacebookLinkedEmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Mail/Social/FacebookAccountLinkedEmail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/sass/app/_buttons.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/views/email/social/facebook.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/FarmersFriend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/FarmersFriend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Events/Social/FacebookAccountWasLinked.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Events/Social/FacebookAccountWasLinked.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/social.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/social.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/components/social-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/social-login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Auth/SocialLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Auth/SocialLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/services.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +241,7 @@
       <workItem from="1587774455897" duration="15580000" />
       <workItem from="1587813631786" duration="20059000" />
       <workItem from="1587866644290" duration="49097000" />
-      <workItem from="1588007073755" duration="39971000" />
+      <workItem from="1588007073755" duration="42333000" />
     </task>
     <servers />
   </component>

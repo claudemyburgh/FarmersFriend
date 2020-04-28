@@ -12,6 +12,10 @@ return [
             'name' => 'Google'
         ],
 
+        'facebook' => [
+            'name' => 'Facebook'
+        ],
+
 
 
     ],
@@ -24,6 +28,10 @@ return [
 
         'google' => [
             'created' => \App\Events\Social\GoogleAccountWasLinked::class
+        ],
+
+        'facebook' => [
+            'created' => \App\Events\Social\FacebookAccountWasLinked::class
         ]
 
     ]

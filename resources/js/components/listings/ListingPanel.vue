@@ -28,8 +28,6 @@
 
                     <div class="flex flex--center text--gray">
                         <i class="lunacon lunacon-heart ml-3 xs-float-right"></i>
-<!--                        <i class="lunacon lunacon-thumbs-up mr-3"></i>-->
-<!--                        <i class="lunacon lunacon-twitter-bird mr-3"></i>-->
                     </div>
                 </div>
             </div>

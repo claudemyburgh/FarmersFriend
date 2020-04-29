@@ -15,10 +15,10 @@
                 </div>
             @endforeach
         </div>
-        <div class="row flex justify--center flex--center">
-            <div class="md-col-6 mt-7">
-                <h3 class="sponsors__title flex flex--row justify--center flex--center"><a href="#">BECOME A SPONSORS</a></h3>
-            </div>
-        </div>
+{{--        <div class="row flex justify--center flex--center">--}}
+{{--            <div class="md-col-6 mt-7">--}}
+{{--                <h3 class="sponsors__title flex flex--row justify--center flex--center"><a href="#">BECOME A SPONSORS</a></h3>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
 </div>

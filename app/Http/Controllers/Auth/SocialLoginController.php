@@ -48,7 +48,12 @@ class SocialLoginController extends Controller
                     'name' => $serviceUser->getName(),
                     'email' => $serviceUser->getEmail(),
                     'password' => bcrypt($this->randomPassword()),
-                    'email_verified_at' => Carbon::now()
+                    'email_verified_at' => Carbon::now(),
+                    'avatar' => $serviceUser->getAvatar()
+                ]);
+            } else {
+                $user->update([
+                    'avatar' => $serviceUser->getAvatar()
                 ]);
             }
 
@@ -67,7 +72,7 @@ class SocialLoginController extends Controller
 
             return redirect()->route('login')->withError('Sorry something went wrong');
         }
-        
+
     }
 
     /**

@@ -6,7 +6,7 @@
 <div class="wrapper">
     <div class="row flex">
         <div class="md-col-3 ">
-            <div class="nav__sidebar__sticky mb-4">
+            <div class="nav__sidebar__sticky mb-6">
                 @if (Auth::check())
                     <ul class="list">
                         <li class="list__item"><a href="{{ route('listings.share.index', [$area, $listing]) }}">Email to a friend</a></li>
@@ -21,32 +21,38 @@
                         @endif
                     </ul>
                 @endif
-                <div class="bg--primary p-4 text--primary-light r-2 shadow--1">
-                    <h2>Lorem ipsum dolor.</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, molestias!
-                    </p>
-                </div>
+{{--                <div class="bg--primary p-4 text--primary-light r-2 shadow--1">--}}
+{{--                    <h2>Lorem ipsum dolor.</h2>--}}
+{{--                    <p>--}}
+{{--                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, molestias!--}}
+{{--                    </p>--}}
+{{--                </div>--}}
             </div>
         </div>
         <div class="md-col-6">
 
             @if($listing->images()->count())
-            <div class="splide panel shadow--1">
-                <div class="splide__track">
-                    <div class="splide__list">
-                        @foreach($listing->images() as $image)
-                            <img class="splide__list" src="{{  $image->getFullUrl('thumb_big') }}" alt="slide">
-                        @endforeach
-
+            <div class="main-carousel panel mb-6 shadow--1">
+                @foreach($listing->images() as $image)
+                    <div class="carousel-cell">
+                        <img class="splide__list" data-flickity-lazyload="{{  $image->getFullUrl('card') }}" alt="slide">
                     </div>
-                </div>
+                @endforeach
             </div>
             @endif
 
             <div class="panel shadow--1">
+
+                    <div class="panel__header text--secondary flex justify--between flex--center">
+                    @if($listing->price)
+                    <h2>R {{ number_format($listing->price, 2)}}</h2>
+                        @else
+                        <h2>N/A</h2>
+                    @endif
+                        <span class="text-muted">in  {{ $listing->area->name }}</span>
+                    </div>
                 <div class="panel__body">
-                    <h2>{{ $listing->title }} in <span class="text-muted">{{ $listing->area->name }}</span></h2>
+                    <h2>{{ $listing->title }}</h2>
 
                     {!! nl2br(e($listing->body)) !!}
                     <hr>

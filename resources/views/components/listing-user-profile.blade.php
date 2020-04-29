@@ -7,7 +7,9 @@
     <i class="lunacon lunacon--size-x3 lunacon-message"></i>
     <br>
     <a href="mailto={{$listing->user->email}}">{{ $listing->user->email }}</a>
-    @if($listing->user->phone)
+{{--    <hide-email to="{{ $listing->user->email }}"></hide-email>--}}
+
+@if($listing->user->phone)
         <a href="tel={{$listing->user->phone}}">{{$listing->user->phone}}</a>
     @endif
     {{--    <footer>links</footer>--}}

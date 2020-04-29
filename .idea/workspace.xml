@@ -2,10 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/FarmersFriend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/FarmersFriend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/js/components/helpers/HideEmail.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingBlankPanel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/sass/app/_flickity.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/T5QfiqIIlpgjFJKREkLtyShrbdEa95nV/Jn9Y8CGjTGCk0OXc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storage/media-library/temp/T5QfiqIIlpgjFJKREkLtyShrbdEa95nV/oSn8kf71gEw94fHSicon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Auth/SocialLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Auth/SocialLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingPanel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingsList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/_settings.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_listing.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_listing.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_panel.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_panel.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/style.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/components/listing-user-profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/listing-user-profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/components/social-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/social-login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/components/sponsors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/sponsors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/listings/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +45,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -165,7 +189,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../app/Listeners/Social" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../resources/js/components/listings" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -181,11 +205,11 @@
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\resources\js\Plugins" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\MyProjects\FarmersFriend\resources\js\components\listings" />
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\app\Listeners\Social" />
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\resources\views\legal" />
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\app\Mail\Social" />
       <recent name="C:\wamp64\www\MyProjects\FarmersFriend\app\Http\Controllers\Api\Listing" />
-      <recent name="C:\wamp64\www\MyProjects\FarmersFriend\resources\js\components\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -241,7 +265,7 @@
       <workItem from="1587774455897" duration="15580000" />
       <workItem from="1587813631786" duration="20059000" />
       <workItem from="1587866644290" duration="49097000" />
-      <workItem from="1588007073755" duration="42333000" />
+      <workItem from="1588007073755" duration="62313000" />
     </task>
     <servers />
   </component>
@@ -292,9 +316,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587514607407" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588094293207">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588123871108">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588094293207" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588123871108" />
   </component>
 </project>

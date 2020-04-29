@@ -1,16 +1,23 @@
 <template>
     <div>
         <div class="row flex">
-            <listing-panel columns="sm-col-6 md-col-4 lg-col-3" v-for="listing in listings" :key="listing.id" :listing="listing" :area="area">
-                <template v-slot:body>
-                    <div class="flex justify--between">
-                        <div class="avatar avatar__sm ">
-                            <img :src="listing.user.avatar" :alt="listing.user.name">
+
+            <template v-for="listing in listings" >
+                <listing-panel columns="sm-col-6 md-col-4 lg-col-3" :key="listing.id" :listing="listing" :area="area">
+                    <template v-slot:body>
+                        <div class="flex justify--between">
+                            <div class="avatar avatar__sm ">
+                                <img :src="listing.user.avatar" :alt="listing.user.name">
+                            </div>
+                            <a :href="`/${area.slug}/listing/${listing.key}`" class="btn btn--primary">VIEW</a>
                         </div>
-                        <a :href="`/${area.slug}/listing/${listing.key}`" class="btn btn--primary">VIEW</a>
-                    </div>
-                </template>
-            </listing-panel>
+                    </template>
+                </listing-panel>
+<!--                <listing-blank-panel columns="sm-col-6 md-col-4 lg-col-3" ></listing-blank-panel>-->
+
+            </template>
+
+
 
             <div class="observ"
                  v-if="listings.length" v-observe-visibility="{
@@ -31,11 +38,12 @@
 
     import {mapActions, mapGetters, mapMutations} from "vuex";
     import ListingPanel from "./ListingPanel";
+    import ListingBlankPanel from "./ListingBlankPanel";
 
 
     export default {
         name: "ListingsList",
-        components: {ListingPanel},
+        components: {ListingBlankPanel, ListingPanel},
         props: {
             category: {
                 required: true,

@@ -21,3 +21,34 @@
 
     &__price
         font-size: larger
+
+
+
+    &__placeholder
+        display: block
+        min-height: 18px
+        width: 40px
+        background: $mute-border-color
+
+
+        &--image
+            position: relative
+            width: 100%
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 0
+                width: 1px
+                padding-top: 75%
+
+        &--avatar
+            border-radius: 50%
+            width: 40px
+            height: 40px
+
+        &--half
+            width: 50%
+
+        &--90
+            width: 90%

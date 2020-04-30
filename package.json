@@ -15,7 +15,7 @@
         "cross-env": "^5.2.1",
         "imagemin-mozjpeg": "^7.x",
         "imagemin-webpack-plugin": "^2.x",
-        "jquery": "^3.2",
+        "jquery": "^3.5",
         "laravel-mix": "^5.0.1",
         "lodash": "^4.17.13",
         "luna-sass": "^2.0.4",

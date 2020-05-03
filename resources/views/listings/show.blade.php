@@ -35,14 +35,12 @@
             <div class="main-carousel panel mb-6 shadow--1">
                 @foreach($listing->images() as $image)
                     <div class="carousel-cell">
-                        <img class="splide__list" data-flickity-lazyload="{{  $image->getFullUrl('card') }}" alt="slide">
+                        <img class="splide__list" src="{{  $image->getFullUrl('card') }}" alt="slide">
                     </div>
                 @endforeach
             </div>
             @endif
-
             <div class="panel shadow--1">
-
                     <div class="panel__header text--secondary flex justify--between flex--center">
                     @if($listing->price)
                     <h2>R {{ number_format($listing->price, 2)}}</h2>
@@ -59,7 +57,6 @@
                     <p>Viewed {{ $listing->views() }} times</p>
                 </div>
             </div>
-
             <div class="panel shadow--1">
                 <div class="panel__header">
                     Contact {{ $listing->user->name }}

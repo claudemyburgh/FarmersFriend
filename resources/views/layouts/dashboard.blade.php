@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <x-google-tags></x-google-tags>
     <meta charset="utf-8">
@@ -18,21 +19,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
+
 <body class="{{ set_body() }}">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGZMMWX"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGZMMWX" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div id="app">
         <x-nav-top></x-nav-top>
-{{--        @include('partials._nav')--}}
-        <div class="wrapper">
-            <div class="row">
-                <div class="col">
-                    @include('layouts.partials._alerts')
-                </div>
-            </div>
-        </div>
+        <x-notify-messages></x-notify-messages>
         <main class="main">
             <div class="wrapper">
                 <div class="row flex">
@@ -56,4 +51,6 @@
 
     </div><!-- #app -->
 </body>
+
+
 </html>

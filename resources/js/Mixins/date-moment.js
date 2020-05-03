@@ -1,11 +1,10 @@
-import moment from "moment";
-
+import moment from 'moment/moment'
 
 export default {
 
     data() {
         return {
-            // moment: moment
+            moment: moment
         }
     },
     filters: {

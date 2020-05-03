@@ -8,7 +8,7 @@
         <div class="md-col-12">
             <div class="panel shadow--3">
                 <div class="panel__body">
-                    <line-chart url="api/dashboard/listings-chart" activities="Views"></line-chart>
+                    <!-- <line-chart url="api/dashboard/listings-chart" activities="Views"></line-chart> -->
 
                 </div>
             </div>

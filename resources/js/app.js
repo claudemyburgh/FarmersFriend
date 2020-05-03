@@ -1,10 +1,12 @@
+require('intersection-observer');
 import Vue from 'vue'
 import VueProgressBar from 'vue-progressbar'
 import VueObserveVisibility from 'vue-observe-visibility'
+import InstantSearch from 'vue-instantsearch'
 import {cacheAdapterEnhancer, throttleAdapterEnhancer} from "axios-extensions";
 import { options } from './defaults'
 import store from './vuex'
-import Moment from './Mixins/moment'
+import Moment from './Mixins/date-moment'
 import Currency from './Mixins/currency'
 
 /**
@@ -17,6 +19,10 @@ window.axios.adapter = throttleAdapterEnhancer(cacheAdapterEnhancer(axios.defaul
 // window.axios.defaults.baseURL = "http://farmersfriend.build";
 window.axios.defaults.baseURL = "http://farmersfriend.co.za";
 axios.defaults.withCredentials = true;
+
+
+
+
 
 /**
  * Plugins
@@ -35,6 +41,8 @@ Dropzone.autoDiscover = false;
  */
 Vue.use(VueObserveVisibility)
 Vue.use(VueProgressBar, options)
+Vue.use(InstantSearch)
+
 Vue.mixin(Moment)
 Vue.mixin(Currency)
 
@@ -44,6 +52,7 @@ Vue.mixin(Currency)
  */
 const files = require.context('./components/', true, /\.vue$/i)
 files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
 
 /**
  * CSRF for axios
@@ -60,9 +69,6 @@ if (token) {
  * Helpers
 
  */
-
-
-
 
 
 /**

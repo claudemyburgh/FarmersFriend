@@ -13,12 +13,7 @@
                         </div>
                     </template>
                 </listing-panel>
-<!--                <listing-blank-panel columns="sm-col-6 md-col-4 lg-col-3" ></listing-blank-panel>-->
-
             </template>
-
-
-
             <div class="observ"
                  v-if="listings.length" v-observe-visibility="{
                     callback: handleScrollToBottomOffTimeline,
@@ -28,8 +23,6 @@
                     throttle: 300}">
                 <div v-if="!loadingComplete"  class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             </div>
-
-
         </div>
     </div>
 </template>
@@ -39,7 +32,6 @@
     import {mapActions, mapGetters, mapMutations} from "vuex";
     import ListingPanel from "./ListingPanel";
     import ListingBlankPanel from "./ListingBlankPanel";
-
 
     export default {
         name: "ListingsList",

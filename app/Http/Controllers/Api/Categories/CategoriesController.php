@@ -11,7 +11,7 @@ class CategoriesController extends Controller
 {
     public function index()
     {
-        $categories = cache()->remember('api.categories', 60*60*24 , function() {
+        $categories = cache()->remember('api.categories', 60*60 , function() {
             return Category::get()->toTree();
         });
 

@@ -64,7 +64,7 @@ class FrontendRoutes
     {
         return function () {
 
-            $this->group(['prefix' => '/listings', 'namespace' => 'Listing'], function () {
+            $this->group(['prefix' => 'dashboard/listings', 'namespace' => 'Listing'], function () {
 
                 $this->get('/favourites', 'ListingFavouriteController@index')->name('listings.favourites.index');
                 $this->post('/{listing}/favourites', 'ListingFavouriteController@store')->name('listings.favourites.store');
@@ -119,7 +119,12 @@ class FrontendRoutes
     {
         return function () {
             $this->group(['middleware' => ['auth:sanctum', 'verified'], 'namespace' => 'Dashboard', 'as' => 'dashboard.'], function () {
-                $this->get('dashboard', 'DashboardController@index')->name('index');
+                $this->get('{area}/dashboard', 'DashboardController@index')->name('index');
+                $this->get('{area}/dashboard/profile', 'ProfileController@index')->name('profile.index');
+
+
+                $this->get('{area}/dashboard/password', 'PasswordController@index')->name('password.index');
+                $this->post('{area}/dashboard/password', 'PasswordController@store')->name('password.store');
             });
         };
     }

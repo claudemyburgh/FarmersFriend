@@ -8,22 +8,28 @@
         <div class="nav__navicon"></div>
         <div class="nav__links__wrapper nav__links--right">
             <ul class="nav__links">
-                <li class="nav__links__item {{ set_active('/*/') }}"><a href="{{ url('/') }}">{{ __('Listings') }}</a></li>
+                <li class="nav__links__item {{ set_active( Request::segment(2) === 'categories') }}"><a href="{{ url('/') }}">{{ __('Listings') }}</a></li>
 {{--                <li class="nav__links__item {{ set_active('areas') }}"><a href="{{ route('areas') }}">{{ __('Areas') }}</a></li>--}}
 {{--                <li class="nav__links__item {{ set_active('*/categories') }}"><a href="{{ route('category.index', [$area]) }}">{{ __('Listings') }}</a></li>--}}
+
                 @guest
                     <li class="nav__links__item {{ set_active('login') }}"><a href="{{ route('login') }}">{{ __('Login') }}</a></li>
                     <li class="nav__links__item {{ set_active('register') }}"><a href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                    <li class="nav__links__button">
-                        <a href="{{ route('listings.create', [$area]) }}" class="btn btn--primary-gradient text--white">Create a Listing</a>
+                    <li class="nav__links__button ">
+                        <a href="{{ route('listings.create', [$area]) }}" class="btn btn--primary-gradient text--white"> Create a Listing</a>
                     </li>
 
                 @else
-                    <li class="nav__links__item nav__links__item--dropdown">
-                        <a href="#"> <img class="avatar__nav"  src="{{ Auth::user()->avatar(30) }}" alt="Avater"> {{ Auth::user()->name }}</a>
+                    <li class="nav__links__item nav__links__item--dropdown {{ set_active("{$area->slug}/dashboard*") }}">
+                        <a href="{{ route('dashboard.profile.index', $area) }}">
+                            @if(request()->segment(3) === 'profile')
+                                <avatar-nav></avatar-nav>
+                            @else
+                                <img class="avatar__nav"  src="{{ Auth::user()->avatar }}" alt="Avater"> {{ Auth::user()->name }}</a>
+                            @endif
                         <ul class="nav__links">
                             <li class="nav__links__item">
-                                <a href="{{ route('dashboard.index') }}"> <i class="lunacom lunacon-dashboard mr-2"></i> {{__("Dashboard")}}</a>
+                                <a href="{{ route('dashboard.index', $area) }}"> <i class="lunacom lunacon-dashboard mr-2"></i> {{__("Dashboard")}}</a>
                             </li>
                             <li class="nav__links__item nav__devider"></li>
 

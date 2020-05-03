@@ -29,25 +29,20 @@ import Masonry from 'masonry-layout'
 
     $(document).Luna();
 
-
-    // let _splide = document.querySelectorAll('.splide')
-    //
-    // if (_splide.length) {
-    //     for (var i = 0,  item = _splide; i < item.length; i++ ) {
-    //         new Splide( item[i] ).mount()
-    //     }
-    // }
-
     var elem = document.querySelector('.main-carousel');
-    var flkty = new Flickity( elem, {
-        // options
-        cellAlign: 'left',
-        contain: true,
-        lazyLoad: 1,
-        fullscreen: true,
-        imagesLoaded: true
 
-    });
+    if  (elem) {
+        var flkty = new Flickity( elem, {
+            // options
+            cellAlign: 'left',
+            contain: true,
+            // lazyLoad: 1,
+            fullscreen: true,
+            imagesLoaded: true
+
+        });
+
+    }
 
 
 

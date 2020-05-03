@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Laravel\Scout\Searchable;
+use PhpParser\Node\Scalar\String_;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -18,7 +19,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'bio', 'avatar', 'email_verified_at'
+        'first_name', 'last_name', 'email', 'password', 'phone', 'bio', 'avatar', 'show_phone', 'show_email', 'email_verified_at'
     ];
 
     /**
@@ -39,11 +40,22 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
+    protected $appends = [
+        'name'
+    ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function social()
     {
         return $this->hasMany(UserSocial::class);
     }
 
+    /**
+     * @param $service
+     * @return bool
+     */
     public function hasSocialLinked($service)
     {
         return (bool) $this->social->where('service', $service)->count();
@@ -91,6 +103,14 @@ class User extends Authenticatable implements MustVerifyEmail
     public function getAvatarAttribute($vaule) : String
     {
         return $vaule ?: $this->avatar();
+    }
+
+    /**
+     * @return String
+     */
+    public function getNameAttribute() : String
+    {
+        return $this->first_name . ' ' . $this->last_name;
     }
 
 }

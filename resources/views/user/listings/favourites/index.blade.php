@@ -9,7 +9,6 @@
             <h1>Favourited Listings</h1>
         </div>
     </div>
-
     <listings-filter :area="{{ $area }}" url="/api/listings/favourited">
 
     </listings-filter>

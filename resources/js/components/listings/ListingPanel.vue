@@ -1,6 +1,6 @@
 <template>
     <div :class="columns">
-        <div class="panel shadow--2 mb-6">
+        <div class="panel shadow--1 mb-6">
             <a :href="`/${area.slug}/listing/${listing.key}`">
                 <div class="panel__picture">
                     <picture v-if="typeof (listing.images[0]) !== 'undefined'">
@@ -16,8 +16,6 @@
                 </div>
 
             </a>
-
-
             <div class="panel__header">
                 <div class="ellipsis">
                     <a class="ellipsis block " :href="`/${area.slug}/listing/${listing.key}`">{{ listing.title }}</a>

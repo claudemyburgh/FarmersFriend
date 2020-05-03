@@ -13,7 +13,7 @@
                 <div class="panel__body">
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}" novalidate>
                         @csrf
-                        <div class="form__group {{ $errors->has('email') ? ' has__danger' : '' }} ">
+                        <div class="form__group {{ $errors->has('email') ? ' has--danger' : '' }} ">
                             <label for="email" class="form__label font--bold">{{ __('E-Mail Address') }}</label>
                             <div class="form__wrap">
                                 <i class="lunacon lunacon-mail-envelope"></i>
@@ -25,7 +25,7 @@
                                 </strong>
                             @endif
                         </div>
-                        <div class="form__group {{ $errors->has('password') ? ' has__danger' : '' }} ">
+                        <div class="form__group {{ $errors->has('password') ? ' has--danger' : '' }} ">
                             <label for="password" class="form__label font--bold">{{ __('Password')  }}</label>
                             <div class="form__wrap">
                                 <i class="lunacon lunacon-shield-lock-solid"></i>

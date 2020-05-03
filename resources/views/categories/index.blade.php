@@ -2,7 +2,6 @@
 
 @section('content')
 {{--    @include('listings.partials._search')--}}
-
     <div class="wrapper">
         <div class="row flex">
             @foreach ($categories as $category)
@@ -19,5 +18,4 @@
             @endforeach
         </div>
     </div>
-
 @endsection

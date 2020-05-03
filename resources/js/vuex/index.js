@@ -7,6 +7,7 @@ import categories from '../components/listings/components/categories/vuex'
 import notify from '../components/components/notify/vuex'
 import notify_published from '../components/components/notify_published/vuex'
 import contactUser from '../components/contact_listing_user/vuex'
+import user from '../components/profile/vuex'
 
 Vue.use(Vuex)
 
@@ -15,6 +16,7 @@ export default new Vuex.Store({
 
     ],
     modules: {
+        user,
         listings,
         area,
         notify,

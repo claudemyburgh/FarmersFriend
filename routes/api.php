@@ -5,13 +5,15 @@
 //});
 
 
+
+
 Route::group(['middleware' => ['auth:sanctum'], 'as' => 'api.'], function() {
 
     Route::get('areas', 'AreasController@index')->name('areas.index');
 
     Route::get('categories', 'Categories\CategoriesController@index')->name('categories.index');
 
-    Route::apiResource('{area}/listings', 'Listing\ListingsController');
+    Route::apiResource('{area}/listings', 'Listing\ListingsController', ['except' => ['index']]);
 
     Route::get('listings/published', 'Listing\ListingsPublishedController@index')->name('listings.published.index');
     Route::get('listings/unpublished', 'Listing\ListingsUnpublishedController@index')->name('listings.unpublished.index');
@@ -31,8 +33,17 @@ Route::group(['prefix' => '{area}/categories/{category}', 'as' => 'api.'], funct
 
 });
 
-Route::group(['middleware' => ['auth:sanctum', 'verified'], 'as' => 'api.dashboard.', 'namespace' => 'Dashboard', 'prefix' => 'dashboard'], function () {
+Route::group(['middleware' => ['auth:sanctum', 'verified'],
+    'as' => 'api.dashboard.', 'namespace' => 'Dashboard', 'prefix' => 'dashboard'], function () {
 
     Route::get('listings-chart', 'ChartsController@listings')->name('chart.listing');
+
+    Route::get('profile', 'Profilecontroller@index')->name('profile.index');
+    Route::post('profile', 'Profilecontroller@store')->name('profile.store');
+
+    Route::get('profile/password', 'ProfilePasswordController@index')->name('profile.password.index');
+    Route::post('profile/password', 'ProfilePasswordController@store')->name('profile.password.store');
+
+
 
 });

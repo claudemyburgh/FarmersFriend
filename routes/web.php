@@ -1,9 +1,21 @@
 <?php
 
+
+//Route::get('{area}/search', function() {
+//
+//    $query = 'blue';
+//
+//    $listings = App\Listing::search($query)->get();
+//
+//    return $listings;
+//});
+//
+
 Route::social();
 Route::legal();
 Route::auth(['verify' => true]);
 Route::frontend();
+
 
 
 

@@ -39,13 +39,15 @@ class SocialLoginController extends Controller
     public function callback($service, Request $request)
     {
         try {
+
             $serviceUser = Socialite::driver($service)->user();
 
             $user = $this->getExistingUser($serviceUser, $service);
 
             if(!$user) {
                 $user = User::create([
-                    'name' => $serviceUser->getName(),
+                    'first_name' => $serviceUser->user['given_name'],
+                    'last_name' => $serviceUser->user['family_name'],
                     'email' => $serviceUser->getEmail(),
                     'password' => bcrypt($this->randomPassword()),
                     'email_verified_at' => Carbon::now(),

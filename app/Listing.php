@@ -20,7 +20,7 @@ class Listing extends Model implements HasMedia
     use SoftDeletes,
         OrderableTrait,
         InteractsWithMedia,
-//        Searchable,
+        Searchable,
         PivotOrderableTrait;
 
     /**
@@ -274,7 +274,6 @@ class Listing extends Model implements HasMedia
             ->registerMediaConversions(function (Media $media) {
                 foreach (config('farmersfriend.img') as $key => $value) {
                     $this->addMediaConversion($key)
-//                        ->fit(Manipulations::FIT_CROP, (int) $value['width'], (int) $value['height'])
                         ->crop(Manipulations::CROP_CENTER, (int) $value['width'], (int) $value['height'])
                         ->sharpen(5)
                         ->optimize()

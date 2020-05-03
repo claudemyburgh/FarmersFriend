@@ -24,6 +24,7 @@ class ListingImageController extends Controller
      */
     public function store(Request $request, Listing $listing)
     {
+
         $details = $listing->addMedia($request->file)->toMediaCollection('listing');
 
         return response()->json([

@@ -87,13 +87,12 @@ class ListingsController extends Controller
 
         $listing = $listing->update(array_merge($request->only(['title', 'body', 'category_id', 'area_id', 'url', 'price']), [
             'area_parent_id' => $request->province_id,
-
         ]));
 
         if ($request->has('payment')) {
             return redirect()->route('listings.payment.show', [$area, $listing]);
         }
-        
+
     }
 
     /**

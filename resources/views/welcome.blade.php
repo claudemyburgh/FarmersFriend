@@ -3,7 +3,12 @@
 @section('title', 'Areas')
 
 @section('content')
+
     <div class="wrapper">
+        <div class="row">
+            <div class="col">
+            </div>
+        </div>
         <div class="row">
             <div class="md-col-12">
                 @foreach ($areas as $country)

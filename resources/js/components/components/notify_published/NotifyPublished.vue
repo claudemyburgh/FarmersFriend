@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import moment from 'moment'
+    // import moment from 'moment'
     import {mapActions, mapGetters} from 'vuex'
     export default {
         name: "NotifyPublished",

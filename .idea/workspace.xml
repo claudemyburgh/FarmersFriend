@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/Http/Requests/ProfilePasswordChangeRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Rules/CurrentPassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/dashboard/profile/password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/dashboard/profile/password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/seeds/CategoriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/seeds/CategoriesTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +246,7 @@
       <workItem from="1588157291099" duration="5273000" />
       <workItem from="1588336732750" duration="44103000" />
       <workItem from="1588453484304" duration="26592000" />
-      <workItem from="1588511058801" duration="11551000" />
+      <workItem from="1588511058801" duration="12948000" />
     </task>
     <servers />
   </component>

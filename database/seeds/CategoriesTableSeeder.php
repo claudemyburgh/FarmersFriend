@@ -63,6 +63,15 @@ class CategoriesTableSeeder extends Seeder
                 'children' => [
                     ['name' => 'Job Opportunities']
                 ]
+            ],
+            [
+                'name' => 'Farmer\'s Wife',
+                'children' => [
+                    ['name' => 'Food Preserves'],
+                    ['name' => 'Fruit and Vegetables'],
+                    ['name' => 'Meat']
+
+                ]
             ]
         ];
 

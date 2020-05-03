@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../resources/img/icons/farmers-wife.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/seeds/CategoriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/seeds/CategoriesTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +245,7 @@
       <workItem from="1588157291099" duration="5273000" />
       <workItem from="1588336732750" duration="44103000" />
       <workItem from="1588453484304" duration="26592000" />
-      <workItem from="1588511058801" duration="12948000" />
+      <workItem from="1588511058801" duration="13747000" />
     </task>
     <servers />
   </component>

@@ -65,7 +65,7 @@ class CategoriesTableSeeder extends Seeder
                 ]
             ],
             [
-                'name' => 'Farmer\'s Wife',
+                'name' => 'Farmers Wife',
                 'children' => [
                     ['name' => 'Food Preserves'],
                     ['name' => 'Fruit and Vegetables'],

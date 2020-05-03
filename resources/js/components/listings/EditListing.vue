@@ -3,7 +3,6 @@
     <div class="panel shadow--2">
         <div class="panel__header flex justify--between">Edit Listing</div>
         <div class="panel__body">
-
                 <form-base>
                     <div class="row">
                         <div class="form__group md-col-8" :class="errors.url ? 'has__danger' : ''">
@@ -115,7 +114,7 @@
                 }).then( ({status}) => {
                     this.$Progress.finish()
                     if (status === 200) {
-                        window.location.href = `/${this.area.slug}/listings/${this.listing.key}/payment`
+                        window.location.href = `/${this.area.slug}/dashboard/listings/${this.listing.key}/payment`
                     }
                 }).catch( (error) => {
                     this.$Progress.fail()

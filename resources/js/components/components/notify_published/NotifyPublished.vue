@@ -39,7 +39,7 @@
                 window.location.href = `/${this.area.slug}/listing/${this.listing.key}`
             },
             viewPublish() {
-                window.location.href = `/${this.area.slug}/listings/${this.listing.key}/payment`
+                window.location.href = `/${this.area.slug}/dashboard/listings/${this.listing.key}/payment`
             }
         }
     }

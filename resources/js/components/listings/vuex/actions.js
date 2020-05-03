@@ -15,7 +15,7 @@ export const create_listing = async ({commit, dispatch}, {area, listing}) => {
         }, {root: true})
         commit('PROCESSING_STATUS', false)
         commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
-        window.location.href = `/${area.slug}/listings/${response.data.data.key}/edit`
+        window.location.href = `/${area.slug}/dashboard/listings/${response.data.data.key}/edit`
         return response.status
     } catch (error) {
 

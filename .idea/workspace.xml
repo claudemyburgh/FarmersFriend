@@ -2,77 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Dashboard/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Dashboard/ProfilePasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/PasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/ProfileController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../app/Http/Requests/UserProfileRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/img/icons/algolia-blue-mark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/Mixins/date-moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/loaders/LoaderDots.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/profile/ProfileForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/js/components/profile/components/AvatarNav.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/sass/app/_search.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/views/dashboard/profile/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../resources/views/dashboard/profile/password.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/Http/Requests/ProfilePasswordChangeRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/Rules/CurrentPassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Area.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Area.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Api/Categories/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Categories/CategoriesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingImageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingImageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Api/Listing/ListingsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Auth/SocialLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Auth/SocialLoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Resources/User/UserResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Resources/User/UserResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Listing.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Listing.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/RouteMethods/FrontendRoutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/RouteMethods/FrontendRoutes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/scout.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/scout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/Mixins/moment.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/charts/BarChart.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/charts/LineChart.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/notify/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/notify/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/notify_published/NotifyPublished.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/NotifyPublished.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingPanel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingsList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/search/AppSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/search/AppSearch.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/search/AreaSearch.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/search/UserSearch.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/vuex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/vuex/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_globals.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_globals.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_list.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_list.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_panel.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_panel.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/style.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/categories/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/components/listing-user-profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/listing-user-profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/components/nav-sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/nav-sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/components/nav-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/nav-top.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/dashboard/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/frontpage.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/frontpage.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/user/listings/favourites/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/user/listings/favourites/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/user/listings/published/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/user/listings/published/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/PasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/dashboard/profile/password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/dashboard/profile/password.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +248,7 @@
       <workItem from="1588157291099" duration="5273000" />
       <workItem from="1588336732750" duration="44103000" />
       <workItem from="1588453484304" duration="26592000" />
-      <workItem from="1588511058801" duration="10590000" />
+      <workItem from="1588511058801" duration="11551000" />
     </task>
     <servers />
   </component>
@@ -365,9 +299,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587514607407" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588527047372">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588528383698">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588527047372" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588528383698" />
   </component>
 </project>

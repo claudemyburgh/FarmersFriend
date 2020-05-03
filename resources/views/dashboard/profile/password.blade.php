@@ -11,11 +11,16 @@
                 <div class="panel__body">
                     <form action="{{ route('dashboard.password.store', [$area]) }}" method="post">
                         @csrf
-                        <div class="form__group">
+                        <div class="form__group @error('password_current') has--danger  @enderror">
                             <label for="password_current" class="form__label font--bold">Current Password</label>
                             <div class="form__wrap">
                                 <input type="password" name="password_current" id="password_current" class="form__item">
                             </div>
+                            @error('password_current')
+                            <span class="form__helper" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form__group @error('password') has--danger  @enderror">
                             <label for="password" class="form__label font--bold">New Password</label>
@@ -29,9 +34,9 @@
                             @enderror
                         </div>
                         <div class="form__group">
-                            <label for="password_conformation" class="form__label font--bold">Current Password</label>
+                            <label for="password_confirmation" class="form__label font--bold">Confirm Password</label>
                             <div class="form__wrap">
-                                <input type="password" name="password_conformation" id="password_conformation" class="form__item">
+                                <input type="password" name="password_confirmation" id="password_confirmation" class="form__item">
                             </div>
                         </div>
                         <div class="form__group">

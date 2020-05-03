@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProfilePasswordChangeRequest;
 use Illuminate\Http\Request;
 
 class PasswordController extends Controller
@@ -28,8 +29,9 @@ class PasswordController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function store(Request $request)
+    public function store(ProfilePasswordChangeRequest $request)
     {
+
         $request->user()->update([
             'password' => bcrypt($request->password)
         ]);

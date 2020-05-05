@@ -28,11 +28,9 @@
 </template>
 
 <script>
-
     import {mapActions, mapGetters, mapMutations} from "vuex";
     import ListingPanel from "./ListingPanel";
     import ListingBlankPanel from "./ListingBlankPanel";
-
     export default {
         name: "ListingsList",
         components: {ListingBlankPanel, ListingPanel},
@@ -85,8 +83,6 @@
         },
         mounted() {
             this.loadListings()
-
         }
-
     }
 </script>

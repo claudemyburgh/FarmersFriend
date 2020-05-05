@@ -38,8 +38,8 @@ Route::group(['middleware' => ['auth:sanctum', 'verified'],
 
     Route::get('listings-chart', 'ChartsController@listings')->name('chart.listing');
 
-    Route::get('profile', 'Profilecontroller@index')->name('profile.index');
-    Route::post('profile', 'Profilecontroller@store')->name('profile.store');
+    Route::get('profile', 'ProfileController@index')->name('profile.index');
+    Route::post('profile', 'ProfileController@store')->name('profile.store');
 
     Route::get('profile/password', 'ProfilePasswordController@index')->name('profile.password.index');
     Route::post('profile/password', 'ProfilePasswordController@store')->name('profile.password.store');

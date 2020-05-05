@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <listings-filter :area="{{ $area }}" url="/api/listings/published">
+    <listings-filter :area="{{ $area }}"  url="/api/listings/published">
 
     </listings-filter>
 

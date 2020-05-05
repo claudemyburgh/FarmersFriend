@@ -18,7 +18,6 @@ class ProfileController extends Controller
         $this->middleware(['auth:sanctum']);
     }
 
-
     /**
      * @param Request $request
      * @return UserResource

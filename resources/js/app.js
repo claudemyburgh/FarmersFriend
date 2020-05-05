@@ -9,6 +9,9 @@ import store from './vuex'
 import Moment from './Mixins/date-moment'
 import Currency from './Mixins/currency'
 
+import VueToastify from "vue-toastify";
+
+
 /**
  * Axios
  */
@@ -42,6 +45,10 @@ Dropzone.autoDiscover = false;
 Vue.use(VueObserveVisibility)
 Vue.use(VueProgressBar, options)
 Vue.use(InstantSearch)
+Vue.use(VueToastify, {
+    maxToasts: 2,
+    successDuration: 1000
+})
 
 Vue.mixin(Moment)
 Vue.mixin(Currency)

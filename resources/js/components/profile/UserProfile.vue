@@ -15,13 +15,19 @@
                     <div class="row">
                         <div class="md-col-6 mb-5">
                             <div class="border--mute p-4 r-3">
-                                <template v-if="user.first_name">{{ user.first_name}}</template>
+                                <template v-if="user.first_name">
+                                    <i class="lunacon lunacon-user-solid mr-2 text--gray"></i>
+                                    {{ user.first_name}}
+                                </template>
                                 <template v-else> <span class="text--danger">No first name</span></template>
                             </div>
                         </div>
                         <div class="md-col-6 mb-5">
                             <div class="border--mute p-4 r-3">
-                                <template v-if="user.last_name">{{ user.last_name}}</template>
+                                <template v-if="user.last_name">
+                                    <i class="lunacon lunacon-users-solid mr-2 text--gray"></i>
+                                    {{ user.last_name}}
+                                </template>
                                 <template v-else> <span class="text--danger">No last name</span></template>
 
                             </div>
@@ -30,13 +36,19 @@
                     <div class="row">
                         <div class="md-col-6 mb-5">
                             <div class="border--mute p-4 r-3">
-                                <template v-if="user.email">{{ user.email}}</template>
+                                <template v-if="user.email">
+                                    <i class="lunacon lunacon-mail-envelope mr-2 text--gray"></i>
+                                    {{ user.email}}
+                                </template>
                                 <template v-else> <span class="text--danger">No email address</span></template>
                             </div>
                         </div>
                         <div class="md-col-6 mb-5">
                             <div class="border--mute p-4 r-3">
-                                <template v-if="user.phone">{{ user.phone}}</template>
+                                <template v-if="user.phone">
+                                    <i class="lunacon lunacon-dailer-solid mr-2 text--gray"></i>
+                                    {{ user.phone}}
+                                </template>
                                 <template v-else> <span class="text--danger">No phone number</span></template>
                             </div>
                         </div>

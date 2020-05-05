@@ -2,16 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../resources/js/ReactComponents/ExampleComponent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/js/react-app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/sass/app/_tobii.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/seeds/CategoriesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/seeds/CategoriesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/img/icons/farmers-wife.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../public/img/icons/farmers-wife.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../public/mix-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/js/components/components/notify_published/NotifyPublished.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/NotifyPublished.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/ContactListingUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/ContactListingUser.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/EditListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/EditListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingsFilter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingsFilter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/profile/UserProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/profile/UserProfile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/listings/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/../webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +37,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -253,7 +264,8 @@
       <workItem from="1588157291099" duration="5273000" />
       <workItem from="1588336732750" duration="44103000" />
       <workItem from="1588453484304" duration="26592000" />
-      <workItem from="1588511058801" duration="16647000" />
+      <workItem from="1588511058801" duration="17891000" />
+      <workItem from="1588624237218" duration="15075000" />
     </task>
     <servers />
   </component>
@@ -292,10 +304,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="795" y="445" key="NewPhpFileDialog/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588088461756" />
-    <state x="342" y="168" width="1102" height="713" key="SettingsEditor" timestamp="1588091055078">
+    <state x="342" y="168" width="1344" height="713" key="SettingsEditor" timestamp="1588634698241">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="342" y="168" width="1102" height="713" key="SettingsEditor/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588091055078" />
+    <state x="342" y="168" width="1344" height="713" key="SettingsEditor/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588634698241" />
     <state x="516" y="128" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587261521538">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -304,9 +316,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587514607407" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588533740094">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588634988854">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588533740094" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588634988854" />
   </component>
 </project>

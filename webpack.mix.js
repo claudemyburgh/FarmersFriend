@@ -36,4 +36,5 @@ mix.webpackConfig({
     ],
 })
 .js('resources/js/app.js', 'public/js')
+.js('resources/js/react-app.js', 'public/js')
 .sass('resources/sass/style.sass', 'public/css').sourceMaps();

@@ -1,4 +1,5 @@
 import axios from 'axios'
+import VueToastify from "vue-toastify";
 
 
 export const create_listing = async ({commit, dispatch}, {area, listing}) => {
@@ -36,6 +37,8 @@ export const update_listing = async ({ commit }, data) => {
     commit('CLEAR_ERROR')
     commit('PROCESSING_STATUS', true)
     commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
+
+    console.log(VueToastify)
     try{
         let response =  await axios.patch(`api/${data.area.slug}/listings/${data.listing.key}`, data.listing)
         commit('notify/SET_NOTIFICATION', {
@@ -45,10 +48,7 @@ export const update_listing = async ({ commit }, data) => {
             show: true
         }, {root: true})
         commit('PROCESSING_STATUS', false)
-        setTimeout( () => {
-            commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
-        }, 3500)
-        return response
+        return response.status
     } catch (error) {
         commit('notify/SET_NOTIFICATION', {
             name: 'success',
@@ -58,9 +58,6 @@ export const update_listing = async ({ commit }, data) => {
         }, {root: true})
         commit('VALIDATE_ERROR', error.response.data.errors)
         commit('PROCESSING_STATUS', false)
-        setTimeout( () => {
-            commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
-        }, 3500)
     }
 }
 

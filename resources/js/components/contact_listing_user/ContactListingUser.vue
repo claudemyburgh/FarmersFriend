@@ -31,7 +31,6 @@
         ],
         data() {
             return {
-                e: null
             }
         },
         computed: mapGetters({
@@ -44,11 +43,10 @@
                 sendMessage: 'contactUser/sendMessage'
             }),
             postMessage() {
-                let response = this.sendMessage({
+                this.sendMessage({
                     listing: this.listing.key,
                     form: this.listingMessage
                 })
-
             }
         }
     }

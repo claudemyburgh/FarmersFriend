@@ -99,7 +99,7 @@ class ListingController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function update(StoreListingFormRequest $request, Area $area, Listing $listing)
+    public function update(ListingCreateRequest $request, Area $area, Listing $listing)
     {
         $this->authorize('update', $listing);
 
@@ -107,6 +107,7 @@ class ListingController extends Controller
         $listing->body = $request->body;
 
         if (!$listing->isLive()) {
+            $listing->parent_id = $request->parent_id;
             $listing->category_id = $request->category_id;
         }
 

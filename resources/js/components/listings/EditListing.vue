@@ -37,7 +37,6 @@
                     </div>
                 </div>
 
-
             </form-base>
 
             <div class="form__group flex justify--between" v-if="!status" >
@@ -73,7 +72,7 @@
         computed: {
             ...mapGetters({
                 listing: 'listings/get_listing',
-                errors: 'listings/get_listing_errors',
+                errors: 'getValidationErrors',
                 status: 'listings/get_processing_status'
             }),
             price() {
@@ -92,20 +91,22 @@
                 })
             },
             submitForm() {
-
+                this.$Progress.start()
+                const loader = this.$vToastify.loader("Please Wait...")
                 this.update_listing({
                     listing: this.listing,
                     area: this.area
                 }).then( ({status}) => {
+                    this.$Progress.finish()
+                    this.$vToastify.removeToast(loader)
                     this.$vToastify.success({
                         title: 'Success',
                         body: "Listing saved"
                     });
 
-
-                    if (status === 200) {
-                    }
                 }).catch( (error) => {
+                    this.$Progress.fail()
+                    this.$vToastify.removeToast(loader)
                     this.$vToastify.error({
                         title: "Error",
                         body: "Sorry something went wrong!"
@@ -114,19 +115,24 @@
                 })
             },
             publishForm() {
-
+                this.$Progress.start()
+                const loader = this.$vToastify.loader("Please Wait...")
                 this.update_listing({
                     listing: this.listing,
                     area: this.area
                 }).then( ({status}) => {
+                    this.$Progress.finish()
+                    this.$vToastify.removeToast(loader)
                     this.$vToastify.success({
-                        title: 'Success',
-                        body: "Publish Listing"
+                        title: 'Publishing',
+                        body: "redirecting ..."
                     });
-                    if (status === 200) {
-                        window.location.href = `/${this.area.slug}/dashboard/listings/${this.listing.key}/payment`
-                    }
+
+                    window.location.href = `/${this.area.slug}/dashboard/listings/${this.listing.key}/payment`
+
                 }).catch( (error) => {
+                    this.$Progress.fail()
+                    this.$vToastify.removeToast(loader)
                     this.$vToastify.error({
                         title: "Error",
                         body: "Sorry something went wrong!"

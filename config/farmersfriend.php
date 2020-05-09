@@ -12,15 +12,15 @@ return [
         ],
         'thumb' => [
             'width' => 300,
-            'height' => 225
+            'height' => 300
         ],
         'thumb_big' => [
             'width' => 400,
-            'height' => 300
+            'height' => 400
         ],
         'card' => [
-            'width' => 800,
-            'height' => 600
+            'width' => 1000,
+            'height' => 1000
         ]
     ],
     'auth' => [

@@ -7,22 +7,6 @@
  */
 
 /*!
- * Flickity fullscreen v1.1.1
- * Enable fullscreen view for Flickity
- */
-
-/*!
- * Flickity v2.2.1
- * Touch, responsive, flickable carousels
- *
- * Licensed GPLv3 for open source use
- * or Flickity Commercial License for commercial use
- *
- * https://flickity.metafizzy.co
- * Copyright 2015-2019 Metafizzy
- */
-
-/*!
  * Masonry v4.2.2
  * Cascading grid layout library
  * https://masonry.desandro.com
@@ -45,18 +29,6 @@
  * https://js.foundation/
  *
  * Date: 2020-03-14
- */
-
-/*!
- * Unidragger v2.3.1
- * Draggable base class
- * MIT license
- */
-
-/*!
- * Unipointer v2.3.0
- * base class for doing one thing with pointer event
- * MIT license
  */
 
 /*!

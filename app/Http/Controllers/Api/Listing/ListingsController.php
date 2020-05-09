@@ -79,21 +79,16 @@ class ListingsController extends Controller
     {
         $this->authorize('update', $listing);
 
-        if (!$listing->isLive()) {
-            $listing->category_id = $request->category_id;
-        }
 
-        $listing->area_id = $request->area_id;
+        $listing = $listing->update($request->only('title', 'body', 'category_id', 'area_id', 'area_parent_id', 'url', 'price'));
 
-        $listing = $listing->update(array_merge($request->only(['title', 'body', 'category_id', 'area_id', 'url', 'price']), [
-            'area_parent_id' => $request->province_id,
-        ]));
 
         if ($request->has('payment')) {
             return redirect()->route('listings.payment.show', [$area, $listing]);
         }
 
     }
+
 
     /**
      * Remove the specified resource from storage.

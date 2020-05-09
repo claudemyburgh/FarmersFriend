@@ -33,7 +33,7 @@
         computed: {
             ...mapGetters({
                 listing: 'listings/get_listing',
-                errors: 'listings/get_listing_errors',
+                errors: 'getValidationErrors',
                 status: 'listings/get_processing_status'
             })
         }

@@ -11,10 +11,17 @@ import user from '../components/profile/vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
-    plugins: [
+import state from './state.js'
+import * as mutations from './mutations.js'
+import * as actions from './actions.js'
+import * as getters from './getters.js'
 
-    ],
+export default new Vuex.Store({
+    // namespaced: true,
+    state,
+    mutations,
+    actions,
+    getters,
     modules: {
         user,
         listings,

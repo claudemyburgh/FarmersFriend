@@ -27,6 +27,7 @@ class UpdateListingRequest extends FormRequest
         return [
             'title' => 'required|max:255',
             'body' => 'required|max:2000',
+            'area_parent_id' => 'required',
             'price' => 'nullable|numeric',
             'url' => 'nullable|url',
             'category_id' => [
@@ -35,7 +36,6 @@ class UpdateListingRequest extends FormRequest
                     $query->where('usable', true);
                 })
             ],
-            'province_id' => 'required',
             'area_id' => [
                 'required',
                 Rule::exists('areas', 'id')->where(function($query) {
@@ -48,7 +48,7 @@ class UpdateListingRequest extends FormRequest
     public function messages()
     {
         return [
-            'province_id.required' => 'Select a valid province.',
+            'area_parent_id.required' => 'Select a valid province.',
             'area_id.required' => 'Select a valid city or town.'
         ];
     }

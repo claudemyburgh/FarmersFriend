@@ -31,17 +31,8 @@
         </div>
         <div class="md-col-6">
 
-            @if($count = $listing->images()->count())
-            <div class="main-carousel panel mb-6 shadow--1">
-                @foreach($listing->images() as $image)
-                    <a href="{{  $image->getFullUrl('card') }}"  class="carousel-cell lightbox" data-group="listing">
-                        <img class="splide__list" src="{{  $image->getFullUrl('icon') }}" alt="slide">
-                    </a>
-                @endforeach
+            <x-listing-images :media="$listing"></x-listing-images>
 
-
-            </div>
-            @endif
             <div class="panel shadow--1">
                     <div class="panel__header text--secondary flex justify--between flex--center">
                     @if($listing->price)

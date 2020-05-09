@@ -26,7 +26,7 @@
             ...mapGetters({
                 categories: 'categories/get_categories',
                 listing: 'listings/get_listing',
-                errors: 'listings/get_listing_errors',
+                errors: 'getValidationErrors',
             })
         },
         methods: {

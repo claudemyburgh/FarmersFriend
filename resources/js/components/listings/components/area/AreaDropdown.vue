@@ -28,11 +28,12 @@
                     </div>
                 </template>
             </div>
-            <div v-else  class="form__group md-col-6" :class="errors.area_id ? 'has__danger' : ''">
+            <div v-else class="form__group md-col-6" :class="errors.area_id ? 'has__danger' : ''">
                 <label class="form__label font--bold">City</label>
                 <div class="form__wrap">
                     <select disabled class="form__item font--bold" >
-                        <option value="">Select City, Town</option>
+                        <option v-if="listing.area_id" value="">{{ listing.area.name }}</option>
+                        <option v-else value="">Select City, Town</option>
                     </select>
                 </div>
                 <div class="form__helper" v-if="errors.area_id">
@@ -59,7 +60,6 @@
         },
         data() {
             return {
-
                 provinces: null
             }
         },
@@ -67,7 +67,7 @@
             ...mapGetters({
                 areas: 'area/get_areas',
                 listing: 'listings/get_listing',
-                errors: 'listings/get_listing_errors',
+                errors: 'getValidationErrors',
                 loaded: 'area/loading_status'
             })
         },
@@ -76,6 +76,7 @@
                 setArea: 'area/set_areas',
             }),
             filteredData() {
+                this.listing.area_id = ''
                 this.provinces = this.areas[0].children.filter((area) => {
                     return Object.keys(area).some((key) => {
                         return parseInt(area[key]) === this.listing.province_id

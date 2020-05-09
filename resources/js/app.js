@@ -25,8 +25,6 @@ axios.defaults.withCredentials = true;
 
 
 
-
-
 /**
  * Plugins
  */
@@ -46,8 +44,9 @@ Vue.use(VueObserveVisibility)
 Vue.use(VueProgressBar, options)
 Vue.use(InstantSearch)
 Vue.use(VueToastify, {
-    maxToasts: 2,
-    successDuration: 1000
+    maxToasts: 3,
+    successDuration: 1500,
+    errorDuration: 1500,
 })
 
 Vue.mixin(Moment)
@@ -76,7 +75,7 @@ if (token) {
  * Helpers
 
  */
-
+require('./interceptors')
 
 /**
  *

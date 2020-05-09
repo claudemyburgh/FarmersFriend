@@ -29,6 +29,7 @@ class StoreListingFormRequest extends FormRequest
             'body' => 'required|max:2000',
             'price' => 'nullable|numeric',
             'url' => 'nullable|url',
+            'province_id' => 'required',
             'category_id' => [
                 'required',
                 Rule::exists('categories', 'id')->where(function ($query) {

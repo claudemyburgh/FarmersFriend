@@ -1,6 +1,5 @@
 <template>
     <form @submit.prevent="postMessage" method="post">
-    <pre>{{ e }}</pre>
         <div class="form__group" :class="errors.message ? 'has__danger' : ''">
             <label for="message" class="form__label font--bold">Message</label>
             <resize-textarea @focus.prevent="errors.message = null" name="message" v-model="listingMessage.message" ></resize-textarea>
@@ -29,10 +28,6 @@
         props: [
             "listing"
         ],
-        data() {
-            return {
-            }
-        },
         computed: mapGetters({
             listingMessage: 'contactUser/getListingFormMessage',
             processing: 'contactUser/processing',
@@ -43,9 +38,25 @@
                 sendMessage: 'contactUser/sendMessage'
             }),
             postMessage() {
+                this.$Progress.start()
+                const loader = this.$vToastify.loader("Please Wait...")
                 this.sendMessage({
                     listing: this.listing.key,
                     form: this.listingMessage
+                }).then( (response) => {
+                    this.$Progress.finish()
+                    this.$vToastify.removeToast(loader)
+                    this.$vToastify.success({
+                        title: 'Success',
+                        body: 'Listing created'
+                    });
+                }).catch( (error) => {
+                    this.$Progress.fail()
+                    this.$vToastify.removeToast(loader)
+                    this.$vToastify.error({
+                        title: 'Error',
+                        body: error.response.data.message
+                    });
                 })
             }
         }

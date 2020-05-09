@@ -4,7 +4,6 @@ export const create_listing = ({commit, dispatch}, {area, listing}) => {
     commit('CLEAR_VALIDATION_ERRORS', {},{root: true})
     commit('PROCESSING_STATUS', true)
     commit('notify/SET_NOTIFICATION', { show: false}, {root: true})
-
     return axios.post(`api/${area.slug}/listings`, listing).then( (response) => {
         commit('notify/SET_NOTIFICATION', {
             name: 'success',
@@ -29,19 +28,18 @@ export const update_listing = ({ commit }, data) => {
 
     return axios.patch(`api/${data.area.slug}/listings/${data.listing.key}`, data.listing)
         .then( (response) => {
-        commit('notify/SET_NOTIFICATION', {
-            name: 'success',
-            class: 'notify--success',
-            message: 'Your listing is successfully Updated.',
-            show: true
-        }, {root: true})
-        commit('PROCESSING_STATUS', false)
-        return Promise.resolve(response)
-    }).catch( (error) => {
-        commit('PROCESSING_STATUS', false)
-        return Promise.reject(error)
-    })
-
+            commit('notify/SET_NOTIFICATION', {
+                name: 'success',
+                class: 'notify--success',
+                message: 'Your listing is successfully Updated.',
+                show: true
+            }, {root: true})
+            commit('PROCESSING_STATUS', false)
+            return Promise.resolve(response)
+        }).catch( (error) => {
+            commit('PROCESSING_STATUS', false)
+            return Promise.reject(error)
+        })
 }
 
 export const get_listings = async ({commit}, {url}) => {

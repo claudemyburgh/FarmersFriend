@@ -4,7 +4,7 @@
         <div class="panel__body">
             <form @submit.prevent="submitForm" method="post" novalidate>
                 <form-base></form-base>
-                <div class="form__group" v-if="!status" >
+                <div class="form__group" v-if="!status">
                     <button type="submit" class="btn btn--primary">CREATE</button>
                 </div>
                 <div class="form__group" v-else>

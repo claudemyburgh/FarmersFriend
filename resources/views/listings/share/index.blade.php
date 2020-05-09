@@ -14,7 +14,7 @@
                     <form action="{{ route('listings.share.store', [$area, $listing]) }}" method="post" autocomplete="off">
                         @foreach (range(0, 4) as $n)
                             <div class="form__group{{ $errors->has('emails.' . $n) ? ' has__danger' : '' }}">
-                                <label class="form__label font--bold" for="emails.{{ $n }}" class="hidden">Email</label>
+                                <label class="form__label font--bold" for="emails.{{ $n }}" >Email</label>
                                 <input type="text" name="emails[]" id="emails.{{ $n }}" class="form__item" placeholder="someone@somewhere.com" value="{{ old('emails.' . $n) }}">
 
                                 @if ($errors->has('emails.' . $n))

@@ -1,29 +1,21 @@
 import axios from 'axios'
 
-export const sendMessage = async ({state, commit} , {listing, form}) => {
-    commit('RESET_ERRORS')
+export const sendMessage = ({state, commit} , {listing, form}) => {
+    commit('CLEAR_VALIDATION_ERRORS',{}, {root: true})
     commit('SET_PROCESSING', true)
 
-    try {
-        let response = await axios.post(`api/${listing}/user/message`, form)
+    return axios.post(`api/${listing}/user/message`, form).then( (response) => {
+        commit('SET_PROCESSING', false)
         commit('notify/SET_NOTIFICATION', {
             name: 'success',
             class: 'notify--success',
-            message: 'Email was delivered successfully.',
+            message: 'Your message was send.',
             show: true
         }, {root: true})
+        return Promise.resolve(response);
+    }).catch( (error) => {
         commit('SET_PROCESSING', false)
-        commit('RESET_FORM')
-        return response
-    } catch (error) {
-        commit('SET_PROCESSING', false)
-        commit('VALIDATE_ERROR', error.response.data)
-        commit('notify/SET_NOTIFICATION', {
-            name: 'Error',
-            class: 'notify--danger',
-            message: error.response.data.message,
-            show: true
-        }, {root: true})
-    }
+        return Promise.reject(error)
+    })
 
 }

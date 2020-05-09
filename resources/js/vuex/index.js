@@ -17,7 +17,6 @@ import * as actions from './actions.js'
 import * as getters from './getters.js'
 
 export default new Vuex.Store({
-    // namespaced: true,
     state,
     mutations,
     actions,

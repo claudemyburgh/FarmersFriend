@@ -59,7 +59,6 @@
             }
         },
         mounted() {
-            console.log(window.token.content)
             this.dropzone()
         }
 

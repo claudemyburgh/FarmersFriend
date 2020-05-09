@@ -1,9 +1,8 @@
 <template>
     <div>
         <div class="row flex">
-
             <template v-for="listing in listings" >
-                <listing-panel columns="sm-col-6 md-col-4 lg-col-3" :key="listing.id" :listing="listing" :area="area">
+                <listing-panel columns="xs-col-6 md-col-4 lg-col-3" :key="listing.id" :listing="listing" :area="area">
                     <template v-slot:body>
                         <div class="flex justify--between">
                             <div class="avatar avatar__sm ">
@@ -20,7 +19,7 @@
                      // throttleOptions: {
                      //    leading: 'visible',
                      // },
-                    throttle: 300}">
+                    throttle: 0}">
                 <div v-if="!loadingComplete"  class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 <template>
-
     <div class="panel shadow--2">
         <div class="panel__header flex justify--between">Edit Listing</div>
         <div class="panel__body">
@@ -15,7 +14,6 @@
                             {{ errors.url[0] }}
                         </div>
                     </div>
-
                     <div class="form__group md-col-4" :class="errors.price ? 'has__danger' : ''">
                         <label for="price" class="form__label font--bold">Price</label>
                         <div class="form__wrap">
@@ -27,8 +25,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="form__group" :class="errors.body ? 'has__danger' : ''">
                     <label for="body" class="form__label font--bold">Body</label>
                     <resize-textarea  name="body" v-model="listing.body"></resize-textarea>
@@ -36,9 +32,7 @@
                         {{ errors.body[0] }}
                     </div>
                 </div>
-
             </form-base>
-
             <div class="form__group flex justify--between" v-if="!status" >
                 <button @click.prevent="submitForm" type="submit" class="btn btn--primary">UPDATE</button>
                 <button v-if="!listing.live" @click.prevent="publishForm" type="button"  class="btn btn--dark">PUBLISH</button>
@@ -46,10 +40,8 @@
             <div class="form__group" v-else>
                 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
             </div>
-
         </div>
     </div>
-
 </template>
 
 <script>
@@ -96,22 +88,22 @@
                 this.update_listing({
                     listing: this.listing,
                     area: this.area
-                }).then( ({status}) => {
+                }).then( (response) => {
+                    console.log(response)
                     this.$Progress.finish()
                     this.$vToastify.removeToast(loader)
                     this.$vToastify.success({
                         title: 'Success',
                         body: "Listing saved"
                     });
-
                 }).catch( (error) => {
+                    console.log(error)
                     this.$Progress.fail()
                     this.$vToastify.removeToast(loader)
                     this.$vToastify.error({
                         title: "Error",
                         body: "Sorry something went wrong!"
                     });
-
                 })
             },
             publishForm() {
@@ -127,9 +119,7 @@
                         title: 'Publishing',
                         body: "redirecting ..."
                     });
-
                     window.location.href = `/${this.area.slug}/dashboard/listings/${this.listing.key}/payment`
-
                 }).catch( (error) => {
                     this.$Progress.fail()
                     this.$vToastify.removeToast(loader)

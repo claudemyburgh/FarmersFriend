@@ -8,7 +8,7 @@ axios.interceptors.response.use( (response ) => {
     }, (error) => {
 
         if (error.response.status === 422) {
-            store.dispatch('setValidationErrors', error.response.data.errors)
+            store.dispatch('setValidationErrors', error.response.data)
         }
         return Promise.reject(error)
     }

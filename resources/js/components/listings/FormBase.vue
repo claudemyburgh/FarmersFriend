@@ -1,6 +1,5 @@
 <template>
   <div>
-
       <div class="form__group" :class="errors.title ? 'has__danger' : ''">
           <label for="title" class="form__label font--bold">Title</label>
           <div class="form__wrap">
@@ -10,15 +9,9 @@
               {{ errors.title[0] }}
           </div>
       </div>
-
       <categories-dropdown></categories-dropdown>
       <area-dropdown></area-dropdown>
-
-      <slot>
-
-      </slot>
-
-
+      <slot></slot>
   </div>
 </template>
 

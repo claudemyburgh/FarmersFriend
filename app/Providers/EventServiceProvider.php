@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use App\Events\ListingPaymetCompleted;
 use App\Events\Social\GithubAccountWasLinked;
+use App\Events\Social\GoogleAccountWasLinked;
+use App\Listeners\ClearListingsCache;
 use App\Listeners\Social\SendGithubLinkedEmail;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -22,6 +25,12 @@ class EventServiceProvider extends ServiceProvider
         ],
         GithubAccountWasLinked::class => [
             SendGithubLinkedEmail::class
+        ],
+        GoogleAccountWasLinked::class => [
+            SendGithubLinkedEmail::class
+        ],
+        ListingPaymetCompleted::class => [
+            ClearListingsCache::class
         ]
     ];
 

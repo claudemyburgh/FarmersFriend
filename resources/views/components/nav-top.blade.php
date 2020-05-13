@@ -8,8 +8,8 @@
         <div class="nav__navicon"></div>
         <div class="nav__links__wrapper nav__links--right">
             <ul class="nav__links">
-                <li class="nav__links__item {{ set_active( Request::segment(2) === 'categories') }}"><a href="{{ url('/') }}">{{ __('Listings') }}</a></li>
-{{--                <li class="nav__links__item {{ set_active('areas') }}"><a href="{{ route('areas') }}">{{ __('Areas') }}</a></li>--}}
+                <li class="nav__links__item md-mr-3 {{ set_active( Request::segment(2) === 'categories') }}"><a href="{{ url('/') }}">{{ __('Listings') }}</a></li>
+                <li class="nav__links__item {{ set_active('areas') }}"><a href="{{ route('areas') }}">{{ __('Areas') }}</a></li>
 {{--                <li class="nav__links__item {{ set_active('*/categories') }}"><a href="{{ route('category.index', [$area]) }}">{{ __('Listings') }}</a></li>--}}
 
                 @guest

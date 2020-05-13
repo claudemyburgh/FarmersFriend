@@ -1,14 +1,14 @@
-import moment from 'moment/moment'
+
+import moment from "moment";
 
 export default {
-
     data() {
         return {
             moment: moment
         }
     },
     filters: {
-        moment(date) {
+        momentDate(date) {
             return moment(date).format('MMMM Do YYYY, h:mm:ss a');
         },
         toNow(date) {

@@ -2,16 +2,18 @@
 
 namespace App;
 
-use App\Traits\Eloquent\OrderableTrait;
-use App\Traits\Eloquent\PivotOrderableTrait;
+use App\Area;
+use App\Category;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
 use Spatie\Image\Manipulations;
 use Spatie\MediaLibrary\HasMedia;
+use App\Traits\Eloquent\OrderableTrait;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use App\Traits\Eloquent\PivotOrderableTrait;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 

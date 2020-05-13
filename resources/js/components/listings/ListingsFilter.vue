@@ -8,14 +8,9 @@
         </div>
         <div class="row flex mb-7">
             <template v-for="listing in filteredListings">
-                <listing-panel columns="sm-col-6 md-col-4 lg-col-3" :key="listing.id" :listing="listing" :area="area">
-                    <template v-slot:body>
-                        <div class="flex justify--between">
-                            <a :href="`/${area.slug}/dashboard/listings/${listing.key}/edit`" class="btn btn--sm btn--info">EDIT</a>
-                            <a href="" disabled class="btn btn--sm btn--danger">DELETE</a>
-                        </div>
-                    </template>
-                </listing-panel>
+                <new-listing-panel columns="sm-col-6 md-col-4 lg-col-3" :key="listing.id" :listing="listing" :area="area">
+                    panel
+                </new-listing-panel>
             </template>
         </div>
 

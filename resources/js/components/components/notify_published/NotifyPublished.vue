@@ -13,6 +13,7 @@
 
 <script>
     import {mapActions, mapGetters} from 'vuex'
+    import moment from 'moment/moment'
     export default {
         name: "NotifyPublished",
         props: {
@@ -23,7 +24,12 @@
         },
         data() {
             return {
-
+                moment: moment
+            }
+        },
+        filters: {
+            toNow(date) {
+                return moment(date).from();
             }
         },
         computed: mapGetters({

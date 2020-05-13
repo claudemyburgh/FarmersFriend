@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Listing;
 
-use App\{Area, Listing};
+
+use App\Area;
+use App\Events\ListingPaymetCompleted;
+use App\Listing;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -44,6 +47,8 @@ class ListingPaymentController extends Controller
     public function store(Request $request, Area $area, Listing $listing)
     {
         $this->authorize('touch', $listing);
+
+//        event(new ListingPaymetCompleted($listing));
 
         if ($listing->isLive()) {
             return back();
@@ -88,6 +93,9 @@ class ListingPaymentController extends Controller
     public function update(Request $request, Area $area, Listing $listing)
     {
         $this->authorize('touch', $listing);
+
+//        event(new ListingPaymetCompleted($listing));
+
 
         if ($listing->cost() > 0) {
             return back();

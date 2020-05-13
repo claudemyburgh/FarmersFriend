@@ -2,33 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../resources/sass/app/_fslightbox.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/FarmersFriend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/FarmersFriend.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/Events/ListingPaymetCompleted.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../app/Listeners/ClearListingsCache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/draggable/SortableHandle.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/draggable/SortableItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/js/components/components/draggable/SortableList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/js/components/listings/NewListingPanel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../resources/sass/app/_draggable.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/factories/ListingsFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/../database/factories/ListingsFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Area.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Area.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Category/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Category/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Dashboard/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingPaymentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/Listing/ListingPaymentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/WelcomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/WelcomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Listing.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Listing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/RouteMethods/FrontendRoutes.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/RouteMethods/FrontendRoutes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/dropzone/DropZone.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/dropzone/DropZone.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/ContactListingUser.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/ContactListingUser.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/contact_listing_user/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/CreateListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/CreateListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/EditListing.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/EditListing.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/FormBase.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/FormBase.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingPanel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingPanel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingsList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingsList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/Tester.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/interceptors.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/interceptors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/vuex/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/vuex/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/js/vuex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/vuex/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_flickity.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/Mixins/date-moment.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/Mixins/date-moment.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/OnHoldComponents/charts/LineChart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/OnHoldComponents/charts/LineChart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/ExampleModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/ExampleModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/components/notify_published/NotifyPublished.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/components/notify_published/NotifyPublished.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/listings/ListingsFilter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/listings/ListingsFilter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/js/components/profile/ProfileForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/js/components/profile/ProfileForm.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/sass/app/_main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_main.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_panel.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/sass/app/_panel.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_splide.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/sass/app/_tobii.sass" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/email/social/facebook.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/email/social/facebook.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/listings/share/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/listings/share/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/areas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/areas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/components/nav-top.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/components/nav-top.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/dashboard/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/dashboard/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/layouts/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../resources/views/user/listings/published/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/user/listings/published/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +56,8 @@
       <list>
         <option value="CSS File" />
         <option value="TypeScript JSX File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -275,6 +285,7 @@
       <workItem from="1588624237218" duration="25637000" />
       <workItem from="1588711579237" duration="7984000" />
       <workItem from="1588911270968" duration="60863000" />
+      <workItem from="1589316901881" duration="16106000" />
     </task>
     <servers />
   </component>
@@ -329,9 +340,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1587514607407" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1588687665844">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1589332676404">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1588687665844" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.148.1366.738@0.0.1920.1050" timestamp="1589332676404" />
   </component>
 </project>

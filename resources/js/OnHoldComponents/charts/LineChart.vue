@@ -1,9 +1,9 @@
 <script>
     import { Line } from 'vue-chartjs'
-    import {primaryColor, secondaryColor, darkColor} from "../../../defaults";
+    import { primaryColor, secondaryColor, darkColor } from '../../../defaults'
 
     export default {
-        name: "LineChart",
+       name: "LineChart",
         extends: Line,
         props: [
             'url',

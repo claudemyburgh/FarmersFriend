@@ -1,9 +1,6 @@
 <template>
 	<div>
-
         <a href="#" class="btn btn--primary" @click.prevent="$modal.show('hello', {name: 'Claude'})">Open Modal</a>
-
-
         <modal-component name="hello" @before-open="loadCources">
             <template slot="header">
                 {{ cources.title }}

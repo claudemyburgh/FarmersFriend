@@ -2,11 +2,10 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
+use Laravel\Scout\Searchable;
 use Kalnoy\Nestedset\NodeTrait;
 use Illuminate\Database\Eloquent\Model;
-use Laravel\Scout\Searchable;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Area extends Model
 {
@@ -15,7 +14,9 @@ class Area extends Model
     protected $fillable = ['name', 'slug'];
 
     /**
-     * @return string
+     * Use slug as default key
+     *
+     * @return void
      */
     public function getRouteKeyName()
     {

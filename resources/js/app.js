@@ -6,7 +6,7 @@ import InstantSearch from 'vue-instantsearch'
 import {cacheAdapterEnhancer, throttleAdapterEnhancer} from "axios-extensions";
 import { options } from './defaults'
 import store from './vuex'
-import Moment from './Mixins/date-moment'
+
 import Currency from './Mixins/currency'
 
 import VueToastify from "vue-toastify";
@@ -19,10 +19,9 @@ window.axios = require('axios');
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.adapter = throttleAdapterEnhancer(cacheAdapterEnhancer(axios.defaults.adapter,
     { enabledByDefault: false, cacheFlag: 'useCache'}))
-// window.axios.defaults.baseURL = "http://farmersfriend.build";
-window.axios.defaults.baseURL = "http://farmersfriend.co.za";
+window.axios.defaults.baseURL = "http://farmersfriend.build";
+// window.axios.defaults.baseURL = "http://farmersfriend.co.za";
 axios.defaults.withCredentials = true;
-
 
 
 /**
@@ -49,7 +48,7 @@ Vue.use(VueToastify, {
     errorDuration: 1500,
 })
 
-Vue.mixin(Moment)
+// Vue.mixin(Moment)
 Vue.mixin(Currency)
 
 

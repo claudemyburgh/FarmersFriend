@@ -26,4 +26,14 @@ class DashboardController extends Controller
         return view ('dashboard.index');
     }
 
+    /**
+     * Settings page
+     *
+     * @return void
+     */
+    public function settings()
+    {
+        return view ('dashboard.settings');
+    }
+
 }

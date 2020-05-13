@@ -46,6 +46,7 @@
             <div class="wrapper"><a href="#" class="scrollup__button" style="transform: translateY(0px);"></a></div>
         </div>
         <vue-progress-bar></vue-progress-bar>
+        <x-dev-message></x-dev-message>
 
 
     </div><!-- #app -->

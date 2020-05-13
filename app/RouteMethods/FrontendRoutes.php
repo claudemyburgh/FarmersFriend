@@ -120,8 +120,8 @@ class FrontendRoutes
         return function () {
             $this->group(['middleware' => ['auth:sanctum', 'verified'], 'namespace' => 'Dashboard', 'as' => 'dashboard.'], function () {
                 $this->get('{area}/dashboard', 'DashboardController@index')->name('index');
+                $this->get('{area}/dashboard/settings', 'DashboardController@settings')->name('settings');
                 $this->get('{area}/dashboard/profile', 'ProfileController@index')->name('profile.index');
-
 
                 $this->get('{area}/dashboard/password', 'PasswordController@index')->name('password.index');
                 $this->post('{area}/dashboard/password', 'PasswordController@store')->name('password.store');

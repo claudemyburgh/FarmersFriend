@@ -45,17 +45,20 @@
             </div>
         </div>
 
-        <div class="bg--dark-light r-3 mb-4">
-            <div class="switch lg-col-6 px-2 py-2">
-                <input type="checkbox" id="show_email" v-model="user.show_email"  class="switch__input">
-                <label for="show_email" class="switch__label">Email Address <span class="toggle--on">Show</span><span class="toggle--off">Hide</span></label>
-            </div>
+        <div class="bg--dark-light  r-3 mb-4">
             <div class="row">
-                <div class="switch lg-col-6 px-2 py-2">
-                    <input type="checkbox" id="show_phone" v-model="user.show_phone"  class="switch__input">
-                    <label for="show_phone" class="switch__label">Phone Number <span class="toggle--on">Show</span><span class="toggle--off">Hide</span></label>
+                <div class="md-col-6">
+                    <div class="switch ">
+                        <input type="checkbox" id="show_email" v-model="user.show_email"  class="switch__input">
+                        <label for="show_email" class="switch__label">Email Address <span class="toggle--on">Show</span><span class="toggle--off">Hide</span></label>
+                    </div>
                 </div>
-
+                <div class="md-col-6">
+                    <div class="switch ">
+                        <input type="checkbox" id="show_phone" v-model="user.show_phone"  class="switch__input">
+                        <label for="show_phone" class="switch__label">Phone Number <span class="toggle--on">Show</span><span class="toggle--off">Hide</span></label>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="form__helper">

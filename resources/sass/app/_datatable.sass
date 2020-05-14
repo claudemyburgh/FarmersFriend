@@ -1,0 +1,30 @@
+.table__responsive
+    overflow-x: auto
+
+    .sortable
+        cursor: pointer
+        display: inline-block
+
+    .arrow
+        display: inline-block
+        vertical-align: middle
+        width: 0
+        height: 0
+        margin-left: 5px
+
+        &--asc
+            border-bottom: 4px solid #444
+            border-left: 4px solid transparent
+            border-right: 4px solid transparent
+
+        &--desc
+            border-top: 4px solid #444
+            border-left: 4px solid transparent
+            border-right: 4px solid transparent
+
+    .toUpperCase
+        text-transform: uppercase
+
+.action__buttons
+    min-width: 146px
+    text-align: right !important

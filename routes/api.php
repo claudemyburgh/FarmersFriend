@@ -5,8 +5,6 @@
 //});
 
 
-
-
 Route::group(['middleware' => ['auth:sanctum'], 'as' => 'api.'], function() {
 
     Route::get('areas', 'AreasController@index')->name('areas.index');
@@ -44,6 +42,16 @@ Route::group(['middleware' => ['auth:sanctum', 'verified'],
     Route::get('profile/password', 'ProfilePasswordController@index')->name('profile.password.index');
     Route::post('profile/password', 'ProfilePasswordController@store')->name('profile.password.store');
 
+});
 
+Route::group(['middleware' => ['auth:sanctum', 'verified'] ,'prefix' => 'datatable', 'namespace' => 'DataTables', 'as' => 'api.datatable.'], function() {
+
+    Route::group(['as' => 'published.', 'prefix' => 'published'], function () {
+        Route::resource('listing', 'UserPublishedController');
+    });
+
+    Route::group(['as' => 'unpublished.', 'prefix' => 'unpublished'], function () {
+        Route::resource('listing', 'UserUnpublishedController');
+    });
 
 });

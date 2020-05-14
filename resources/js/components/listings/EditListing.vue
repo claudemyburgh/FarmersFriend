@@ -89,7 +89,6 @@
                     listing: this.listing,
                     area: this.area
                 }).then( (response) => {
-                    console.log(response)
                     this.$Progress.finish()
                     this.$vToastify.removeToast(loader)
                     this.$vToastify.success({
@@ -97,7 +96,6 @@
                         body: "Listing saved"
                     });
                 }).catch( (error) => {
-                    console.log(error)
                     this.$Progress.fail()
                     this.$vToastify.removeToast(loader)
                     this.$vToastify.error({

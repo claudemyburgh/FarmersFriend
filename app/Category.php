@@ -24,6 +24,9 @@ class Category extends Model
         }]);
     }
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function listings()
     {
         return $this->hasMany(Listing::class);

@@ -10,8 +10,6 @@
         </div>
     </div>
 
-    <listings-filter :area="{{ $area }}"  url="/api/listings/published">
-
-    </listings-filter>
+    <data-table endpoint="{{ route('api.datatable.published.listing.index') }}" post_method="edit" :area="{{ $area }}"></data-table>
 
 @endsection

@@ -59,10 +59,7 @@ class ListingsController extends Controller
      */
     public function show($key)
     {
-
         $listing = Listing::find($key);
-
-//        $listing->load('area', 'user', 'media');
 
         return new ListingResource($listing);
     }
@@ -79,25 +76,24 @@ class ListingsController extends Controller
     {
         $this->authorize('update', $listing);
 
-
         $listing = $listing->update($request->only('title', 'body', 'category_id', 'area_id', 'area_parent_id', 'url', 'price'));
-
 
         if ($request->has('payment')) {
             return redirect()->route('listings.payment.show', [$area, $listing]);
         }
-
     }
 
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Area $area
+     * @param Listing $listing
+     * @return mixed
+     * @throws \Illuminate\Auth\Access\AuthorizationException
      */
-    public function destroy($id)
+    public function destroy(Area $area, Listing $listing)
     {
-        //
+        $this->authorize('destroy', $listing);
+
+        $listing->delete();
     }
 }

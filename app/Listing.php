@@ -2,8 +2,6 @@
 
 namespace App;
 
-use App\Area;
-use App\Category;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Laravel\Scout\Searchable;
@@ -48,7 +46,6 @@ class Listing extends Model implements HasMedia
      */
 //    public $incrementing = false;
 
-
     protected $fillable = [
         'id',
         'title',
@@ -72,7 +69,7 @@ class Listing extends Model implements HasMedia
     ];
 
     protected $appends = [
-        'province_id'
+//        'province_id'
     ];
 
     /**
@@ -194,7 +191,6 @@ class Listing extends Model implements HasMedia
         $properties['user'] = $this->user;
         $properties['category'] = $this->category;
         $properties['area'] = $this->area;
-
         return $properties;
     }
 
@@ -205,7 +201,6 @@ class Listing extends Model implements HasMedia
     {
         return $this->belongsTo(User::class);
     }
-
 
     /**
      * @return \Illuminate\Support\Collection
@@ -230,7 +225,6 @@ class Listing extends Model implements HasMedia
     {
         return $this->belongsTo(Area::class);
     }
-
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
@@ -266,7 +260,6 @@ class Listing extends Model implements HasMedia
         return $this->viewedUsers()->sum('count');
     }
 
-
     /**
      * Media conversions
      */
@@ -284,6 +277,4 @@ class Listing extends Model implements HasMedia
                 }
         });
     }
-
-
 }

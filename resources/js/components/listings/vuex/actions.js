@@ -53,3 +53,13 @@ export const set_listing = ({commit}, data) => {
 }
 
 
+export const delete_listing = ({commit, dispatch}, {listing, area}) => {
+
+    return axios.delete(`api/${area}/listings/${listing.key}`).then((response) => {
+
+    }).catch((error) => {
+
+    })
+}
+
+

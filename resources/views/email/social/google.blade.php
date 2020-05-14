@@ -1,12 +1,15 @@
 @component('mail::message')
-# Introduction
+    # Hello, {{ $user->name }}
 
-The body of your message.
+    Your Google Account was linked.
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+    @include('email.social._linked-accounts')
+
+    @component('mail::button', ['url' => config('app.url')])
+        Farmer's Friend
+    @endcomponent
+
+    Thanks,<br>
+    {{ config('app.name') }}
 @endcomponent

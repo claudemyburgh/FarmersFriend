@@ -3,7 +3,8 @@
 namespace App\Listeners\Social;
 
 
-use App\Events\Social\GithubAccountWasLinked;
+
+use App\Events\Social\GoogleAccountWasLinked;
 use App\Mail\Social\GoogleAccountLinkedEmail;
 use App\User;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -29,7 +30,7 @@ class SendGoogleLinkedEmail
      * @param  GithubAccountWasLinked  $event
      * @return void
      */
-    public function handle(GithubAccountWasLinked $event)
+    public function handle(GoogleAccountWasLinked $event)
     {
         Mail::to($event->user)->queue(new GoogleAccountLinkedEmail($event->user));
     }

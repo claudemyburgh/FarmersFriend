@@ -16,8 +16,6 @@ return [
             'name' => 'Facebook'
         ],
 
-
-
     ],
 
     'events' => [

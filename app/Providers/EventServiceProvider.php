@@ -27,7 +27,7 @@ class EventServiceProvider extends ServiceProvider
             SendGithubLinkedEmail::class
         ],
         GoogleAccountWasLinked::class => [
-            SendGithubLinkedEmail::class
+            SendGoogleLinkedEmail::class
         ],
         ListingPaymetCompleted::class => [
             ClearListingsCache::class

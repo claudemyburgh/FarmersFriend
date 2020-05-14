@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af7d3e2-b269-47ba-afb3-3abf43fbd848" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/social.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/social.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/email/social/google.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/email/social/google.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Providers/EventServiceProvider.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +250,7 @@
       <workItem from="1588711579237" duration="7984000" />
       <workItem from="1588911270968" duration="60863000" />
       <workItem from="1589316901881" duration="20452000" />
-      <workItem from="1589380213355" duration="34688000" />
+      <workItem from="1589380213355" duration="35323000" />
     </task>
     <servers />
   </component>

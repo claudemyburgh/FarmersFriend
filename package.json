@@ -17,7 +17,7 @@
         "imagemin-webpack-plugin": "^2.x",
         "jquery": "^3.2",
         "laravel-mix": "^5.0.1",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.21",
         "luna-sass": "^2.3.2",
         "path": "^0.12.7",
         "resolve-url-loader": "^2.3.1",
